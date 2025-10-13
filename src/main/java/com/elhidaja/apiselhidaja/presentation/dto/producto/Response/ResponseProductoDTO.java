@@ -10,13 +10,12 @@ public class ResponseProductoDTO {
     private Long id;
     private String categoria;
     private String subCategoria;
-    private String nombre;
     private String codigo;
+    private String nombre;
     private String codigoBarras;
-    private Integer stock;
+    private String descripcion;
+    private Long stock_total;
     private String unidadMedida;
-    private String pallet;
-    private String estante;
-    private String almacen;
+    private Double costo;
     private Boolean status;
 }

@@ -10,10 +10,11 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.EstanteDAO;
+
 @Repository
 
 public class EstanteRepository implements EstanteDAO {
-        private final JdbcTemplate jdbc;
+    private final JdbcTemplate jdbc;
 
     public EstanteRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -26,7 +27,9 @@ public class EstanteRepository implements EstanteDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_estantes");
 
-            Map<String, Object> inParams = Map.of("option", option.getOption());
+            Map<String, Object> inParams = Map.of(
+                    "option", option.getEstado(),
+                    "id_almacen", option.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -35,11 +38,11 @@ public class EstanteRepository implements EstanteDAO {
 
             List<ResponseEstanteDTO> estantes = rows.stream().map(row -> {
                 ResponseEstanteDTO dto = new ResponseEstanteDTO();
-                    dto.setId(((Number) row.get("id_estante")).longValue());
-                    dto.setAlmacen((String) row.get("codigo_almacen"));
-                    dto.setUbicacion((String) row.get("descripcion_ubicacion"));
-                    dto.setCodigo((String) row.get("codigo_estante"));
-                    dto.setDescripcion((String) row.get("descripcion_estante"));
+                dto.setId(((Number) row.get("id_estante")).longValue());
+                dto.setAlmacen((String) row.get("codigo_almacen"));
+                dto.setUbicacion((String) row.get("descripcion_ubicacion"));
+                dto.setCodigo((String) row.get("codigo_estante"));
+                dto.setDescripcion((String) row.get("descripcion_estante"));
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;
             }).toList();

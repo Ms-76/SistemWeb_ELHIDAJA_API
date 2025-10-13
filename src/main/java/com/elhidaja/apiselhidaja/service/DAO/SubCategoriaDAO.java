@@ -1,8 +1,6 @@
 package com.elhidaja.apiselhidaja.service.DAO;
 
-import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponseDetalleSubCategoriaDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponseSubCategoriAllDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponserSubCategoriaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 
 public interface SubCategoriaDAO {

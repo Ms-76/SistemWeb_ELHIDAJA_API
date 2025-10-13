@@ -27,7 +27,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_obtener_almacenes");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "option", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 

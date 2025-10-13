@@ -27,7 +27,9 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_obtener_pallets");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "option", option.getEstado(),
+                    "id_almacen", option.getIdAlmacen()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 

@@ -1,0 +1,48 @@
+package com.elhidaja.apiselhidaja.service.implementation;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
+
+import com.elhidaja.apiselhidaja.persistence.repository.TipoOperacionRepository;
+import com.elhidaja.apiselhidaja.presentation.dto.tipoOperacion.Request.*;
+import com.elhidaja.apiselhidaja.presentation.dto.tipoOperacion.Response.*;
+
+@Service
+@Validated
+public class TipoOperacionService {
+     private final TipoOperacionRepository tipoOperacionRepo;
+
+    public TipoOperacionService(TipoOperacionRepository tipoOperacionRepo) {
+        this.tipoOperacionRepo = tipoOperacionRepo;
+    }
+
+    @Transactional
+    public ResponseTipoOperacionMensajeDTO insertSer(RequestTipoOperacionInsertDTO obj) {
+        return tipoOperacionRepo.insertD(obj);
+    }
+
+    @Transactional
+    public ResponseTipoOperacionMensajeDTO updateSer(RequestTipoOperacionUpdateDTO obj) {
+        return tipoOperacionRepo.updateD(obj);
+    }
+
+    @Transactional
+    public ResponseTipoOperacionAllDTO getAllSer(RequestTipoOperacionOptionDTO option) {
+        return tipoOperacionRepo.getAllD(option);
+    }
+
+    @Transactional
+    public ResponseDetalleTipoOperacionDTO getByIdSer(RequestTipoOperacionIdDTO id) {
+        return tipoOperacionRepo.getByIdD(id);
+    }
+
+    @Transactional
+    public ResponseTipoOperacionMensajeDTO activateSer(RequestTipoOperacionIdDTO id) {
+        return tipoOperacionRepo.activateD(id);
+    }
+
+    @Transactional
+    public ResponseTipoOperacionMensajeDTO desactivateSer(RequestTipoOperacionIdDTO id) {
+        return tipoOperacionRepo.desactivateD(id);
+    }
+}

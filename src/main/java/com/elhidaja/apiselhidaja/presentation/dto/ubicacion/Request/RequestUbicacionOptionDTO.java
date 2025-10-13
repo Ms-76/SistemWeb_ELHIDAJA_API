@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestUbicacionOptionDTO {
-    @NotNull(message = "La opción es obligatoria")
+       @NotNull(message = "El estado es obligatorio")
     @ValidOption
-    private Long option;
+    private Long estado;
 }

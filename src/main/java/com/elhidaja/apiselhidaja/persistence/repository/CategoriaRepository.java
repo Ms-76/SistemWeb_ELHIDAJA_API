@@ -29,7 +29,7 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP ption
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "option", option.getEstado());
 
             // Ejecutar el SP
             Map<String, Object> result = call.execute(inParams);

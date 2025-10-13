@@ -28,7 +28,7 @@ public class UbicacionRepository implements UbicacionDAO {
                     .withProcedureName("SP_obtener_ubicaciones");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "option", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
