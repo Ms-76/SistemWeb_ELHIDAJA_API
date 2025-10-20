@@ -2,14 +2,21 @@ package com.elhidaja.apiselhidaja.presentation.dto.producto.Request;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "id", "codigo", "nombre", "imagen", "codigoBarras", "descripcion", "idSubcategoria",
+        "costo" })
 public class RequestProductoUpdateDTO {
-    
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El ID del producto es obligatorio")
     @Min(value = 1, message = "El ID del producto debe ser mayor que cero")
     private Long id;

@@ -26,7 +26,7 @@ public class InventarioController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleInventarioDTO> getByIdInventario(
-            @Valid @RequestBody RequestInventarioIdDTO id) {
+            @Valid @RequestBody RequestInventarioFilterDTO id) {
         return ResponseEntity.ok(inventarioService.getByIdSer(id));
     }
 

@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class RequestTipoDocumentoOptionDTO {
-       @NotNull(message = "El estado es obligatorio")
+    @NotNull(message = "El estado es obligatorio")
     @ValidOption
     private Long estado;
 }

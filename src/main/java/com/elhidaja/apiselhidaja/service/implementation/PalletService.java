@@ -35,7 +35,7 @@ public class PalletService {
     }
 
     @Transactional
-    public ResponseDetallePalletDTO getByIdSer(RequestPalletIdDTO id) {
+    public ResponseDetallePalletDTO getByIdSer(RequestPalletFilterDTO id) {
         return palletRepo.getByIdD(id);
     }
 

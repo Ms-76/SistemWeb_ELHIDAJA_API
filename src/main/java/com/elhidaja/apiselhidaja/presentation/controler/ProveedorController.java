@@ -26,7 +26,7 @@ public class ProveedorController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleProveedorDTO> getByIdCategoria(
-            @Valid @RequestBody RequestProveedorIdDTO id) {
+            @Valid @RequestBody RequestProveedorFilterDTO id) {
         return ResponseEntity.ok(proveedorService.getByIdSer(id));
     }
 

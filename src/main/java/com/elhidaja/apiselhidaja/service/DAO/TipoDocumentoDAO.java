@@ -5,7 +5,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.tipoDocumento.Response.*;
 public interface TipoDocumentoDAO {
     public ResponseTipoDocumentoAllDTO getAllD(RequestTipoDocumentoOptionDTO option);
 
-    public ResponseDetalleTipoDocumentoDTO getByIdD(RequestTipoDocumentoIdDTO id);
+    public ResponseDetalleTipoDocumentoDTO getByIdD(RequestTipoDocumentoFilterDTO id);
 
     public ResponseTipoDocumentoMensajeDTO desactivateD(RequestTipoDocumentoIdDTO id);
 

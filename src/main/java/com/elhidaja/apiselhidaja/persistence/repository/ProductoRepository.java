@@ -31,7 +31,7 @@ public class ProductoRepository implements ProductoDAO {
                     .withProcedureName("SP_obtener_productos");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado(),
+                    "status", option.getEstado(),
                     "id_almacen", option.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
@@ -90,14 +90,14 @@ public class ProductoRepository implements ProductoDAO {
     }
 
     @Override
-    public ResponseDetalleProductoDTO getByIdD(RequestProductoIdDTO id) {
+    public ResponseDetalleProductoDTO getByIdD(RequestProductoFilterDTO id) {
         ResponseDetalleProductoDTO rp = new ResponseDetalleProductoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_producto_por_id");
 
             Map<String, Object> inParams = Map.of(
-                    "id_producto", id.getIdProducto(),
+                    "id_producto", id.getId(),
                     "id_almacen", id.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
@@ -172,6 +172,7 @@ public class ProductoRepository implements ProductoDAO {
                             new SqlParameter("costo", Types.NUMERIC));
 
             Map<String, Object> inParams = new HashMap<>();
+            inParams.put("id_usuario_sign", objProducto.getIdLogin());
             inParams.put("codigo", objProducto.getCodigo());
             inParams.put("nombre", objProducto.getNombre());
             inParams.put("imagen", objProducto.getImagen());
@@ -213,6 +214,7 @@ public class ProductoRepository implements ProductoDAO {
                     .withProcedureName("SP_actualizar_producto");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objProducto.getIdLogin(),
                     "id_producto", objProducto.getId(),
                     "codigo", objProducto.getCodigo(),
                     "nombre", objProducto.getNombre(),
@@ -254,7 +256,9 @@ public class ProductoRepository implements ProductoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_desactivar_producto");
 
-            Map<String, Object> inParams = Map.of("id_producto", id.getIdProducto());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_producto", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -288,7 +292,9 @@ public class ProductoRepository implements ProductoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_activar_producto");
 
-            Map<String, Object> inParams = Map.of("id_producto", id.getIdProducto());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_producto", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 

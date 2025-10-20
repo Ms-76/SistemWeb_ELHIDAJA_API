@@ -32,7 +32,7 @@ public class DocumentoOperacionService {
     }
 
     @Transactional
-    public ResponseDetalleDocumentoOperacionDTO getByIdSer(RequestDocumentoOperacionIdDTO id) {
+    public ResponseDetalleDocumentoOperacionDTO getByIdSer(RequestDocumentoOperacionFilterDTO id) {
         return docOpRepo.getByIdD(id);
     }
 

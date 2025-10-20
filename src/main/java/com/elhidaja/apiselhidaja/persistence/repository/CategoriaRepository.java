@@ -29,7 +29,7 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP ption
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             // Ejecutar el SP
             Map<String, Object> result = call.execute(inParams);
@@ -61,7 +61,7 @@ public class CategoriaRepository implements CategoriaDAO {
     }
 
     @Override
-    public ResponseDetalleCategoriaDTO getByIdD(RequesteCategoriaIdDTO id) {
+    public ResponseDetalleCategoriaDTO getByIdD(RequestCategoriaFilterDTO id) {
         ResponseDetalleCategoriaDTO rp = new ResponseDetalleCategoriaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -97,8 +97,7 @@ public class CategoriaRepository implements CategoriaDAO {
                     rp.setCodigo("200");
                     rp.setMensaje("categoria encontrada");
                 }
-            }
-            else {
+            } else {
                 rp.setExito(false);
                 rp.setCodigo("404");
                 rp.setMensaje("No se encontró la categoría");
@@ -122,7 +121,8 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP ID y nombre
             Map<String, Object> inParams = Map.of(
-                    "id_categoria", id.getId());
+                    "id_categoria", id.getId(),
+                    "id_usuario_sign", id.getIdLogin());
 
             // Ejecutar el SP
             Map<String, Object> result = call.execute(inParams);
@@ -163,7 +163,8 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP ID y nombre
             Map<String, Object> inParams = Map.of(
-                    "id_categoria", id.getId());
+                    "id_categoria", id.getId(),
+                    "id_usuario_sign", id.getIdLogin());
 
             // Ejecutar el SP
             Map<String, Object> result = call.execute(inParams);
@@ -203,6 +204,7 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP ID y nombre
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objCategoria.getIdLogin(),
                     "id_categoria", objCategoria.getId(),
                     "nombre", objCategoria.getNombre());
 
@@ -245,6 +247,7 @@ public class CategoriaRepository implements CategoriaDAO {
 
             // Parámetros de entrada del SP
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objCategoria.getIdLogin(),
                     "nombre", objCategoria.getNombre());
 
             // Ejecutar el SP

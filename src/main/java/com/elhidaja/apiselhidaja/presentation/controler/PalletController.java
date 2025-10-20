@@ -31,7 +31,7 @@ public class PalletController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetallePalletDTO> getByIdPallet(
-            @Valid @RequestBody RequestPalletIdDTO id) {
+            @Valid @RequestBody RequestPalletFilterDTO id) {
         return ResponseEntity.ok(palletService.getByIdSer(id));
     }
 

@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.serieDocumento.Response.*;
 public interface SerieDocumentoDAO {
     public ResponseSerieDocumentoAllDTO getAllD(RequestSerieDocumentoOptionDTO option);
 
-    public ResponseDetalleSerieDocumentoDTO getByIdD(RequestSerieDocumentoIdDTO id);
+    public ResponseDetalleSerieDocumentoDTO getByIdD(RequestSerieDocumentoFilterDTO id);
 
     public ResponseSerieDocumentoMensajeDTO desactivateD(RequestSerieDocumentoIdDTO id);
 

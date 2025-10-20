@@ -33,7 +33,7 @@ public class RolService {
     }
 
     @Transactional
-    public ResponseDetalleRolDTO getByIdSer(RequestRolIdDTO id) {
+    public ResponseDetalleRolDTO getByIdSer(RequestRolFilterDTO id) {
         return rolRepo.getByIdD(id);
     }
 

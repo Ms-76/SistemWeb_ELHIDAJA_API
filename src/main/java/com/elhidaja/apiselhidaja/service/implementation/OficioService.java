@@ -33,7 +33,7 @@ public class OficioService {
     }
 
     @Transactional
-    public ResponseDetalleOficioDTO getByIdSer(RequestOficioIdDTO id) {
+    public ResponseDetalleOficioDTO getByIdSer(RequestOficioFilterDTO id) {
         return oficioRepo.getByIdD(id);
     }
 

@@ -1,13 +1,12 @@
 package com.elhidaja.apiselhidaja.presentation.dto.area.Request;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
+import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectActionId;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import lombok.Data;
 
 @Data
+@JsonPropertyOrder({ "idLogin", "id" })
+public class RequestAreaIdDTO  extends RequestObjectActionId{
 
-public class RequestAreaIdDTO {
-    @NotNull(message = "El id del área es obligatorio")
-    @Min(value = 1, message = "El id del área debe ser mayor o igual a 1")
-    private Long id;
 }

@@ -1,14 +1,24 @@
 package com.elhidaja.apiselhidaja.presentation.dto.estante.Request;
 
 import jakarta.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonPropertyOrder({ "idLogin", "codigo", "descripcion" })
 public class RequestEstanteInsertDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotBlank(message = "El código no puede estar vacío")
     @Pattern(regexp = "^[a-zA-Z0-9\\-\\s]+$", message = "El código del estante solo puede contener letras, números, espacios y guiones")
     @Size(min = 2, max = 50, message = "El código debe tener entre 2 y 50 caracteres")

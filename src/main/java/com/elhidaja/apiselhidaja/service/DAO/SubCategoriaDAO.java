@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 public interface SubCategoriaDAO {
      ResponseSubCategoriAllDTO getAllD(ResquestSubCategoriaOptionDTO option);
 
-    ResponseDetalleSubCategoriaDTO getByIdD(RequestSubCategoriaIdDTO id);
+    ResponseDetalleSubCategoriaDTO getByIdD(RequestSubCategoriaFilterDTO id);
 
     ResponserSubCategoriaMensajeDTO insertD(RequestSubCategoriaInsertDTO dto);
 

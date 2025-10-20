@@ -26,7 +26,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                     .withProcedureName("SP_obtener_serie_documento");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
     }
 
     @Override
-    public ResponseDetalleSerieDocumentoDTO getByIdD(RequestSerieDocumentoIdDTO id) {
+    public ResponseDetalleSerieDocumentoDTO getByIdD(RequestSerieDocumentoFilterDTO id) {
         ResponseDetalleSerieDocumentoDTO rp = new ResponseDetalleSerieDocumentoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -114,6 +114,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                     .withProcedureName("SP_activar_serie_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_serie_documento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -152,6 +153,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                     .withProcedureName("SP_desactivar_serie_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_serie_documento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -190,6 +192,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                     .withProcedureName("SP_actualizar_serie_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objSerieDocumento.getIdLogin(),
                     "id_serie_documento", objSerieDocumento.getId(),
                     "id_serie", objSerieDocumento.getIdSerie(),
                     "id_documento_operacion", objSerieDocumento.getIdDocumentoOperacion(),
@@ -230,6 +233,7 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                     .withProcedureName("SP_insertar_serie_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objSerieDocumento.getIdLogin(),
                     "id_serie", objSerieDocumento.getIdSerie(),
                     "id_documento_operacion", objSerieDocumento.getIdDocumentoOperacion(),
                     "ultimo_correlativo", objSerieDocumento.getUltimoCorrelativo());

@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.*;
 public interface EstanteDAO {
     public ResponseEstanteAllDTO getAllD(RequestEstanteOptionDTO option);
 
-    public ResponseDetalleEstanteDTO getByIdD(RequestEstanteIdDTO id);
+    public ResponseDetalleEstanteDTO getByIdD(RequestEstanteFilterDTO id);
 
     public ResponseEstanteMensajeDTO desactivateD(RequestEstanteIdDTO id);
 

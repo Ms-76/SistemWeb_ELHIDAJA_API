@@ -5,7 +5,7 @@ public interface GuiaEntradaDAO {
 
     public ResponseGuiaEntradaAllDTO getAllD(RequestGuiaEntradaOptionDTO option);
 
-    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestGuiaEntradaIdDTO id);
+    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestGuiaEntradaFilterDTO id);
 
     public ResponseGuiaEntradaMensajeDTO desactivateD(RequestGuiaEntradaIdDTO id);
 

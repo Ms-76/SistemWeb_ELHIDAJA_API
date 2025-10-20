@@ -5,11 +5,18 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 import com.elhidaja.apiselhidaja.util.validationsPersonalisate.EstadoValido;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
 
 @Data
+@JsonPropertyOrder({ "idLogin", "id", "stockFisico", "diferencia", "observacion", "fechaFinInventario", "nuevo",
+        "editadoManual", "estado" })
 public class RequestDetalleInventarioUpdateDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El id del detalle inventario es obligatorio")
     @Min(value = 1, message = "El id debe ser mayor o igual a 1")
     private Long id;
@@ -29,7 +36,7 @@ public class RequestDetalleInventarioUpdateDTO {
     @NotNull(message = "La fecha de cirre del inventario no puede estar vacía")
     @FutureOrPresent(message = "La fecha de cirre del inventario no puede ser anterior a hoy")
     private LocalDateTime fechaFinInventario;
-    
+
     @NotNull(message = "El campo nuevo es obligatorio")
     private Boolean nuevo;
 

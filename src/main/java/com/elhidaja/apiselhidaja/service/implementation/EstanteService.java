@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.EstanteRepository;
+import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteOptionDTO;
@@ -38,7 +39,7 @@ public class EstanteService {
     }
 
     @Transactional
-    public ResponseDetalleEstanteDTO getByIdSer(RequestEstanteIdDTO id) {
+    public ResponseDetalleEstanteDTO getByIdSer(RequestEstanteFilterDTO id) {
         return estanteRepo.getByIdD(id);
     }
 

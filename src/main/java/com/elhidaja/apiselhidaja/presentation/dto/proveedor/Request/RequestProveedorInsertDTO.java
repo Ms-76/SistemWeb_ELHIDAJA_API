@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.proveedor.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +10,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "numeroDocumento", "nombres", "idDocumentoIdentidad", "direccion", "telefono", "email", "idDistrito" })
 public class RequestProveedorInsertDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
 
     @NotBlank(message = "El número de documento no puede estar vacío")
     @Size(max = 50, message = "El número de documento no debe exceder 50 caracteres")

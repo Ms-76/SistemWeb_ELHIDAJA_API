@@ -7,11 +7,17 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin","id", "fecha", "descripcion", "idUsuario" })
 public class RequestInventarioUpdateDTO {
-    
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El id del inventario es obligatorio")
     @Min(value = 1, message = "El id del inventario debe ser mayor a 0")
     private Long id;

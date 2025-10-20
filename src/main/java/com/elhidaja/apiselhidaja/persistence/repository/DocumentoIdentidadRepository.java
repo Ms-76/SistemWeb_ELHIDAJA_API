@@ -10,9 +10,10 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request.*;
 import com.elhidaja.apiselhidaja.service.DAO.DocumentoIdentidadDAO;
+
 @Repository
-public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
-        private final JdbcTemplate jdbc;
+public class DocumentoIdentidadRepository implements DocumentoIdentidadDAO {
+    private final JdbcTemplate jdbc;
 
     public DocumentoIdentidadRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -26,7 +27,7 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_documentos_identidad");
 
-            Map<String, Object> inParams = Map.of("option", option.getEstado());
+            Map<String, Object> inParams = Map.of("status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -59,7 +60,7 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
     }
 
     @Override
-    public ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadIdDTO id) {
+    public ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadFilterDTO id) {
         ResponseDetalleDocumentoIdentidadDTO rp = new ResponseDetalleDocumentoIdentidadDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -115,11 +116,11 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
                     .withProcedureName("SP_insertar_documento_identidad");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", doc.getIdLogin(),
                     "nombre", doc.getNombre(),
                     "descripcion", doc.getDescripcion(),
                     "longitud", doc.getLongitud(),
-                    "tipo_documento", doc.getTipoDocumento()
-            );
+                    "tipo_documento", doc.getTipoDocumento());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -156,12 +157,12 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
                     .withProcedureName("SP_actualizar_documento_identidad");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", doc.getIdLogin(),
                     "id_documento_identidad", doc.getId(),
                     "nombre", doc.getNombre(),
                     "descripcion", doc.getDescripcion(),
                     "longitud", doc.getLongitud(),
-                    "tipo_documento", doc.getTipoDocumento()
-            );
+                    "tipo_documento", doc.getTipoDocumento());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -197,7 +198,9 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_activar_documento_identidad");
 
-            Map<String, Object> inParams = Map.of("id_documento_identidad", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_documento_identidad", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -233,7 +236,9 @@ public class DocumentoIdentidadRepository  implements DocumentoIdentidadDAO{
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_desactivar_documento_identidad");
 
-            Map<String, Object> inParams = Map.of("id_documento_identidad", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_documento_identidad", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 

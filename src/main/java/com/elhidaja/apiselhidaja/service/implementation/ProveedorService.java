@@ -33,7 +33,7 @@ public class ProveedorService {
     }
 
     @Transactional
-    public ResponseDetalleProveedorDTO getByIdSer(RequestProveedorIdDTO id) {
+    public ResponseDetalleProveedorDTO getByIdSer(RequestProveedorFilterDTO id) {
         return provRepo.getByIdD(id);
     }
 

@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.departamento.Request.*;
 public interface  DepartamentoDAO {
     public ResponseDepartamentoAllDTO getAll(RequestDepartamentoOptionDTO option);
 
-    public ResponseDetalleDepartamentoDTO getById(RequestDepartamentoIdDTO id);
+    public ResponseDetalleDepartamentoDTO getById(RequestDepartamentoFilterDTO id);
 
     public ResponseDepartamentoMensajeDTO desactivate(RequestDepartamentoIdDTO id);
 

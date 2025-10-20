@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.provincia.Request.*;
 public interface ProvinciaDAO {
      public ResponseProvinciaAllDTO getAllD(RequestProvinciaOptionDTO option);
 
-    public ResponseDetalleProvinciaDTO getByIdD(RequestProvinciaIdDTO id);
+    public ResponseDetalleProvinciaDTO getByIdD(RequestProvinciaFilterDTO id);
 
     public ResponseProvinciaMensajeDTO desactivateD(RequestProvinciaIdDTO id);
 

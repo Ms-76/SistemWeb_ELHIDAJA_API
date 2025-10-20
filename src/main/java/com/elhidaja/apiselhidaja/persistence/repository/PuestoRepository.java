@@ -28,7 +28,7 @@ public class PuestoRepository implements PuestoDAO {
                     .withProcedureName("SP_obtener_puestos");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class PuestoRepository implements PuestoDAO {
     }
 
     @Override
-    public ResponseDetallePuestoDTO getByIdD(RequestPuestoIdDTO id) {
+    public ResponseDetallePuestoDTO getByIdD(RequestPuestoFilterDTO id) {
         ResponseDetallePuestoDTO rp = new ResponseDetallePuestoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -113,6 +113,7 @@ public class PuestoRepository implements PuestoDAO {
                     .withProcedureName("SP_activar_puesto");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_puesto", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -152,6 +153,7 @@ public class PuestoRepository implements PuestoDAO {
                     .withProcedureName("SP_desactivar_puesto");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_puesto", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -190,6 +192,7 @@ public class PuestoRepository implements PuestoDAO {
                     .withProcedureName("SP_actualizar_puesto");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objPuesto.getIdLogin(),
                     "id_puesto", objPuesto.getId(),
                     "nombre", objPuesto.getNombre());
 
@@ -230,6 +233,7 @@ public class PuestoRepository implements PuestoDAO {
                     .withProcedureName("SP_insertar_puesto");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objPuesto.getIdLogin(),
                     "nombre", objPuesto.getNombre());
 
             Map<String, Object> result = call.execute(inParams);

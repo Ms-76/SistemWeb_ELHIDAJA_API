@@ -8,7 +8,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Data
 public class RequestUsuarioOptionDTO {
-       @NotNull(message = "El estado es obligatorio")
+    @NotNull(message = "El estado es obligatorio")
     @ValidOption
     private Long estado;
 }

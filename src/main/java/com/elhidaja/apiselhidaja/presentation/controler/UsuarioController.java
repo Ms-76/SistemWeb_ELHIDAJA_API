@@ -26,7 +26,7 @@ public class UsuarioController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleUsuarioDTO> getByIdUsuario(
-            @Valid @RequestBody RequestUsuarioIdDTO id) {
+            @Valid @RequestBody RequestUsuarioFilterDTO id) {
         return ResponseEntity.ok(usuarioService.getByIdSer(id));
     }
 

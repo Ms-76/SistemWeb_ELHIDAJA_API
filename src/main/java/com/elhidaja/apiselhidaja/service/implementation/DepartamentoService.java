@@ -31,7 +31,7 @@ public class DepartamentoService {
     }
 
     @Transactional(readOnly = true)
-    public ResponseDetalleDepartamentoDTO getByIdSer(RequestDepartamentoIdDTO id) {
+    public ResponseDetalleDepartamentoDTO getByIdSer(RequestDepartamentoFilterDTO id) {
         return deptoRepo.getById(id);
     }
 

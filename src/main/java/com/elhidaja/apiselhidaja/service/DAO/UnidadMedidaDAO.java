@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.*;
 public interface UnidadMedidaDAO {
      public ResponseUnidadMedidaAllDTO getAllD(RequestUnidadMedidaOptionDTO option);
 
-    public ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaIdDTO id);
+    public ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaFilterDTO id);
 
     public ResponseUnidadMedidaMensajeDTO desactivateD(RequestUnidadMedidaIdDTO id);
 

@@ -5,7 +5,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.oficio.Response.*;
 public interface OficioDAO {
     public ResponseOficioAllDTO getAllD(RequestOficioOptionDTO option);
 
-    public ResponseDetalleOficioDTO getByIdD(RequestOficioIdDTO id);
+    public ResponseDetalleOficioDTO getByIdD(RequestOficioFilterDTO id);
 
     public ResponseOficioMensajeDTO deactivateD(RequestOficioIdDTO id);
 

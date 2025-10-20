@@ -33,7 +33,7 @@ public class AlmacenService {
     }
 
     @Transactional
-    public ResponseDetalleAlmacenDTO getByIdSer(RequestAlmacenIdDTO id) {
+    public ResponseDetalleAlmacenDTO getByIdSer(RequestAlmacenFilterDTO id) {
         return almacenRepo.getByIdD(id);
     }
 

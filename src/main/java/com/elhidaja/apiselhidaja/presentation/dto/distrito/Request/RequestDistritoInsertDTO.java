@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.distrito.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 
 import lombok.AllArgsConstructor;
@@ -9,7 +11,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "nombre", "idProvincia" })
+
 public class RequestDistritoInsertDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotBlank(message = "El nombre del distrito no puede estar vacío")
     @Size(min = 3, max = 100, message = "El nombre del distrito debe tener entre 3 y 100 caracteres")
     @Pattern(regexp = "^[a-zA-ZÁÉÍÓÚáéíóúÑñ\\s]+$", message = "El nombre del distrito debe contener solo letras y espacios")

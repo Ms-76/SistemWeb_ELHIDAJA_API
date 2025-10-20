@@ -12,8 +12,8 @@ import com.elhidaja.apiselhidaja.presentation.dto.area.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.AreaDAO;
 
 @Repository
-public class AreaRepository  implements AreaDAO {
-       private final JdbcTemplate jdbc;
+public class AreaRepository implements AreaDAO {
+    private final JdbcTemplate jdbc;
 
     public AreaRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +27,7 @@ public class AreaRepository  implements AreaDAO {
                     .withProcedureName("SP_obtener_areas");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -56,7 +56,7 @@ public class AreaRepository  implements AreaDAO {
     }
 
     @Override
-    public ResponseDetalleAreaDTO getByIdD(RequestAreaIdDTO id) {
+    public ResponseDetalleAreaDTO getByIdD(RequestAreaFilterDTO id) {
         ResponseDetalleAreaDTO rp = new ResponseDetalleAreaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -89,8 +89,7 @@ public class AreaRepository  implements AreaDAO {
                     rp.setCodigo("200");
                     rp.setMensaje("Área encontrada");
                 }
-            }
-            else {
+            } else {
                 rp.setExito(false);
                 rp.setCodigo("404");
                 rp.setMensaje("No se encontró el área");
@@ -113,6 +112,7 @@ public class AreaRepository  implements AreaDAO {
                     .withProcedureName("SP_activar_area");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_area", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -152,6 +152,7 @@ public class AreaRepository  implements AreaDAO {
                     .withProcedureName("SP_desactivar_area");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_area", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -190,6 +191,7 @@ public class AreaRepository  implements AreaDAO {
                     .withProcedureName("SP_actualizar_area");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objArea.getIdLogin(),
                     "id_area", objArea.getId(),
                     "nombre", objArea.getNombre());
 
@@ -230,6 +232,7 @@ public class AreaRepository  implements AreaDAO {
                     .withProcedureName("SP_insertar_area");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objArea.getIdLogin(),
                     "nombre", objArea.getNombre());
 
             Map<String, Object> result = call.execute(inParams);
@@ -260,5 +263,5 @@ public class AreaRepository  implements AreaDAO {
             rp.setMensaje("Error al insertar área : " + e.getMessage());
         }
         return rp;
-    } 
+    }
 }

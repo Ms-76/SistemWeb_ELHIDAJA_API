@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,7 +14,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "idCategoria", "nombre" })
 public class RequestSubCategoriaInsertDTO {
+
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
 
     @NotNull(message = "El id de la categoría es obligatorio")
     @Min(value = 1, message = "El id de la categoría debe ser mayor o igual a 1")

@@ -30,7 +30,7 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     .withProcedureName("SP_obtener_detalles_guia_entrada");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado(),
+                    "status", option.getEstado(),
                     "id_almacen", option.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
@@ -106,14 +106,14 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
     }
 
     @Override
-    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestDetalleGuiaEntradaIdDTO id) {
+    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestDetalleGuiaEntradaFilterDTO id) {
         ResponseDetalleGuiaEntradaDTO rp = new ResponseDetalleGuiaEntradaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_detalle_guia_entrada_por_id");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_guia_entrada", id.getIdDetalleGuiaEntrada());
+                    "id_detalle_guia_entrada", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -182,7 +182,8 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     .withProcedureName("SP_activar_detalle_guia_entrada");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_guia_entrada", id.getIdDetalleGuiaEntrada());
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_guia_entrada", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -221,7 +222,8 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     .withProcedureName("SP_desactivar_detalle_guia_entrada");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_guia_entrada", id.getIdDetalleGuiaEntrada());
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_guia_entrada", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -259,6 +261,7 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     .withProcedureName("SP_actualizar_detalle_guia_entrada");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDetalleGuiaEntrada.getIdLogin(),
                     "id_detalle_guia_entrada", objDetalleGuiaEntrada.getIdDetalleGuiaEntrada(),
                     "id_guia_entrada", objDetalleGuiaEntrada.getIdGuiaEntrada(),
                     "fecha_vencimiento_producto", objDetalleGuiaEntrada.getFechaVencimientoProducto(),
@@ -304,6 +307,7 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     .withProcedureName("SP_insertar_detalle_guia_entrada");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDetalleGuiaEntrada.getIdLogin(),
                     "id_guia_entrada", objDetalleGuiaEntrada.getIdGuiaEntrada(),
                     "fecha_vencimiento_producto", objDetalleGuiaEntrada.getFechaVencimientoProducto(),
                     "id_producto", objDetalleGuiaEntrada.getIdProducto(),

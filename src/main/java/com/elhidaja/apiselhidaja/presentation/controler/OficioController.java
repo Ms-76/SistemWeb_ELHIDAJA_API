@@ -25,7 +25,7 @@ public class OficioController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleOficioDTO> getByIdOficio(
-            @Valid @RequestBody RequestOficioIdDTO id) {
+            @Valid @RequestBody RequestOficioFilterDTO id) {
         return ResponseEntity.ok(oficioService.getByIdSer(id));
     }
 

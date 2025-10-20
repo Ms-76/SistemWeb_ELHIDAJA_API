@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
+import com.elhidaja.apiselhidaja.presentation.dto.rol.Request.RequestRolFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.rol.Request.RequestRolIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.rol.Request.RequestRolInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.rol.Request.RequestRolOptionDTO;
@@ -34,7 +35,7 @@ public class RolRepository implements RolDAO {
                     .withProcedureName("SP_obtener_roles");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -62,7 +63,7 @@ public class RolRepository implements RolDAO {
     }
 
     @Override
-    public ResponseDetalleRolDTO getByIdD(RequestRolIdDTO id) {
+    public ResponseDetalleRolDTO getByIdD(RequestRolFilterDTO id) {
         ResponseDetalleRolDTO rp = new ResponseDetalleRolDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -116,6 +117,7 @@ public class RolRepository implements RolDAO {
                     .withProcedureName("SP_activar_rol");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_rol", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -153,6 +155,7 @@ public class RolRepository implements RolDAO {
                     .withProcedureName("SP_desactivar_rol");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_rol", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -190,6 +193,7 @@ public class RolRepository implements RolDAO {
                     .withProcedureName("SP_actualizar_rol");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objRol.getIdLogin(),
                     "id_rol", objRol.getId(),
                     "nombre", objRol.getNombre());
 
@@ -228,6 +232,7 @@ public class RolRepository implements RolDAO {
                     .withProcedureName("SP_insertar_rol");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objRol.getIdLogin(),
                     "nombre", objRol.getNombre());
 
             Map<String, Object> result = call.execute(inParams);

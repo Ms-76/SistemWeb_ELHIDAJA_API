@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.area.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,7 +14,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin","id", "nombre" })
 public class RequestAreaUpdateDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+    
     @NotNull(message = "El id del área es obligatorio")
     @Min(value = 1, message = "El id del área debe ser mayor o igual a 1")
     private Long id;

@@ -1,4 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
+
 import com.elhidaja.apiselhidaja.presentation.dto.distrito.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.DistritoDAO;
 
@@ -13,7 +14,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.distrito.Request.*;
 
 @Repository
 public class DistritoRepository implements DistritoDAO {
-      private final JdbcTemplate jdbc;
+    private final JdbcTemplate jdbc;
 
     public DistritoRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +28,7 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_obtener_distritos");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -58,7 +59,7 @@ public class DistritoRepository implements DistritoDAO {
     }
 
     @Override
-    public ResponseDetalleDistritoDTO getByIdD(RequestDistritoIdDTO id) {
+    public ResponseDetalleDistritoDTO getByIdD(RequestDistritoFilterDTO id) {
         ResponseDetalleDistritoDTO rp = new ResponseDetalleDistritoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -114,6 +115,7 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_activar_distrito");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_distrito", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -152,6 +154,7 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_desactivar_distrito");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_distrito", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -190,6 +193,7 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_actualizar_distrito");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDistrito.getIdLogin(),
                     "id_distrito", objDistrito.getId(),
                     "nombre", objDistrito.getNombre(),
                     "id_provincia", objDistrito.getIdProvincia());
@@ -229,6 +233,7 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_insertar_distrito");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDistrito.getIdLogin(),
                     "nombre", objDistrito.getNombre(),
                     "id_provincia", objDistrito.getIdProvincia());
 

@@ -27,7 +27,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
                     .withProcedureName("SP_obtener_tipo_documentos");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
             Map<String, Object> result = call.execute(inParams);
 
             @SuppressWarnings("unchecked")
@@ -55,7 +55,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
     }
 
     @Override
-    public ResponseDetalleTipoDocumentoDTO getByIdD(RequestTipoDocumentoIdDTO id) {
+    public ResponseDetalleTipoDocumentoDTO getByIdD(RequestTipoDocumentoFilterDTO id) {
         ResponseDetalleTipoDocumentoDTO rp = new ResponseDetalleTipoDocumentoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -110,6 +110,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
                     .withProcedureName("SP_activar_tipo_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_tipo_documento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -148,6 +149,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
                     .withProcedureName("SP_desactivar_tipo_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_tipo_documento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -186,6 +188,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
                     .withProcedureName("SP_actualizar_tipo_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objTipoDocumento.getIdLogin(),
                     "id_tipo_documento", objTipoDocumento.getId(),
                     "nombre", objTipoDocumento.getNombre());
 
@@ -224,6 +227,7 @@ public class TipoDocumentoRepository implements TipoDocumentoDAO {
                     .withProcedureName("SP_insertar_tipo_documento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objTipoDocumento.getIdLogin(),
                     "nombre", objTipoDocumento.getNombre());
 
             Map<String, Object> result = call.execute(inParams);

@@ -26,7 +26,7 @@ public class RolController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleRolDTO> getByIdRol(
-            @Valid @RequestBody RequestRolIdDTO id) {
+            @Valid @RequestBody RequestRolFilterDTO id) {
         return ResponseEntity.ok(rolService.getByIdSer(id));
     }
 

@@ -1,13 +1,19 @@
 package com.elhidaja.apiselhidaja.presentation.dto.estante.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@JsonPropertyOrder({ "idLogin","id", "codigo", "descripcion" })
 public class RequestEstanteUpdateDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El id_estante es obligatorio")
     @Min(value = 1, message = "El id del estante debe ser mayor o igual a 1")
     private Long id;

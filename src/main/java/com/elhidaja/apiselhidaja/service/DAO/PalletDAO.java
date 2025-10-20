@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.pallet.Response.*;
 public interface PalletDAO {
        ResponsePalletAllDTO getAllD(RequestPalletOptionDTO option);
 
-    ResponseDetallePalletDTO getByIdD(RequestPalletIdDTO id);
+    ResponseDetallePalletDTO getByIdD(RequestPalletFilterDTO id);
 
     ResponserPalletMensajeDTO desactivateD(RequestPalletIdDTO id);
 

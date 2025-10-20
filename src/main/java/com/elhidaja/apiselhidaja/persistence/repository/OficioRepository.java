@@ -28,7 +28,7 @@ public class OficioRepository implements OficioDAO {
                     .withProcedureName("SP_obtener_oficios");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class OficioRepository implements OficioDAO {
     }
 
     @Override
-    public ResponseDetalleOficioDTO getByIdD(RequestOficioIdDTO id) {
+    public ResponseDetalleOficioDTO getByIdD(RequestOficioFilterDTO id) {
         ResponseDetalleOficioDTO rp = new ResponseDetalleOficioDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -112,6 +112,7 @@ public class OficioRepository implements OficioDAO {
                     .withProcedureName("SP_activar_oficio");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_oficio", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -151,6 +152,7 @@ public class OficioRepository implements OficioDAO {
                     .withProcedureName("SP_desactivar_oficio");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_oficio", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -189,6 +191,7 @@ public class OficioRepository implements OficioDAO {
                     .withProcedureName("SP_insertar_oficio");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objOficio.getIdLogin(),
                     "nombre", objOficio.getNombre());
 
             Map<String, Object> result = call.execute(inParams);
@@ -230,6 +233,7 @@ public class OficioRepository implements OficioDAO {
                     .withProcedureName("SP_actualizar_oficio");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objOficio.getIdLogin(),
                     "id_oficio", objOficio.getId(),
                     "nombre", objOficio.getNombre());
 

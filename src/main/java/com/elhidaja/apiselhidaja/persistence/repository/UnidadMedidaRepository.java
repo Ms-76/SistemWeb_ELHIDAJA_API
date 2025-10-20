@@ -11,6 +11,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.Response
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaAllDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaOptionDTO;
@@ -32,7 +33,7 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_unidad_medidas");
 
-            Map<String, Object> inParams = Map.of("option", option.getOption());
+            Map<String, Object> inParams = Map.of("status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -61,7 +62,7 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
     }
 
     @Override
-    public ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaIdDTO id) {
+    public ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaFilterDTO id) {
         ResponseDetalleUnidadMedidaDTO rp = new ResponseDetalleUnidadMedidaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -115,6 +116,7 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
                     .withProcedureName("SP_actualizar_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
                     "id_unidad_medida", obj.getId(),
                     "nombre", obj.getNombre());
 
@@ -152,7 +154,9 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_insertar_unidad_medida");
 
-            Map<String, Object> inParams = Map.of("nombre", obj.getNombre());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
+                    "nombre", obj.getNombre());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -189,6 +193,7 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
                     .withProcedureName("SP_activar_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_unidad_medida", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -227,6 +232,7 @@ public class UnidadMedidaRepository implements UnidadMedidaDAO {
                     .withProcedureName("SP_desactivar_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_unidad_medida", id.getId());
 
             Map<String, Object> result = call.execute(inParams);

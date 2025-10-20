@@ -7,6 +7,7 @@ import com.elhidaja.apiselhidaja.persistence.repository.UnidadMedidaRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseDetalleUnidadMedidaDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaAllDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaOptionDTO;
@@ -41,7 +42,7 @@ public class UnidadMedidaService {
 
     @Transactional
 
-    public ResponseDetalleUnidadMedidaDTO getByIdSer(RequestUnidadMedidaIdDTO id) {
+    public ResponseDetalleUnidadMedidaDTO getByIdSer(RequestUnidadMedidaFilterDTO id) {
         return unidadRepo.getByIdD(id);
     }
 

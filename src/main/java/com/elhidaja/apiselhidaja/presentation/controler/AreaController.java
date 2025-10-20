@@ -26,7 +26,7 @@ public class AreaController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleAreaDTO> getByIdArea(
-            @Valid @RequestBody RequestAreaIdDTO id) {
+            @Valid @RequestBody RequestAreaFilterDTO id) {
         return ResponseEntity.ok(areaService.getByIdSer(id));
     }
 

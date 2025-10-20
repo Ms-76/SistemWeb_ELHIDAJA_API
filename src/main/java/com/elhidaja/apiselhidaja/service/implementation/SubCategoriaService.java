@@ -4,9 +4,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.elhidaja.apiselhidaja.persistence.repository.SubCategoriaRepository;
+import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectId;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponseDetalleSubCategoriaDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponseSubCategoriAllDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponserSubCategoriaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.RequestSubCategoriaFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.RequestSubCategoriaIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.RequestSubCategoriaInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.RequestSubCategoriaUpdateDTO;
@@ -36,7 +38,7 @@ public class SubCategoriaService {
     }
 
     @Transactional
-    public ResponseDetalleSubCategoriaDTO getByIdSer(RequestSubCategoriaIdDTO id) {
+    public ResponseDetalleSubCategoriaDTO getByIdSer(RequestSubCategoriaFilterDTO id) {
         return subCatRepo.getByIdD(id);
     }
 

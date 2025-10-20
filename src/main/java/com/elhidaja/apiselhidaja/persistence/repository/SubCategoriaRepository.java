@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
+import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectId;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 import com.elhidaja.apiselhidaja.service.DAO.SubCategoriaDAO;
@@ -22,13 +23,12 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
     @Override
     public ResponseSubCategoriAllDTO getAllD(ResquestSubCategoriaOptionDTO option) {
         ResponseSubCategoriAllDTO rp = new ResponseSubCategoriAllDTO();
-        System.out.println(option.getOption());
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_sub_categorias");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -58,7 +58,7 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
     }
 
     @Override
-    public ResponseDetalleSubCategoriaDTO getByIdD(RequestSubCategoriaIdDTO id) {
+    public ResponseDetalleSubCategoriaDTO getByIdD(RequestSubCategoriaFilterDTO id) {
         ResponseDetalleSubCategoriaDTO rp = new ResponseDetalleSubCategoriaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -111,6 +111,7 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
                     .withProcedureName("SP_insertar_sub_categoria");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", dto.getIdLogin(),
                     "id_categoria", dto.getIdCategoria(),
                     "nombre", dto.getNombre());
 
@@ -149,6 +150,7 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
                     .withProcedureName("SP_actualizar_sub_categoria");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", dto.getIdLogin(),
                     "id_sub_categoria", dto.getId(),
                     "nombre", dto.getNombre());
 
@@ -186,7 +188,9 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_activar_sub_categoria");
 
-            Map<String, Object> inParams = Map.of("id_sub_categoria", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_sub_categoria", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -223,6 +227,7 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
                     .withProcedureName("SP_desactivar_sub_categoria");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_sub_categoria", id.getId());
 
             Map<String, Object> result = call.execute(inParams);

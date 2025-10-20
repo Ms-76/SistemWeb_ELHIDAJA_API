@@ -2,13 +2,23 @@ package com.elhidaja.apiselhidaja.presentation.dto.usuario.Request;
 
 import lombok.Data;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
+import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectActionId;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @Data
-public class RequestUsuarioIdDTO {
+@JsonPropertyOrder({ "idLogin", "idUsuario" })
+public class RequestUsuarioIdDTO extends RequestObjectActionId {
+    @Override
+    @JsonProperty("idUsuario") 
+    public Long getId() {
+        return super.getId();
+    }
 
-    @NotNull(message = "El idUsuario es obligatorio")
-    @Min(value = 1, message = "El id del usuario debe ser mayor o igual a 1")
-    private Long id;
+    @Override
+    @JsonProperty("idUsuario") 
+    public void setId(Long idProducto) {
+        super.setId(idProducto);
+    }
+
 }

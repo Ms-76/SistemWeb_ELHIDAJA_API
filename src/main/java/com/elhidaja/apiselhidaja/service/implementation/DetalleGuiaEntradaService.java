@@ -30,7 +30,7 @@ public class DetalleGuiaEntradaService {
     }
 
     @Transactional
-    public ResponseDetalleGuiaEntradaDTO getByIdSer(RequestDetalleGuiaEntradaIdDTO id) {
+    public ResponseDetalleGuiaEntradaDTO getByIdSer(RequestDetalleGuiaEntradaFilterDTO id) {
         return detalleRepo.getByIdD(id);
     }
 

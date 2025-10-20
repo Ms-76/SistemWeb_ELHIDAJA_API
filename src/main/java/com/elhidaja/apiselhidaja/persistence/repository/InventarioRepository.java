@@ -28,7 +28,7 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_obtener_inventarios");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -58,7 +58,7 @@ public class InventarioRepository implements InventarioDAO {
     }
 
     @Override
-    public ResponseDetalleInventarioDTO getByIdD(RequestInventarioIdDTO id) {
+    public ResponseDetalleInventarioDTO getByIdD(RequestInventarioFilterDTO id) {
         ResponseDetalleInventarioDTO rp = new ResponseDetalleInventarioDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -115,6 +115,7 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_desactivar_inventario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -154,6 +155,7 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_activar_inventario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -193,6 +195,7 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_insertar_inventario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objInventario.getIdLogin(),
                     "fecha", objInventario.getFecha(),
                     "descripcion", objInventario.getDescripcion(),
                     "id_usuario", objInventario.getIdUsuario());
@@ -234,6 +237,7 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_actualizar_inventario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objInventario.getIdLogin(),
                     "id_inventario", objInventario.getId(),
                     "fecha", objInventario.getFecha(),
                     "descripcion", objInventario.getDescripcion(),

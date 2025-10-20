@@ -32,7 +32,7 @@ public class AlmacenController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleAlmacenDTO> getByIdAlmacen(
-            @Valid @RequestBody RequestAlmacenIdDTO id) {
+            @Valid @RequestBody RequestAlmacenFilterDTO id) {
         return ResponseEntity.ok(almacenService.getByIdSer(id));
     }
 

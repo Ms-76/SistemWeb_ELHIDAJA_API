@@ -29,7 +29,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_obtener_detalle_inventarios");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -69,14 +69,14 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
     }
 
     @Override
-    public ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioIdDTO id) {
+    public ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioFilterDTO id) {
         ResponseDetalleInventarioDTO rp = new ResponseDetalleInventarioDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_detalle_inventario_por_id");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_inventario", id.getIdDetalleInventario());
+                    "id_detalle_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -136,7 +136,8 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_activar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_inventario", id.getIdDetalleInventario());
+                "id_usuario_sign", id.getIdLogin(),  
+                    "id_detalle_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -175,7 +176,8 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_desactivar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
-                    "id_detalle_inventario", id.getIdDetalleInventario());
+                "id_usuario_sign", id.getIdLogin(),  
+                    "id_detalle_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -213,6 +215,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_actualizar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
+                "id_usuario_sign", objDetalleInventario.getIdLogin(),  
                     "id_detalle_inventario", objDetalleInventario.getId(),
                     "stock_fisico", objDetalleInventario.getStockFisico(),
                     "diferencia", objDetalleInventario.getDiferencia(),

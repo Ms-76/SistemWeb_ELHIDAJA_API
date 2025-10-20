@@ -1,12 +1,18 @@
 package com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "nombre", "descripcion", "longitud", "tipoDocumento" })
 public class RequestDocumentoIdentidadInsertDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Size(max = 10, message = "El nombre debe tener máximo 10 caracteres")

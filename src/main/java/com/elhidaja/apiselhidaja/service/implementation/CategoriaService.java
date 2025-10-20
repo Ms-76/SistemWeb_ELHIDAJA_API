@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.CategoriaRepository;
+import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectId;
 import com.elhidaja.apiselhidaja.presentation.dto.categoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.categoria.Resquest.*;
 import com.elhidaja.apiselhidaja.service.implementation.CategoriaService;
@@ -35,7 +36,7 @@ public class CategoriaService {
     }
 
     @Transactional
-    public ResponseDetalleCategoriaDTO getByIdSer(RequesteCategoriaIdDTO id) {
+    public ResponseDetalleCategoriaDTO getByIdSer(RequestCategoriaFilterDTO id) {
        
         return catRepo.getByIdD(id);
     }

@@ -27,9 +27,8 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_obtener_pallets");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen()
-                    );
+                    "status", option.getEstado(),
+                    "id_almacen", option.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -61,7 +60,7 @@ public class PalletRepository implements PalletDAO {
     }
 
     @Override
-    public ResponseDetallePalletDTO getByIdD(RequestPalletIdDTO id) {
+    public ResponseDetallePalletDTO getByIdD(RequestPalletFilterDTO id) {
         ResponseDetallePalletDTO rp = new ResponseDetallePalletDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -120,6 +119,7 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_activar_pallet");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_pallet", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -158,6 +158,7 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_desactivar_pallet");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_pallet", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -196,11 +197,11 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_actualizar_pallet");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objPallet.getIdLogin(),
                     "id_pallet", objPallet.getId(),
                     "codigo", objPallet.getCodigo(),
                     "descripcion", objPallet.getDescripcion(),
-                    "id_estante", objPallet.getIdEstante()
-                    );
+                    "id_estante", objPallet.getIdEstante());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -237,6 +238,7 @@ public class PalletRepository implements PalletDAO {
                     .withProcedureName("SP_insertar_pallet");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objPallet.getIdLogin(),
                     "codigo", objPallet.getCodigo(),
                     "descripcion", objPallet.getDescripcion(),
                     "id_estante", objPallet.getIdEstante());

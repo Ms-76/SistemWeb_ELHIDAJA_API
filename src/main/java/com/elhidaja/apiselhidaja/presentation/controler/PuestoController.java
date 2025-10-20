@@ -26,7 +26,7 @@ public class PuestoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetallePuestoDTO> getByIdPuesto(
-            @Valid @RequestBody RequestPuestoIdDTO id) {
+            @Valid @RequestBody RequestPuestoFilterDTO id) {
         return ResponseEntity.ok(puestoService.getByIdSer(id));
     }
 

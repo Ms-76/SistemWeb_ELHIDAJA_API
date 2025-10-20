@@ -12,8 +12,8 @@ import com.elhidaja.apiselhidaja.presentation.dto.documentoOperacion.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.DocumentoOperacionDAO;
 
 @Repository
-public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
-       private final JdbcTemplate jdbc;
+public class DocumentoOperacionRepository implements DocumentoOperacionDAO {
+    private final JdbcTemplate jdbc;
 
     public DocumentoOperacionRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -24,9 +24,9 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
         ResponseDocumentoOperacionAllDTO rp = new ResponseDocumentoOperacionAllDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_obtener_documentos_operacion");
+                    .withProcedureName("SP_obtener_documentos_operacion");
 
-            Map<String, Object> inParams = Map.of("option", option.getEstado());
+            Map<String, Object> inParams = Map.of("status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -58,11 +58,11 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
     }
 
     @Override
-    public ResponseDetalleDocumentoOperacionDTO getByIdD(RequestDocumentoOperacionIdDTO id) {
+    public ResponseDetalleDocumentoOperacionDTO getByIdD(RequestDocumentoOperacionFilterDTO id) {
         ResponseDetalleDocumentoOperacionDTO rp = new ResponseDetalleDocumentoOperacionDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_obtener_documento_operacion_por_id");
+                    .withProcedureName("SP_obtener_documento_operacion_por_id");
 
             Map<String, Object> inParams = Map.of("id_documento_operacion", id.getId());
 
@@ -110,17 +110,19 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
         ResponseDocumentoOperacionMensajeDTO rp = new ResponseDocumentoOperacionMensajeDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_activar_documento_operacion");
+                    .withProcedureName("SP_activar_documento_operacion");
 
-            Map<String, Object> inParams = Map.of("id_documento_operacion", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_documento_operacion", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                .findFirst()
-                .orElse(null);
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
 
             if (resultSet != null) {
                 Map<String, Object> errorRow = resultSet.get(0);
@@ -146,17 +148,19 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
         ResponseDocumentoOperacionMensajeDTO rp = new ResponseDocumentoOperacionMensajeDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_desactivar_documento_operacion");
+                    .withProcedureName("SP_desactivar_documento_operacion");
 
-            Map<String, Object> inParams = Map.of("id_documento_operacion", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_documento_operacion", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                .findFirst()
-                .orElse(null);
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
 
             if (resultSet != null) {
                 Map<String, Object> errorRow = resultSet.get(0);
@@ -182,23 +186,23 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
         ResponseDocumentoOperacionMensajeDTO rp = new ResponseDocumentoOperacionMensajeDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_actualizar_documento_operacion");
+                    .withProcedureName("SP_actualizar_documento_operacion");
 
             Map<String, Object> inParams = Map.of(
-                "id_documento_operacion", objDocumentoOperacion.getId(),
-                "id_tipo_documento", objDocumentoOperacion.getId_tipo_documento(),
-                "id_tipo_operacion", objDocumentoOperacion.getId_tipo_operacion(),
-                "codigo_sunat", objDocumentoOperacion.getCodigo_sunat(),
-                "codigo_interno", objDocumentoOperacion.getCodigo_interno()
-            );
+                    "id_usuario_sign", objDocumentoOperacion.getIdLogin(),
+                    "id_documento_operacion", objDocumentoOperacion.getId(),
+                    "id_tipo_documento", objDocumentoOperacion.getId_tipo_documento(),
+                    "id_tipo_operacion", objDocumentoOperacion.getId_tipo_operacion(),
+                    "codigo_sunat", objDocumentoOperacion.getCodigo_sunat(),
+                    "codigo_interno", objDocumentoOperacion.getCodigo_interno());
 
             Map<String, Object> result = call.execute(inParams);
 
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                .findFirst()
-                .orElse(null);
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
 
             if (resultSet != null) {
                 Map<String, Object> errorRow = resultSet.get(0);
@@ -223,22 +227,22 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO  {
         ResponseDocumentoOperacionMensajeDTO rp = new ResponseDocumentoOperacionMensajeDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                .withProcedureName("SP_insertar_documento_operacion");
+                    .withProcedureName("SP_insertar_documento_operacion");
 
             Map<String, Object> inParams = Map.of(
-                "id_tipo_documento", objDocumentoOperacion.getId_tipo_documento(),
-                "id_tipo_operacion", objDocumentoOperacion.getId_tipo_operacion(),
-                "codigo_sunat", objDocumentoOperacion.getCodigo_sunat(),
-                "codigo_interno", objDocumentoOperacion.getCodigo_interno()
-            );
+                    "id_usuario_sign", objDocumentoOperacion.getIdLogin(),
+                    "id_tipo_documento", objDocumentoOperacion.getId_tipo_documento(),
+                    "id_tipo_operacion", objDocumentoOperacion.getId_tipo_operacion(),
+                    "codigo_sunat", objDocumentoOperacion.getCodigo_sunat(),
+                    "codigo_interno", objDocumentoOperacion.getCodigo_interno());
 
             Map<String, Object> result = call.execute(inParams);
 
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                .findFirst()
-                .orElse(null);
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
 
             if (resultSet != null) {
                 Map<String, Object> errorRow = resultSet.get(0);

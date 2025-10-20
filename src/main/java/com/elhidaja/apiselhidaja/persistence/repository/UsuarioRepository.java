@@ -28,7 +28,7 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_obtener_usuarios");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -67,7 +67,7 @@ public class UsuarioRepository implements UsuarioDAO {
     }
 
     @Override
-    public ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioIdDTO id) {
+    public ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioFilterDTO id) {
         ResponseDetalleUsuarioDTO rp = new ResponseDetalleUsuarioDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -132,6 +132,7 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_activar_usuario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_usuario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -169,6 +170,7 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_desactivar_usuario");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_usuario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -206,6 +208,8 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_actualizar_usuario");
 
             Map<String, Object> inParams = new HashMap<>();
+            inParams.put("id_usuario_sign", objUsuario.getIdLogin());
+            inParams.put("id_usuario", objUsuario.getId());
             inParams.put("numero_documento", objUsuario.getNumeroDocumento());
             inParams.put("nombres", objUsuario.getNombres());
             inParams.put("id_documento_identidad", objUsuario.getIdDocumentoIdentidad());
@@ -256,6 +260,7 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_insertar_usuario");
 
             Map<String, Object> inParams = new HashMap<>();
+            inParams.put("id_usuario_sign", objUsuario.getIdLogin());
             inParams.put("numero_documento", objUsuario.getNumeroDocumento());
             inParams.put("nombres", objUsuario.getNombres());
             inParams.put("id_documento_identidad", objUsuario.getIdDocumentoIdentidad());

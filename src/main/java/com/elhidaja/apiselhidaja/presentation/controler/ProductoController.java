@@ -26,7 +26,7 @@ public class ProductoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleProductoDTO> getProductoById(
-            @Valid @RequestBody RequestProductoIdDTO id) {
+            @Valid @RequestBody RequestProductoFilterDTO id) {
         return ResponseEntity.ok(productoService.getByIdSer(id));
     }
 

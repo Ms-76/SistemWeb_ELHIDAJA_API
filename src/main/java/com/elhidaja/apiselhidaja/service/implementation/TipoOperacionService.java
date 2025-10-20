@@ -32,7 +32,7 @@ public class TipoOperacionService {
     }
 
     @Transactional
-    public ResponseDetalleTipoOperacionDTO getByIdSer(RequestTipoOperacionIdDTO id) {
+    public ResponseDetalleTipoOperacionDTO getByIdSer(RequestTipoOperacionFilterDTO id) {
         return tipoOperacionRepo.getByIdD(id);
     }
 

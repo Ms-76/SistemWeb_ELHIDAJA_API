@@ -5,7 +5,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.usuario.Response.*;
 public interface UsuarioDAO {
     public ResponseUsuarioAllDTO getAllD(RequestUsuarioOptionDTO option);
 
-    public ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioIdDTO id);
+    public ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioFilterDTO id);
 
     public ResponseUsuarioMensajeDTO desactivateD(RequestUsuarioIdDTO id);
 

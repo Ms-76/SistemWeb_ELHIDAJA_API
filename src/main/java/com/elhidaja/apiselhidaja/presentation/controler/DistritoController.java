@@ -24,7 +24,7 @@ public class DistritoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleDistritoDTO> getByIdDistrito(
-            @Valid @RequestBody RequestDistritoIdDTO id) {
+            @Valid @RequestBody RequestDistritoFilterDTO id) {
         return ResponseEntity.ok(distritoService.getByIdSer(id));
     }
 

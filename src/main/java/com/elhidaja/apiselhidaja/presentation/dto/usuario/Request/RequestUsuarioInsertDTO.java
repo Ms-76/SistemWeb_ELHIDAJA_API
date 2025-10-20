@@ -3,6 +3,7 @@ package com.elhidaja.apiselhidaja.presentation.dto.usuario.Request;
 import java.time.LocalDate;
 
 import com.elhidaja.apiselhidaja.util.validationsPersonalisate.MayorDeEdad;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
 import lombok.*;
@@ -10,7 +11,13 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin",  "numeroDocumento", "nombres", "idDocumentoIdentidad", "direccion", "telefono",
+        "email", "idDistrito", "idEstadoCivil", "fechaNacimiento", "idGenero", "password", "idArea", "idNivelAcademico",
+        "idOficio", "idPuesto", "idRol" })
 public class RequestUsuarioInsertDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
 
     @NotBlank(message = "El número de documento no puede estar vacío")
     @Size(max = 50, message = "El número de documento no debe exceder 50 caracteres")
@@ -19,16 +26,16 @@ public class RequestUsuarioInsertDTO {
 
     @NotBlank(message = "Los nombres no pueden estar vacíos")
     @Size(max = 255, message = "Los nombres no deben exceder 255 caracteres")
-    @Pattern(regexp = "^[a-zA-ZÁÉÍÓÚáéíóúÑñ\\s]+$", message = "Los nombres solo deben contener letras y espacios")   
-    private String nombres; 
-    
+    @Pattern(regexp = "^[a-zA-ZÁÉÍÓÚáéíóúÑñ\\s]+$", message = "Los nombres solo deben contener letras y espacios")
+    private String nombres;
+
     @NotNull(message = "El ID del documento de identidad es obligatorio")
-    @Min(value = 1, message = "ID de documento de identidad no válido")           
-    private Integer idDocumentoIdentidad; 
-    
+    @Min(value = 1, message = "ID de documento de identidad no válido")
+    private Integer idDocumentoIdentidad;
+
     @NotBlank(message = "La dirección no puede estar vacía")
     @Size(max = 150, message = "La dirección no debe exceder 150 caracteres")
-    private String direccion;     
+    private String direccion;
 
     @NotBlank(message = "El teléfono no puede estar vacío")
     @Size(max = 20, message = "El teléfono no debe exceder 20 caracteres")

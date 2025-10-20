@@ -27,7 +27,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_obtener_proveedores");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -64,7 +64,7 @@ public class ProveedorRepository implements ProveedorDAO {
     }
 
     @Override
-    public ResponseDetalleProveedorDTO getByIdD(RequestProveedorIdDTO id) {
+    public ResponseDetalleProveedorDTO getByIdD(RequestProveedorFilterDTO id) {
         ResponseDetalleProveedorDTO rp = new ResponseDetalleProveedorDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -127,6 +127,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_activar_proveedor");
 
             Map<String, Object> inParams = Map.of(
+                "id_usuario_sign", id.getIdLogin(),  
                     "id_proveedor", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -166,6 +167,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_desactivar_proveedor");
 
             Map<String, Object> inParams = Map.of(
+                "id_usuario_sign", id.getIdLogin(),  
                     "id_proveedor", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -205,6 +207,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_insertar_proveedor");
 
             Map<String, Object> inParams = Map.of(
+                "id_usuario_sign", objProveedor.getIdLogin(),  
                     "numero_documento", objProveedor.getNumeroDocumento(),
                     "nombres", objProveedor.getNombres(),
                     "id_documento_identidad", objProveedor.getIdDocumentoIdentidad(),

@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.producto.Response.*;
 public interface ProductoDAO {
      ResponseProductoAllDTO getAllD(RequestProductoOptionDTO option);
 
-    ResponseDetalleProductoDTO getByIdD(RequestProductoIdDTO id);
+    ResponseDetalleProductoDTO getByIdD(RequestProductoFilterDTO id);
 
     ResponseProductoMensajeDTO insertD(RequestProductoInsertDTO objProducto);
 

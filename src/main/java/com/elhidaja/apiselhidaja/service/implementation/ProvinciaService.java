@@ -32,7 +32,7 @@ public class ProvinciaService {
     }
 
     @Transactional
-    public ResponseDetalleProvinciaDTO getByIdSer(RequestProvinciaIdDTO id) {
+    public ResponseDetalleProvinciaDTO getByIdSer(RequestProvinciaFilterDTO id) {
         return provinciaRepo.getByIdD(id);
     }
 

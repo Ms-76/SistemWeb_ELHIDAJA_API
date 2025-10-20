@@ -24,7 +24,7 @@ public class TipoOperacionController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleTipoOperacionDTO> getByIdTipoOperacion(
-            @Valid @RequestBody RequestTipoOperacionIdDTO id) {
+            @Valid @RequestBody RequestTipoOperacionFilterDTO id) {
         return ResponseEntity.ok(tipoOperacionService.getByIdSer(id));
     }
 

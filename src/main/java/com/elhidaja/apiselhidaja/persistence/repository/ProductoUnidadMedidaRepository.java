@@ -27,7 +27,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
                     .withProcedureName("SP_obtener_producto_unidad_medidas");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "status", option.getOption());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
     }
 
     @Override
-    public ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestProductoUnidadMedidaIdDTO id) {
+    public ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestUnidadMedidaProductoFilterDTO id) {
         ResponseDetalleProductoUnidadMedidaDTO rp = new ResponseDetalleProductoUnidadMedidaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -114,6 +114,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
                     .withProcedureName("SP_activar_producto_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_producto_unidad_medida", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -153,6 +154,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
                     .withProcedureName("SP_desactivar_producto_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_producto_unidad_medida", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -191,6 +193,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
                     .withProcedureName("SP_actualizar_producto_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
                     "id_producto_unidad_medida", obj.getId(),
                     "id_unidad_medida", obj.getIdUnidadMedida());
 
@@ -230,6 +233,7 @@ public class ProductoUnidadMedidaRepository implements UnidadMedidaProductoDAO {
                     .withProcedureName("SP_insertar_producto_unidad_medida");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
                     "id_producto", obj.getId_producto(),
                     "id_unidad_medida", obj.getId_unidad_medida());
 

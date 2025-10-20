@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.proveedor.Response.*;
 public interface ProveedorDAO {
     public ResponseProveedorAllDTO getAllD(RequestProveedorOptionDTO option);
 
-    public ResponseDetalleProveedorDTO getByIdD(RequestProveedorIdDTO id);
+    public ResponseDetalleProveedorDTO getByIdD(RequestProveedorFilterDTO id);
 
     public ResponseProveedorMensajeDTO desactivateD(RequestProveedorIdDTO id);
 

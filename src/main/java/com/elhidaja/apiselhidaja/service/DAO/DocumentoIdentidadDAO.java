@@ -6,7 +6,7 @@ public interface DocumentoIdentidadDAO {
 
     public ResponseDocumentoIdentidadAllDTO getAllD(RequestDocumentoIdentidadOptionDTO option);
 
-    public ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadIdDTO id);
+    public ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadFilterDTO id);
 
     public ResponseDocumentoIdentidadMensajeDTO desactivateD(RequestDocumentoIdentidadIdDTO id);
 

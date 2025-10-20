@@ -14,7 +14,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({ FIELD })
 @Retention(RUNTIME)
 public @interface ValidOption {
-    String message() default "La opción no es válida solo validos 0 ,1 ,2";
+    String message() default "El estado no es valido solo se aceptan los valores 0 ,1 ,2";
 
     Class<?>[] groups() default {};
 

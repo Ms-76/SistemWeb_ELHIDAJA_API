@@ -33,7 +33,7 @@ public class DocumentoIdentidadService {
     }
 
     @Transactional
-    public ResponseDetalleDocumentoIdentidadDTO getByIdSer(RequestDocumentoIdentidadIdDTO id) {
+    public ResponseDetalleDocumentoIdentidadDTO getByIdSer(RequestDocumentoIdentidadFilterDTO id) {
         return docRepo.getByIdD(id);
     }
 

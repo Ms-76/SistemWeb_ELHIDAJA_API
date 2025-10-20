@@ -33,7 +33,7 @@ public class ProductoService {
     }
 
     @Transactional(readOnly = true)
-    public ResponseDetalleProductoDTO getByIdSer(RequestProductoIdDTO id) {
+    public ResponseDetalleProductoDTO getByIdSer(RequestProductoFilterDTO id) {
         return productoRepo.getByIdD(id);
     }
 

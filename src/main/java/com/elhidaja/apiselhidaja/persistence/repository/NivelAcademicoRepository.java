@@ -10,10 +10,11 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.NivelAcademicoDAO;
-@Repository
-public class NivelAcademicoRepository  implements NivelAcademicoDAO{
 
-        private final JdbcTemplate jdbc;
+@Repository
+public class NivelAcademicoRepository implements NivelAcademicoDAO {
+
+    private final JdbcTemplate jdbc;
 
     public NivelAcademicoRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +28,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
                     .withProcedureName("SP_obtener_niveles_academicos");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -56,7 +57,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
     }
 
     @Override
-    public ResponseDetalleNivelAcademicoDTO getByIdD(RequestNivelAcademicoIdDTO id) {
+    public ResponseDetalleNivelAcademicoDTO getByIdD(RequestNivelAcademicoFilterDTO id) {
         ResponseDetalleNivelAcademicoDTO rp = new ResponseDetalleNivelAcademicoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -110,6 +111,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
                     .withProcedureName("SP_activar_nivel_academico");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_nivel_academico", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -147,6 +149,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
                     .withProcedureName("SP_desactivar_nivel_academico");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_nivel_academico", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -184,6 +187,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
                     .withProcedureName("SP_actualizar_nivel_academico");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objNivel.getIdLogin(),
                     "id_nivel_academico", objNivel.getId(),
                     "nombre", objNivel.getNombre());
 
@@ -221,6 +225,7 @@ public class NivelAcademicoRepository  implements NivelAcademicoDAO{
                     .withProcedureName("SP_insertar_nivel_academico");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objNivel.getIdLogin(),
                     "nombre", objNivel.getNombre());
 
             Map<String, Object> result = call.execute(inParams);

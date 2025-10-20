@@ -12,8 +12,8 @@ import com.elhidaja.apiselhidaja.presentation.dto.serie.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.SerieDAO;
 
 @Repository
-public class SerieRepository implements SerieDAO{
-        private final JdbcTemplate jdbc;
+public class SerieRepository implements SerieDAO {
+    private final JdbcTemplate jdbc;
 
     public SerieRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +27,7 @@ public class SerieRepository implements SerieDAO{
                     .withProcedureName("SP_obtener_series");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -56,7 +56,7 @@ public class SerieRepository implements SerieDAO{
     }
 
     @Override
-    public ResponseDetalleSerieDTO getByIdD(RequestSerieIdDTO id) {
+    public ResponseDetalleSerieDTO getByIdD(RequestSerieFilterDTO id) {
         ResponseDetalleSerieDTO rp = new ResponseDetalleSerieDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -111,6 +111,7 @@ public class SerieRepository implements SerieDAO{
                     .withProcedureName("SP_activar_serie");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_serie", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -148,6 +149,7 @@ public class SerieRepository implements SerieDAO{
                     .withProcedureName("SP_desactivar_serie");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_serie", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -185,6 +187,7 @@ public class SerieRepository implements SerieDAO{
                     .withProcedureName("SP_actualizar_serie");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objSerie.getIdLogin(),
                     "id_serie", objSerie.getId(),
                     "serie", objSerie.getSerie(),
                     "descripcion", objSerie.getDescripcion());
@@ -224,6 +227,7 @@ public class SerieRepository implements SerieDAO{
                     .withProcedureName("SP_insertar_serie");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objSerie.getIdLogin(),
                     "serie", objSerie.getSerie(),
                     "descripcion", objSerie.getDescripcion());
 

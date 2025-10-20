@@ -26,7 +26,7 @@ public class NivelAcademicoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleNivelAcademicoDTO> getByIdNivelAcademico(
-            @Valid @RequestBody RequestNivelAcademicoIdDTO id) {
+            @Valid @RequestBody RequestNivelAcademicoFilterDTO id) {
         return ResponseEntity.ok(nivelAcademicoService.getByIdSer(id));
     }
 

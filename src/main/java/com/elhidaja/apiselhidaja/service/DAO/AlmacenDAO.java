@@ -6,7 +6,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.almacen.Request.*;
 public interface AlmacenDAO {
     public ResponseAlmacenAllDTO getAllD(RequestAlmacenOptionDTO option);
 
-    public ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenIdDTO id);
+    public ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenFilterDTO id);
 
     public ResponseAlmacenMensajeDTO desactivateD(RequestAlmacenIdDTO id);
 

@@ -33,7 +33,7 @@ public class AreaService {
     }
 
     @Transactional
-    public ResponseDetalleAreaDTO getByIdSer(RequestAreaIdDTO id) {
+    public ResponseDetalleAreaDTO getByIdSer(RequestAreaFilterDTO id) {
         return areaRepo.getByIdD(id);
     }
 

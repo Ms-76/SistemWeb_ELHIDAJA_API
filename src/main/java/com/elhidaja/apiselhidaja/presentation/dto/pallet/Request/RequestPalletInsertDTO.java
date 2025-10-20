@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.pallet.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,8 +14,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin", "codigo", "descripcion", "idEstante" })
 public class RequestPalletInsertDTO {
-    
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotBlank(message = "El código del pallet no puede estar vacío")
     @Pattern(regexp = "^[a-zA-Z0-9\\-\\s]+$", message = "El código del pallet solo puede contener letras, números, espacios y guiones")
     @Size(min = 1, max = 50, message = "El código del pallet debe tener máximo 50 caracteres")

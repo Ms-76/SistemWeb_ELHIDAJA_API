@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.*;
 public interface NivelAcademicoDAO {
     public ResponseNivelAcademicoAllDTO getAllD(RequestNivelAcademicoOptionDTO option);
 
-    public ResponseDetalleNivelAcademicoDTO getByIdD(RequestNivelAcademicoIdDTO id);
+    public ResponseDetalleNivelAcademicoDTO getByIdD(RequestNivelAcademicoFilterDTO id);
 
     public ResponseNivelAcademicoMensajeDTO desactivateD(RequestNivelAcademicoIdDTO id);
 

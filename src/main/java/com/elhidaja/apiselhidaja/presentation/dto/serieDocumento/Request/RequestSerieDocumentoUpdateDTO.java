@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.serieDocumento.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -7,7 +9,13 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
+@JsonPropertyOrder({ "idLogin","id","idSerie","idDocumentoOperacion","ultimoCorrelativo" })
 public class RequestSerieDocumentoUpdateDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El idSerieDocumento es obligatorio")
     @Min(value = 1, message = "El idSerieDocumento debe ser mayor o igual a 1")
     private Long id;

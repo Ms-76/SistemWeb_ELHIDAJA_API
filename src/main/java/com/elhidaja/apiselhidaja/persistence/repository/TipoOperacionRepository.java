@@ -13,7 +13,7 @@ import com.elhidaja.apiselhidaja.service.DAO.TipoOperacionDAO;
 
 @Repository
 public class TipoOperacionRepository implements TipoOperacionDAO {
-   private final JdbcTemplate jdbc;
+    private final JdbcTemplate jdbc;
 
     public TipoOperacionRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +27,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
                     .withProcedureName("SP_obtener_tipo_operaciones");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getOption());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
     }
 
     @Override
-    public ResponseDetalleTipoOperacionDTO getByIdD(RequestTipoOperacionIdDTO id) {
+    public ResponseDetalleTipoOperacionDTO getByIdD(RequestTipoOperacionFilterDTO id) {
         ResponseDetalleTipoOperacionDTO rp = new ResponseDetalleTipoOperacionDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -113,6 +113,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
                     .withProcedureName("SP_activar_tipo_operacion");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_tipo_operacion", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -151,6 +152,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
                     .withProcedureName("SP_desactivar_tipo_operacion");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_tipo_operacion", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -189,6 +191,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
                     .withProcedureName("SP_actualizar_tipo_operacion");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
                     "id_tipo_operacion", obj.getId(),
                     "nombre", obj.getNombre(),
                     "abreviatura", obj.getAbreviatura());
@@ -228,6 +231,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
                     .withProcedureName("SP_insertar_tipo_operacion");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", obj.getIdLogin(),
                     "nombre", obj.getNombre(),
                     "abreviatura", obj.getAbreviatura());
 
@@ -241,7 +245,7 @@ public class TipoOperacionRepository implements TipoOperacionDAO {
 
             if (resultSet != null) {
                 Map<String, Object> errorRow = resultSet.get(0);
-                 String mensajeError = (String) errorRow.get("mensaje");
+                String mensajeError = (String) errorRow.get("mensaje");
 
                 rp.setCodigo("400");
                 rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo registrar el tipo de operación.");

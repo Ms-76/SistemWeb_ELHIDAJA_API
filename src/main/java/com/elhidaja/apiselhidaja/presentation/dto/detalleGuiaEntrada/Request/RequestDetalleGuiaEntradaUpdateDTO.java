@@ -1,6 +1,9 @@
 package com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaEntrada.Request;
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -11,7 +14,14 @@ import jakarta.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
+@JsonPropertyOrder({ "idLogin", "idDetalleGuiaEntrada", "idGuiaEntrada", "fechaVencimientoProducto",
+        "idProducto", "cantidad", "idUnidadMedida", "observacion" })
 public class RequestDetalleGuiaEntradaUpdateDTO {
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
+
     @NotNull(message = "El idDetalleGuiaEntrada es obligatorio")
     @Min(value = 1, message = "El idDetalleGuiaEntrada debe ser mayor o igual a 1")
     private Integer idDetalleGuiaEntrada;

@@ -24,7 +24,7 @@ public class SerieController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleSerieDTO> getByIdSerie(
-            @Valid @RequestBody RequestSerieIdDTO id) {
+            @Valid @RequestBody RequestSerieFilterDTO id) {
         return ResponseEntity.ok(serieService.getByIdSer(id));
     }
 

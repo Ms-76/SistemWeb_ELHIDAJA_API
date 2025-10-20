@@ -5,7 +5,7 @@ public interface  AreaDAO {
     
     public ResponseAreaAllDTO getAllD(RequestAreaOptionDTO option);
 
-    public ResponseDetalleAreaDTO getByIdD(RequestAreaIdDTO id);
+    public ResponseDetalleAreaDTO getByIdD(RequestAreaFilterDTO id);
 
     public ResponseAreaMensajeDTO desactivateD(RequestAreaIdDTO id);
 

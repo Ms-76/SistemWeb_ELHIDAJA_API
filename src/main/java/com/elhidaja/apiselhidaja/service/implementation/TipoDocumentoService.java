@@ -33,7 +33,7 @@ public class TipoDocumentoService {
     }
 
     @Transactional
-    public ResponseDetalleTipoDocumentoDTO getByIdSer(RequestTipoDocumentoIdDTO id) {
+    public ResponseDetalleTipoDocumentoDTO getByIdSer(RequestTipoDocumentoFilterDTO id) {
         return tipoDocRepo.getByIdD(id);
     }
 

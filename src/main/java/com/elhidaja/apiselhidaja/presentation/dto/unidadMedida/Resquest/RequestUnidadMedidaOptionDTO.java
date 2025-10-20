@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class RequestUnidadMedidaOptionDTO {
 
-    @NotNull(message = "La opcion es obligatoria")
+    @NotNull(message = "El estado es obligatorio")
     @ValidOption
-    private Long option;
+    private Long estado;
 }

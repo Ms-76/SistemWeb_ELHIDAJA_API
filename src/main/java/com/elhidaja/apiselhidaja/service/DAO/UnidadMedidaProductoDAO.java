@@ -7,7 +7,7 @@ public interface UnidadMedidaProductoDAO {
 
     public ResponseProductoUnidadMedidaAllDTO getAllD(RequestProductoUnidadMedidaOptionDTO option);
 
-    public ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestProductoUnidadMedidaIdDTO id);
+    public ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestUnidadMedidaProductoFilterDTO id);
 
     public ResponserProductoUnidadMedidaMensajeDTO desactivateD(RequestProductoUnidadMedidaIdDTO id);
 

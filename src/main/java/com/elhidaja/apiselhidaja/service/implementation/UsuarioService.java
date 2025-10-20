@@ -33,7 +33,7 @@ public class UsuarioService {
     }
 
     @Transactional
-    public ResponseDetalleUsuarioDTO getByIdSer(RequestUsuarioIdDTO id) {
+    public ResponseDetalleUsuarioDTO getByIdSer(RequestUsuarioFilterDTO id) {
         return usuarioRepo.getByIdD(id);
     }
 

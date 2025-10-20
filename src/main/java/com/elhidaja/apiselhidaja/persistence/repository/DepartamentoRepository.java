@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.DepartamentoDAO;
+
 @Repository
 public class DepartamentoRepository implements DepartamentoDAO {
     private final JdbcTemplate jdbc;
@@ -25,7 +26,7 @@ public class DepartamentoRepository implements DepartamentoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_departamentos");
 
-            Map<String, Object> inParams = Map.of("option", option.getEstado());
+            Map<String, Object> inParams = Map.of("status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -54,7 +55,7 @@ public class DepartamentoRepository implements DepartamentoDAO {
     }
 
     @Override
-    public ResponseDetalleDepartamentoDTO getById(RequestDepartamentoIdDTO id) {
+    public ResponseDetalleDepartamentoDTO getById(RequestDepartamentoFilterDTO id) {
         ResponseDetalleDepartamentoDTO rp = new ResponseDetalleDepartamentoDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -106,7 +107,9 @@ public class DepartamentoRepository implements DepartamentoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_activar_departamento");
 
-            Map<String, Object> inParams = Map.of("id_departamento", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_departamento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -141,7 +144,9 @@ public class DepartamentoRepository implements DepartamentoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_desactivar_departamento");
 
-            Map<String, Object> inParams = Map.of("id_departamento", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_departamento", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -176,7 +181,9 @@ public class DepartamentoRepository implements DepartamentoDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_insertar_departamento");
 
-            Map<String, Object> inParams = Map.of("nombre", objDepartamento.getNombre());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDepartamento.getIdLogin(),
+                    "nombre", objDepartamento.getNombre());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -211,6 +218,7 @@ public class DepartamentoRepository implements DepartamentoDAO {
                     .withProcedureName("SP_actualizar_departamento");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objDepartamento.getIdLogin(),
                     "id_departamento", objDepartamento.getId(),
                     "nombre", objDepartamento.getNombre());
 

@@ -28,7 +28,7 @@ public class EstanteRepository implements EstanteDAO {
                     .withProcedureName("SP_obtener_estantes");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado(),
+                    "status", option.getEstado(),
                     "id_almacen", option.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
@@ -61,7 +61,7 @@ public class EstanteRepository implements EstanteDAO {
     }
 
     @Override
-    public ResponseDetalleEstanteDTO getByIdD(RequestEstanteIdDTO id) {
+    public ResponseDetalleEstanteDTO getByIdD(RequestEstanteFilterDTO id) {
         ResponseDetalleEstanteDTO rp = new ResponseDetalleEstanteDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -116,7 +116,9 @@ public class EstanteRepository implements EstanteDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_desactivar_estante");
 
-            Map<String, Object> inParams = Map.of("id_estante", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_estante", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -151,7 +153,9 @@ public class EstanteRepository implements EstanteDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_activar_estante");
 
-            Map<String, Object> inParams = Map.of("id_estante", id.getId());
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_estante", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -187,6 +191,7 @@ public class EstanteRepository implements EstanteDAO {
                     .withProcedureName("SP_insertar_estante");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objEstante.getIdLogin(),
                     "codigo", objEstante.getCodigo(),
                     "descripcion", objEstante.getDescripcion());
 
@@ -223,6 +228,7 @@ public class EstanteRepository implements EstanteDAO {
                     .withProcedureName("SP_actualizar_estante");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objEstante.getIdLogin(),
                     "id_estante", objEstante.getId(),
                     "codigo", objEstante.getCodigo(),
                     "descripcion", objEstante.getDescripcion());

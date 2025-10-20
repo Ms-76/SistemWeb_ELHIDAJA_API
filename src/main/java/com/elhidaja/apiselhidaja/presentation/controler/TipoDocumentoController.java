@@ -26,7 +26,7 @@ public class TipoDocumentoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleTipoDocumentoDTO> getByIdTipoDocumento(
-            @Valid @RequestBody RequestTipoDocumentoIdDTO id) {
+            @Valid @RequestBody RequestTipoDocumentoFilterDTO id) {
         return ResponseEntity.ok(tipoDocumentoService.getByIdSer(id));
     }
 

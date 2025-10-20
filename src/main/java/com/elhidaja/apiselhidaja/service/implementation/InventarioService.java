@@ -34,7 +34,7 @@ public class InventarioService {
     }
 
     @Transactional
-    public ResponseDetalleInventarioDTO getByIdSer(RequestInventarioIdDTO id) {
+    public ResponseDetalleInventarioDTO getByIdSer(RequestInventarioFilterDTO id) {
         return inventarioRepo.getByIdD(id);
     }
 

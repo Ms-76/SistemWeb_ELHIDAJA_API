@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.NivelAcademicoRepository;
+import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoOptionDTO;
@@ -38,7 +39,7 @@ public class NivelAcademicoService {
     }
 
     @Transactional
-    public ResponseDetalleNivelAcademicoDTO getByIdSer(RequestNivelAcademicoIdDTO id) {
+    public ResponseDetalleNivelAcademicoDTO getByIdSer(RequestNivelAcademicoFilterDTO id) {
         return nivelRepo.getByIdD(id);
     }
 

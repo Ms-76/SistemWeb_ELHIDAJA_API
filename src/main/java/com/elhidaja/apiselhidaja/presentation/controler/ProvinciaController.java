@@ -26,7 +26,7 @@ public class ProvinciaController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleProvinciaDTO> getByIdProvincia(
-            @Valid @RequestBody RequestProvinciaIdDTO id) {
+            @Valid @RequestBody RequestProvinciaFilterDTO id) {
         return ResponseEntity.ok(provinciaService.getByIdSer(id));
     }
 

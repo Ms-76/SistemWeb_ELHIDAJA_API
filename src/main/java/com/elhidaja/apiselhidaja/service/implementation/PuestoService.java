@@ -33,7 +33,7 @@ public class PuestoService {
     }
 
     @Transactional
-    public ResponseDetallePuestoDTO getByIdSer(RequestPuestoIdDTO id) {
+    public ResponseDetallePuestoDTO getByIdSer(RequestPuestoFilterDTO id) {
         return puestoRepo.getByIdD(id);
     }
 

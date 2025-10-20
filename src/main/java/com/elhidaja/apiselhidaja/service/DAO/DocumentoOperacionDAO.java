@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.documentoOperacion.Response.*;
 public interface DocumentoOperacionDAO {
     public ResponseDocumentoOperacionAllDTO getAllD(RequestDocumentoOperacionOptionDTO option);
 
-    public ResponseDetalleDocumentoOperacionDTO getByIdD(RequestDocumentoOperacionIdDTO id);
+    public ResponseDetalleDocumentoOperacionDTO getByIdD(RequestDocumentoOperacionFilterDTO id);
 
     public ResponseDocumentoOperacionMensajeDTO desactivateD(RequestDocumentoOperacionIdDTO id);
 

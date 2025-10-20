@@ -5,7 +5,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.rol.Response.*;
 public interface RolDAO {
     public ResponseRolAllDTO getAllD(RequestRolOptionDTO option);
 
-    public ResponseDetalleRolDTO getByIdD(RequestRolIdDTO id);
+    public ResponseDetalleRolDTO getByIdD(RequestRolFilterDTO id);
 
     public ResponseRolMensajeDTO deactivateD(RequestRolIdDTO id);
 

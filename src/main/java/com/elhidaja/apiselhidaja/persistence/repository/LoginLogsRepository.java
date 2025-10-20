@@ -27,7 +27,7 @@ public class LoginLogsRepository implements LoginLogsDAO {
                     .withProcedureName("SP_obtener_login_logs");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 

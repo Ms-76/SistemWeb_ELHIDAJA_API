@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.puesto.Response.*;
 public interface PuestoDAO {
     public ResponsePuestoAllDTO getAllD(RequestPuestoOptionDTO option);
 
-    public ResponseDetallePuestoDTO getByIdD(RequestPuestoIdDTO id);
+    public ResponseDetallePuestoDTO getByIdD(RequestPuestoFilterDTO id);
 
     public ResponsePuestoMensajeDTO desactivateD(RequestPuestoIdDTO id);
 

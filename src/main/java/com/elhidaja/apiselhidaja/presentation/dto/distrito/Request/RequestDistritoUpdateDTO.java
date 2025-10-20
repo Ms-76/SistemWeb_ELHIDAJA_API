@@ -1,5 +1,7 @@
 package com.elhidaja.apiselhidaja.presentation.dto.distrito.Request;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +10,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({ "idLogin","id", "nombre", "idProvincia" })
 public class RequestDistritoUpdateDTO {
+
+    @NotNull(message = "El idLogin es obligatorio")
+    @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
+    private Long idLogin;
     @NotNull(message = "El idDistrito es obligatorio")
     @Min(value = 1, message = "El id del distrito debe ser mayor o igual a 1")
     private Long id;

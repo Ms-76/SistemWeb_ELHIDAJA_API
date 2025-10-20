@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.inventario.Response.*;
 public interface InventarioDAO {
     public ResponseInventarioAllDTO getAllD(RequestInventarioOptionDTO option);
 
-    public ResponseDetalleInventarioDTO getByIdD(RequestInventarioIdDTO id);
+    public ResponseDetalleInventarioDTO getByIdD(RequestInventarioFilterDTO id);
 
     public ResponseInventarioMensajeDTO desactivateD(RequestInventarioIdDTO id);
 

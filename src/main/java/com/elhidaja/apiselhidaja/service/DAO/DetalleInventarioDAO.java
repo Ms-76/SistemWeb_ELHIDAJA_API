@@ -7,7 +7,7 @@ public interface DetalleInventarioDAO {
 
     public ResponseDetalleInventarioAllDTO getAllD(RequestDetalleInventarioOptionDTO option);
 
-    public ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioIdDTO id);
+    public ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioFilterDTO id);
 
     public ResponseDetalleInventarioMensajeDTO desactivateD(RequestDetalleInventarioIdDTO id);
 

@@ -5,7 +5,7 @@ public interface TipoOperacionDAO {
     
     public ResponseTipoOperacionAllDTO getAllD(RequestTipoOperacionOptionDTO option);
 
-    public ResponseDetalleTipoOperacionDTO getByIdD(RequestTipoOperacionIdDTO id);
+    public ResponseDetalleTipoOperacionDTO getByIdD(RequestTipoOperacionFilterDTO id);
 
     public ResponseTipoOperacionMensajeDTO desactivateD(RequestTipoOperacionIdDTO id);
 

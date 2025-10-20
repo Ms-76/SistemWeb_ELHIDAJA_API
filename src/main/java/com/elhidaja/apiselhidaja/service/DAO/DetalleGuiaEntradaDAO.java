@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaEntrada.Response.*;
 public interface DetalleGuiaEntradaDAO {
     public ResponseDetalleGuiaEntradaAllDTO getAllD(RequestDetalleGuiaEntradaOptionDTO option);
 
-    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestDetalleGuiaEntradaIdDTO id);
+    public ResponseDetalleGuiaEntradaDTO getByIdD(RequestDetalleGuiaEntradaFilterDTO id);
 
     public ResponseDetalleGuiaEntradaMensajeDTO desactivateD(RequestDetalleGuiaEntradaIdDTO id);
 

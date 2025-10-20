@@ -32,7 +32,7 @@ public class DistritoService {
     }
 
     @Transactional
-    public ResponseDetalleDistritoDTO getByIdSer(RequestDistritoIdDTO id) {
+    public ResponseDetalleDistritoDTO getByIdSer(RequestDistritoFilterDTO id) {
         return distritoRepo.getByIdD(id);
     }
 

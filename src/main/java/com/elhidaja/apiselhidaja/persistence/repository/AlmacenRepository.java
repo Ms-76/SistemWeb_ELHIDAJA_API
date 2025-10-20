@@ -12,8 +12,8 @@ import com.elhidaja.apiselhidaja.presentation.dto.almacen.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.AlmacenDAO;
 
 @Repository
-public class AlmacenRepository implements  AlmacenDAO  {
-        private final JdbcTemplate jdbc;
+public class AlmacenRepository implements AlmacenDAO {
+    private final JdbcTemplate jdbc;
 
     public AlmacenRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
@@ -27,7 +27,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_obtener_almacenes");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -56,7 +56,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
     }
 
     @Override
-    public ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenIdDTO id) {
+    public ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenFilterDTO id) {
         ResponseDetalleAlmacenDTO rp = new ResponseDetalleAlmacenDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -110,6 +110,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_desactivar_almacen");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_almacen", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -147,6 +148,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_activar_almacen");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_almacen", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -184,6 +186,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_insertar_almacen");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objAlmacen.getIdLogin(),
                     "codigo", objAlmacen.getCodigo(),
                     "descripcion", objAlmacen.getDescripcion());
 
@@ -221,6 +224,7 @@ public class AlmacenRepository implements  AlmacenDAO  {
                     .withProcedureName("SP_actualizar_almacen");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objAlmacen.getIdLogin(),
                     "id_almacen", objAlmacen.getId(),
                     "codigo", objAlmacen.getCodigo(),
                     "descripcion", objAlmacen.getDescripcion());

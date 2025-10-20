@@ -5,7 +5,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.distrito.Request.*;
 public interface DistritoDAO {
      public ResponseDistritoAllDTO getAllD(RequestDistritoOptionDTO option);
 
-    public ResponseDetalleDistritoDTO getByIdD(RequestDistritoIdDTO id);
+    public ResponseDetalleDistritoDTO getByIdD(RequestDistritoFilterDTO id);
 
     public ResponseDistritoMensajeDTO desactivateD(RequestDistritoIdDTO id);
 

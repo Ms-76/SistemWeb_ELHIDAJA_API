@@ -27,7 +27,7 @@ public class DepartamentoController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleDepartamentoDTO> getByIdDepartamento(
-            @Valid @RequestBody RequestDepartamentoIdDTO id) {
+            @Valid @RequestBody RequestDepartamentoFilterDTO id) {
         return ResponseEntity.ok(departamentoService.getByIdSer(id));
     }
 

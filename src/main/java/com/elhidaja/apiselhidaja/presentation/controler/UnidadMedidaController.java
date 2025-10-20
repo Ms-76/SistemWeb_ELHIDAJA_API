@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseDetalleUnidadMedidaDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaAllDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.ResponseUnidadMedidaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaFilterDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaIdDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaInsertDTO;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.RequestUnidadMedidaOptionDTO;
@@ -37,7 +38,7 @@ public class UnidadMedidaController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleUnidadMedidaDTO> getByIdUnidadMedida(
-            @Valid @RequestBody RequestUnidadMedidaIdDTO id) {
+            @Valid @RequestBody RequestUnidadMedidaFilterDTO id) {
         return ResponseEntity.ok(unidadMedidaService.getByIdSer(id));
     }
 

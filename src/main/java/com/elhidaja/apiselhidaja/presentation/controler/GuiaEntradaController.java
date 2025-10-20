@@ -26,7 +26,7 @@ public class GuiaEntradaController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleGuiaEntradaDTO> getByIdGuiaEntrada(
-            @Valid @RequestBody RequestGuiaEntradaIdDTO id) {
+            @Valid @RequestBody RequestGuiaEntradaFilterDTO id) {
         return ResponseEntity.ok(guiaEntradaService.getByIdSer(id));
     }
 

@@ -7,11 +7,9 @@ public interface CategoriaDAO {
 
     public ResponseCategoriAllDTO getAllD(ResquestCategoriaOptionDTO option);
 
-    public ResponseDetalleCategoriaDTO getByIdD(RequesteCategoriaIdDTO id);
+    public ResponseDetalleCategoriaDTO getByIdD(RequestCategoriaFilterDTO id);
 
     public ResponserCategoriaMensajeDTO desactivateD(RequesteCategoriaIdDTO id);
-
-    //public ResponseCategoriaDTO DetalleFamilias(Request_DetalleFamilias option);
 
     public ResponserCategoriaMensajeDTO activateD(RequesteCategoriaIdDTO id);
 

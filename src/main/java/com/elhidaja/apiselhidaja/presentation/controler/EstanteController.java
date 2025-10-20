@@ -31,7 +31,7 @@ public class EstanteController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleEstanteDTO> getByIdEstante(
-            @Valid @RequestBody RequestEstanteIdDTO id) {
+            @Valid @RequestBody RequestEstanteFilterDTO id) {
         return ResponseEntity.ok(estanteService.getByIdSer(id));
     }
 

@@ -31,7 +31,7 @@ public class ProductoUnidadMedidaController {
 
     @PostMapping("/getbyid")
     public ResponseEntity<ResponseDetalleProductoUnidadMedidaDTO> getByIdProductoUnidadMedida(
-            @Valid @RequestBody RequestProductoUnidadMedidaIdDTO id) {
+            @Valid @RequestBody RequestUnidadMedidaProductoFilterDTO id) {
         return ResponseEntity.ok(productoUnidadMedidaService.getByIdSer(id));
     }
 

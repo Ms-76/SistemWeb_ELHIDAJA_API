@@ -28,7 +28,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_obtener_provincias");
 
             Map<String, Object> inParams = Map.of(
-                    "option", option.getEstado());
+                    "status", option.getEstado());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -57,7 +57,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
     }
 
     @Override
-    public ResponseDetalleProvinciaDTO getByIdD(RequestProvinciaIdDTO id) {
+    public ResponseDetalleProvinciaDTO getByIdD(RequestProvinciaFilterDTO id) {
         ResponseDetalleProvinciaDTO rp = new ResponseDetalleProvinciaDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
@@ -113,6 +113,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_activar_provincia");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_provincia", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -152,6 +153,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_desactivar_provincia");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_provincia", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -191,6 +193,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_insertar_provincia");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objProvincia.getIdLogin(),
                     "nombre", objProvincia.getNombre(),
                     "id_departamento", objProvincia.getIdDepartamento());
 
@@ -231,6 +234,7 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_actualizar_provincia");
 
             Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objProvincia.getIdLogin(),
                     "id_provincia", objProvincia.getId(),
                     "nombre", objProvincia.getNombre(),
                     "id_departamento", objProvincia.getIdDepartamento());
@@ -261,5 +265,5 @@ public class ProvinciaRepository implements ProvinciaDAO {
         }
 
         return rp;
-    }    
+    }
 }

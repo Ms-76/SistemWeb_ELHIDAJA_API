@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class ResquestSubCategoriaOptionDTO {
 
-    @NotNull(message = "La opcion es obligatoria")
+    @NotNull(message = "El estado es obligatorio")
     @ValidOption
-    private Long option;
+    private Long estado;
 }
