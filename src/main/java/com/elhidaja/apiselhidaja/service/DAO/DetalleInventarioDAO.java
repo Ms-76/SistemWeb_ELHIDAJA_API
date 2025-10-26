@@ -13,7 +13,6 @@ public interface DetalleInventarioDAO {
 
     public ResponseDetalleInventarioMensajeDTO activateD(RequestDetalleInventarioIdDTO id);
 
-    public ResponseDetalleInventarioMensajeDTO insertD(RequestDetalleInventarioInsertDTO objDetalleInventario);
-
     public ResponseDetalleInventarioMensajeDTO updateD(RequestDetalleInventarioUpdateDTO objDetalleInventario);
+
 }

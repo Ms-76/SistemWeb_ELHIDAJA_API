@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.categoria.Resquest;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -21,7 +22,7 @@ public class RequestCategoriaUpdateDTO {
     private Long id;
 
     @NotBlank(message = "El nombre de la categoria no puede estar vacío")
-    @Size(min = 3, max = 100, message = "El nombre de la categoria debe tener entre 3 y 100 caracteres")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre de la categoria contener letras y espacios")
+    @LengthSQL(tabla = "categoria", columna = "nombre")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$", message = "el nombre de la categoria solo puede letras y espacios")
     private String nombre;
 }

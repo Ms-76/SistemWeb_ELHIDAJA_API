@@ -30,12 +30,6 @@ public class DetalleInventarioController {
         return ResponseEntity.ok(detalleInventarioService.getByIdSer(id));
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<ResponseDetalleInventarioMensajeDTO> insertarDetalleInventario(
-            @Valid @RequestBody RequestDetalleInventarioInsertDTO dto) {
-        return ResponseEntity.ok(detalleInventarioService.insertSer(dto));
-    }
-
     @PutMapping("/update")
     public ResponseEntity<ResponseDetalleInventarioMensajeDTO> actualizarDetalleInventario(
             @Valid @RequestBody RequestDetalleInventarioUpdateDTO dto) {

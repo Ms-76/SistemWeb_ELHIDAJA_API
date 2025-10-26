@@ -15,7 +15,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/productos")
 @Validated
 public class ProductoController {
-       @Autowired
+    @Autowired
     private ProductoService productoService;
 
     @PostMapping("/getall")
@@ -32,14 +32,20 @@ public class ProductoController {
 
     @PostMapping("/create")
     public ResponseEntity<ResponseProductoMensajeDTO> insertarProducto(
-            @Valid @RequestBody RequestProductoInsertDTO dto) {
+            @Valid @RequestBody RequestProductoXmlInsertDTO dto) {
         return ResponseEntity.ok(productoService.insertSer(dto));
     }
 
     @PutMapping("/update")
     public ResponseEntity<ResponseProductoMensajeDTO> actualizarProducto(
-            @Valid @RequestBody RequestProductoUpdateDTO dto) {
+            @Valid @RequestBody RequestProductoXmlUpdateDTO dto) {
         return ResponseEntity.ok(productoService.updateSer(dto));
+    }
+
+    @PutMapping("/update_individual")
+    public ResponseEntity<ResponseProductoMensajeDTO> actualizarProducto(
+            @Valid @RequestBody RequestProductoUpdateDTO dto) {
+        return ResponseEntity.ok(productoService.updateIndividualSer(dto));
     }
 
     @PutMapping("/activate")

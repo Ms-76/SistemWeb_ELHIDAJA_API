@@ -8,9 +8,11 @@ public interface ProductoDAO {
 
     ResponseDetalleProductoDTO getByIdD(RequestProductoFilterDTO id);
 
-    ResponseProductoMensajeDTO insertD(RequestProductoInsertDTO objProducto);
+    ResponseProductoMensajeDTO insertD(RequestProductoXmlInsertDTO objProducto);
 
-    ResponseProductoMensajeDTO updateD(RequestProductoUpdateDTO objProducto);
+    ResponseProductoMensajeDTO updateD(RequestProductoXmlUpdateDTO objProducto);
+
+    ResponseProductoMensajeDTO updateDIndividual(RequestProductoUpdateDTO objProducto);
 
     ResponseProductoMensajeDTO desactivateD(RequestProductoIdDTO id);
 

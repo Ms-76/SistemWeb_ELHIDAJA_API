@@ -12,5 +12,5 @@ public interface DetalleGuiaEntradaDAO {
 
     public ResponseDetalleGuiaEntradaMensajeDTO insertD(RequestDetalleGuiaEntradaInsertDTO objDetalleGuiaEntrada);
 
-    public ResponseDetalleGuiaEntradaMensajeDTO updateD(RequestDetalleGuiaEntradaUpdateDTO objDetalleGuiaEntrada);
+    public ResponseDetalleGuiaEntradaMensajeDTO updateObservacionD(RequestActualizarObservacionDetalleGuiaEntradaDTO  objDetalleGuiaEntrada);
 }

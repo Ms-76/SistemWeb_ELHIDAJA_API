@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.estante.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -20,10 +21,10 @@ public class RequestEstanteUpdateDTO {
 
     @NotBlank(message = "El código no puede estar vacío")
     @Pattern(regexp = "^[a-zA-Z0-9\\-\\s]+$", message = "El código del estante solo puede contener letras, números, espacios y guiones")
-    @Size(min = 2, max = 50, message = "El código debe tener entre 2 y 50 caracteres")
+    @LengthSQL(tabla = "estante", columna = "codigo")
     private String codigo;
 
     @NotBlank(message = "La descripción no puede estar vacía")
-    @Size(min = 3, max = 255, message = "La descripción debe tener entre 3 y 255 caracteres")
+    @LengthSQL(tabla = "estante", columna = "descripcion")
     private String descripcion;
 }

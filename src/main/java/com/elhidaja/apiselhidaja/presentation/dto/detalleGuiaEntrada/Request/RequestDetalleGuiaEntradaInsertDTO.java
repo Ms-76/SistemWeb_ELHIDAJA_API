@@ -2,11 +2,11 @@ package com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaEntrada.Request;
 
 import java.time.LocalDateTime;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,6 +38,6 @@ public class RequestDetalleGuiaEntradaInsertDTO {
     @NotNull(message = "El idUnidadMedida es obligatorio")
     private Integer idUnidadMedida;
 
-    @Size(max = 255, message = "La observación debe tener máximo 255 caracteres")
+    @LengthSQL(tabla = "detalle_guia_entrada", columna = "observacion")
     private String observacion;
 }

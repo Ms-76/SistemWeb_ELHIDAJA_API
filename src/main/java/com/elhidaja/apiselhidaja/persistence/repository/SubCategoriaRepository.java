@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
-import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectId;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 import com.elhidaja.apiselhidaja.service.DAO.SubCategoriaDAO;

@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.puesto.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -15,7 +16,7 @@ public class RequestPuestoInsertDTO {
     private Long idLogin;
 
     @NotBlank(message = "El nombre del puesto no puede estar vacío")
-    @Size(min = 3, max = 100, message = "El nombre del puesto debe tener entre 3 y 100 caracteres")
+    @LengthSQL(tabla = "puesto", columna = "nombre")
     @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre del puesto debe contener letras y espacios")
     private String nombre;
 }

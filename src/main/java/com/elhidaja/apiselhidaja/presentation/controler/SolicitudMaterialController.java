@@ -9,13 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.RequestSolicitudMaterialFilterDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.RequestSolicitudMaterialIdDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.RequestSolicitudMaterialInsertDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.RequestSolicitudMaterialOptionDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.ResponseDetalleSolicitudMaterialDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.ResponseSolicitudMaterialAllDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.ResponseSolicitudMaterialMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.*;
+import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.*;
 import com.elhidaja.apiselhidaja.service.implementation.SolicitudMaterialService;
 
 import jakarta.validation.Valid;

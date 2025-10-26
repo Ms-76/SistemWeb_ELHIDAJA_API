@@ -11,20 +11,25 @@ import com.elhidaja.apiselhidaja.presentation.dto.producto.Response.*;
 @Service
 @Validated
 public class ProductoService {
-     private final ProductoRepository productoRepo;
+    private final ProductoRepository productoRepo;
 
     public ProductoService(ProductoRepository productoRepo) {
         this.productoRepo = productoRepo;
     }
 
     @Transactional
-    public ResponseProductoMensajeDTO insertSer(RequestProductoInsertDTO objProducto) {
+    public ResponseProductoMensajeDTO insertSer(RequestProductoXmlInsertDTO objProducto) {
         return productoRepo.insertD(objProducto);
     }
 
     @Transactional
-    public ResponseProductoMensajeDTO updateSer(RequestProductoUpdateDTO objProducto) {
+    public ResponseProductoMensajeDTO updateSer(RequestProductoXmlUpdateDTO objProducto) {
         return productoRepo.updateD(objProducto);
+    }
+
+    @Transactional
+    public ResponseProductoMensajeDTO updateIndividualSer(RequestProductoUpdateDTO objProducto) {
+        return productoRepo.updateDIndividual(objProducto);
     }
 
     @Transactional(readOnly = true)

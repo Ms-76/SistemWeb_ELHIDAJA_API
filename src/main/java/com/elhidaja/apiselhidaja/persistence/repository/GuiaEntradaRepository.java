@@ -1,6 +1,7 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
 import java.time.ZoneId;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -8,16 +9,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.RequestGuiaEntradaFilterDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.RequestGuiaEntradaIdDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.RequestGuiaEntradaInsertDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.RequestGuiaEntradaOptionDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.RequestGuiaEntradaUpdateDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.ResponseDetalleGuiaEntradaDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.ResponseGuiaEntradaAllDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.ResponseGuiaEntradaDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.ResponseGuiaEntradaMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.*;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.*;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Request.RequestRecibirDesdeGuiaSalidaDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Response.ResponseGuiaSalidaMensajeDTO;
 import com.elhidaja.apiselhidaja.service.DAO.GuiaEntradaDAO;
+import com.elhidaja.apiselhidaja.util.xml.XmlBuilder;
+import com.elhidaja.apiselhidaja.util.xml.XmlDetalleGuiaEntrada;
 
 @Repository
 public class GuiaEntradaRepository implements GuiaEntradaDAO {
@@ -279,14 +277,40 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
 
         ResponseGuiaEntradaMensajeDTO rp = new ResponseGuiaEntradaMensajeDTO();
         try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_guia_entrada");
 
-            Map<String, Object> inParams = Map.of(
-                    "id_usuario_sign", objGuiaEntrada.getIdLogin(),
-                    "id_proveedor", objGuiaEntrada.getIdProveedor(),
-                    "id_usuario", objGuiaEntrada.getIdUsuario(),
-                    "descripcion", objGuiaEntrada.getDescripcion());
+            List<XmlDetalleGuiaEntrada> xmlDetallesList = objGuiaEntrada.getDetalles().stream()
+                    .map(d -> new XmlDetalleGuiaEntrada(
+                            d.getIdProducto(),
+                            d.getCodigo(),
+                            d.getNombre(),
+                            d.getImagen(),
+                            d.getCodigoBarras(),
+                            d.getDescripcionProd(),
+                            d.getIdSubcategoria(),
+                            d.getCosto(),
+                            d.getCantidad(),
+                            d.getIdUnidadMedida(),
+                            d.getObservacion()
+
+                    ))
+                    .toList();
+
+            String xmlGenerado = XmlBuilder.toXmlGuiaEntrada(xmlDetallesList);
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_insertar_guia_entrada_con_detalle_xml");
+
+            Map<String, Object> inParams = new HashMap<>();
+            inParams.put("id_usuario_sign", objGuiaEntrada.getIdLogin());
+            inParams.put("id_tipo_operacion", objGuiaEntrada.getIdTipoOperacion());
+            inParams.put("id_tipo_documento", objGuiaEntrada.getIdTipoDocumento());
+            inParams.put("codigo_sunat", objGuiaEntrada.getCodigoSunat());
+            inParams.put("codigo_interno", objGuiaEntrada.getCodigoInterno());
+            inParams.put("id_serie", objGuiaEntrada.getIdSerie());
+            inParams.put("id_proveedor", objGuiaEntrada.getIdProveedor());
+            inParams.put("id_usuario", objGuiaEntrada.getIdUsuario());
+            inParams.put("id_almacen", objGuiaEntrada.getIdAlmacen());
+            inParams.put("descripcion", objGuiaEntrada.getDescripcion());
+            inParams.put("xml_detalles", xmlGenerado);
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -314,6 +338,51 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
             e.printStackTrace();
             rp.setCodigo("500");
             rp.setMensaje("Error al insertar guía de entrada : " + e.getMessage());
+        }
+        return rp;
+    }
+       @Override
+    public ResponseGuiaSalidaMensajeDTO recibirDesdeGuiaSalida(RequestRecibirDesdeGuiaSalidaDTO r) {
+        ResponseGuiaSalidaMensajeDTO rp = new ResponseGuiaSalidaMensajeDTO();
+        try {
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_recibir_desde_guia_salida");
+
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", r.getIdLogin(),
+                    "id_guia_salida", r.getIdGuiaSalida(),
+                    "id_tipo_operacion", r.getIdTipoOperacion(),
+                    "id_tipo_documento", r.getIdTipoDocumento(),
+                    "codigo_sunat", r.getCodigoSunat(),
+                    "codigo_interno", r.getCodigoInterno(),
+                    "id_serie", r.getIdSerie(),
+                    "id_proveedor_sistema", r.getIdProveedorSistema());
+
+            Map<String, Object> result = call.execute(inParams);
+
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
+
+            if (resultSet != null) {
+                Map<String, Object> errorRow = resultSet.get(0);
+                String mensajeError = (String) errorRow.get("mensaje");
+
+                rp.setCodigo("400");
+                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo recibir desde guía de salida.");
+
+            } else {
+                rp.setExito(true);
+                rp.setCodigo("200");
+                rp.setMensaje("Recepción desde guía de salida realizada correctamente.");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            rp.setCodigo("500");
+            rp.setMensaje("Error al recibir desde guía de salida : " + e.getMessage());
         }
         return rp;
     }

@@ -1,5 +1,9 @@
 package com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request;
 
+import java.util.List;
+
+import com.elhidaja.apiselhidaja.presentation.dto.detalleSolicitudMaterial.Request.RequestDetalleSolicitudMaterialInsert;
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -11,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-@JsonPropertyOrder({ "idLogin","id", "idSupervisor", "nombre", "descripcion", "xmlDetalles" })
+@JsonPropertyOrder({ "idLogin", "id", "idSupervisor", "nombre", "descripcion", "xmlDetalles" })
 public class RequestSolicitudMaterialInsertDTO {
     @NotNull(message = "El idLogin es obligatorio")
     @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
@@ -26,13 +30,14 @@ public class RequestSolicitudMaterialInsertDTO {
     private Long idSupervisor;
 
     @NotBlank(message = "El nombre de la solicitud no puede estar vacío")
-    @Size(min = 3, max = 200, message = "El nombre de la solicitud debe tener entre 3 y 200 caracteres")
+    @LengthSQL(tabla = "solicitud_material", columna = "nombre")
     private String nombre;
 
-    @Size(max = 500, message = "La descripción no puede superar los 500 caracteres")
+    @NotBlank(message = "La descripcion no de la solicitud no puede estar vacía")
+    @LengthSQL(tabla = "solicitud_material", columna = "descripcion")
     private String descripcion;
 
-    @NotBlank(message = "Debe incluir los detalles en formato XML")
-    private String xmlDetalles;
+    @NotEmpty(message = "Debe incluir al menos un detalle")
+    private List<RequestDetalleSolicitudMaterialInsert> detalles;
 
 }

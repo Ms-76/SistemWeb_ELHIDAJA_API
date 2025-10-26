@@ -94,17 +94,38 @@ public class DetalleSolicitudMaterialRepository implements DetalleSolicitudMater
     @Override
     public ResponserDetalleSolicitudMaterialMensajeDTO activateD(RequestDetalleSolicitudMaterialIdDTO id) {
         ResponserDetalleSolicitudMaterialMensajeDTO rp = new ResponserDetalleSolicitudMaterialMensajeDTO();
+
         try {
-            new SimpleJdbcCall(jdbc).withProcedureName("SP_activar_detalle_solicitud_material")
-                    .execute(Map.of(
-                    "id_usuario_sign", id.getIdLogin(),      
-                    "id_detalle_solicitud_material", id.getId()));
-            rp.setExito(true);
-            rp.setCodigo("200");
-            rp.setMensaje("Detalle activado correctamente.");
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_activar_detalle_solicitud_material");
+
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_solicitud_material", id.getId());
+
+            Map<String, Object> result = call.execute(inParams);
+
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
+
+            if (resultSet != null) {
+                Map<String, Object> errorRow = resultSet.get(0);
+                String mensajeError = (String) errorRow.get("mensaje");
+                rp.setExito(false);
+                rp.setCodigo("400");
+                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo activar el detalle.");
+            } else {
+                rp.setExito(true);
+                rp.setCodigo("200");
+                rp.setMensaje("Detalle activado correctamente.");
+            }
+
         } catch (Exception e) {
             rp.setCodigo("500");
-            rp.setMensaje("Error al activar: " + e.getMessage());
+            rp.setMensaje("Error al activar el detalle: " + e.getMessage());
         }
         return rp;
     }
@@ -112,17 +133,38 @@ public class DetalleSolicitudMaterialRepository implements DetalleSolicitudMater
     @Override
     public ResponserDetalleSolicitudMaterialMensajeDTO desactivateD(RequestDetalleSolicitudMaterialIdDTO id) {
         ResponserDetalleSolicitudMaterialMensajeDTO rp = new ResponserDetalleSolicitudMaterialMensajeDTO();
+
         try {
-            new SimpleJdbcCall(jdbc).withProcedureName("SP_desactivar_detalle_solicitud_material")
-                    .execute(Map.of(
-                    "id_usuario_sign", id.getIdLogin(),      
-                    "id_detalle_solicitud_material", id.getId()));
-            rp.setExito(true);
-            rp.setCodigo("200");
-            rp.setMensaje("Detalle desactivado correctamente.");
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_desactivar_detalle_solicitud_material");
+
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_solicitud_material", id.getId());
+
+            Map<String, Object> result = call.execute(inParams);
+
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
+
+            if (resultSet != null) {
+                Map<String, Object> errorRow = resultSet.get(0);
+                String mensajeError = (String) errorRow.get("mensaje");
+                rp.setExito(false);
+                rp.setCodigo("400");
+                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo desactivar el detalle.");
+            } else {
+                rp.setExito(true);
+                rp.setCodigo("200");
+                rp.setMensaje("Detalle desactivado correctamente.");
+            }
+
         } catch (Exception e) {
             rp.setCodigo("500");
-            rp.setMensaje("Error al desactivar: " + e.getMessage());
+            rp.setMensaje("Error al desactivar el detalle: " + e.getMessage());
         }
         return rp;
     }

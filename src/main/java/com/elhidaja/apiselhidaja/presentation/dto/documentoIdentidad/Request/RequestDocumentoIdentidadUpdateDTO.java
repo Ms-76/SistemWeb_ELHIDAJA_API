@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -8,7 +9,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonPropertyOrder({ "idLogin","id", "nombre", "descripcion", "longitud", "tipoDocumento" })
+@JsonPropertyOrder({ "idLogin", "id", "nombre", "descripcion", "longitud", "tipoDocumento" })
 public class RequestDocumentoIdentidadUpdateDTO {
     @NotNull(message = "El idLogin es obligatorio")
     @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
@@ -19,11 +20,13 @@ public class RequestDocumentoIdentidadUpdateDTO {
     private Long id;
 
     @NotBlank(message = "El nombre no puede estar vacío")
-    @Size(max = 10, message = "El nombre debe tener máximo 10 caracteres")
+    @LengthSQL(tabla = "documento_identidad", columna = "nombre")
+    @Pattern(regexp = "^[a-zA-Z]+$", message = "El nombre solo puede contener letras sin espacios")
     private String nombre;
 
     @NotBlank(message = "La descripción no puede estar vacía")
-    @Size(max = 100, message = "La descripción debe tener máximo 100 caracteres")
+    @LengthSQL(tabla = "documento_identidad", columna = "descripcion")
+    @Pattern(regexp = "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$", message = "La descripción solo puede contener letras y espacios")
     private String descripcion;
 
     @NotNull(message = "La longitud es obligatoria")

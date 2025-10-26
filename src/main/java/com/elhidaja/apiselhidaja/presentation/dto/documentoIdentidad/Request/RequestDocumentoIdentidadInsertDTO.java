@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -15,12 +16,12 @@ public class RequestDocumentoIdentidadInsertDTO {
     private Long idLogin;
 
     @NotBlank(message = "El nombre no puede estar vacío")
-    @Size(max = 10, message = "El nombre debe tener máximo 10 caracteres")
+    @LengthSQL(tabla = "documento_identidad", columna = "nombre")
     @Pattern(regexp = "^[a-zA-Z]+$", message = "El nombre solo puede contener letras sin espacios")
     private String nombre;
 
     @NotBlank(message = "La descripción no puede estar vacía")
-    @Size(max = 100, message = "La descripción debe tener máximo 100 caracteres")
+    @LengthSQL(tabla = "documento_identidad", columna = "descripcion")
     @Pattern(regexp = "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$", message = "La descripción solo puede contener letras y espacios")
     private String descripcion;
 

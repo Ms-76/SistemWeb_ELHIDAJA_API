@@ -7,11 +7,13 @@ import org.springframework.validation.annotation.Validated;
 import com.elhidaja.apiselhidaja.persistence.repository.GuiaEntradaRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.*;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Request.RequestRecibirDesdeGuiaSalidaDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Response.ResponseGuiaSalidaMensajeDTO;
 
 @Service
 @Validated
 public class GuiaEntradaService {
-        private final GuiaEntradaRepository guiaEntradaRepo;
+    private final GuiaEntradaRepository guiaEntradaRepo;
 
     public GuiaEntradaService(GuiaEntradaRepository guiaEntradaRepo) {
         this.guiaEntradaRepo = guiaEntradaRepo;
@@ -45,5 +47,10 @@ public class GuiaEntradaService {
     @Transactional
     public ResponseGuiaEntradaMensajeDTO desactivateSer(RequestGuiaEntradaIdDTO id) {
         return guiaEntradaRepo.desactivateD(id);
+    }
+
+    @Transactional
+    public ResponseGuiaSalidaMensajeDTO recibirDesdeGuiaSalidaSer(RequestRecibirDesdeGuiaSalidaDTO r) {
+        return guiaEntradaRepo.recibirDesdeGuiaSalida(r);
     }
 }

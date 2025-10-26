@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -20,12 +21,12 @@ public class RequestArquitectoInsertDTO {
     private Long idLogin;
 
     @NotBlank(message = "El número de documento no puede estar vacío")
-    @Size(max = 50, message = "El número de documento no debe exceder 50 caracteres")
+    @LengthSQL(tabla = "entidad", columna = "numero_documento")
     @Pattern(regexp = "^[a-zA-Z0-9\\-]+$", message = "El número de documento solo puede contener letras, números y guiones")
     private String numeroDocumento;
 
     @NotBlank(message = "Los nombres no pueden estar vacíos")
-    @Size(max = 255, message = "Los nombres no deben exceder 255 caracteres")
+    @LengthSQL(tabla = "entidad", columna = "nombres")
     @Pattern(regexp = "^[a-zA-ZÁÉÍÓÚáéíóúÑñ\\s]+$", message = "Los nombres solo deben contener letras y espacios")
     private String nombres;
 
@@ -34,16 +35,16 @@ public class RequestArquitectoInsertDTO {
     private Integer idDocumentoIdentidad;
 
     @NotBlank(message = "La dirección no puede estar vacía")
-    @Size(max = 150, message = "La dirección no debe exceder 150 caracteres")
+    @LengthSQL(tabla = "entidad", columna = "direccion")
     private String direccion;
 
     @NotBlank(message = "El teléfono no puede estar vacío")
-    @Size(max = 20, message = "El teléfono no debe exceder 20 caracteres")
+    @LengthSQL(tabla = "entidad", columna = "telefono")
     @Pattern(regexp = "^9[0-9]{8}$", message = "El teléfono debe comenzar con 9 y contener exactamente 9 dígitos numéricos sin espacios")
     private String telefono;
 
     @NotBlank(message = "El email no puede estar vacío")
-    @Size(max = 255, message = "El email no debe exceder 255 caracteres")
+    @LengthSQL(tabla = "entidad", columna = "email")
     @Email(message = "El email debe tener un formato válido")
     private String email;
 
@@ -52,6 +53,6 @@ public class RequestArquitectoInsertDTO {
     private Integer idDistrito;
 
     @NotBlank(message = "La especialidad no puede estar vacía")
-    @Size(max = 100, message = "La especialidad no debe exceder 100 caracteres")
+    @LengthSQL(tabla = "arquitecto", columna = "especialidad")
     private String especialidad;
 }

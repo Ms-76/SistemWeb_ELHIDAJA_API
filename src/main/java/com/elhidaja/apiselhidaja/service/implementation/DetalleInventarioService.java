@@ -18,11 +18,6 @@ public class DetalleInventarioService {
     }
 
     @Transactional
-    public ResponseDetalleInventarioMensajeDTO insertSer(RequestDetalleInventarioInsertDTO objDetalleInventario) {
-        return detInvRepo.insertD(objDetalleInventario);
-    }
-
-    @Transactional
     public ResponseDetalleInventarioMensajeDTO updateSer(RequestDetalleInventarioUpdateDTO objDetalleInventario) {
         return detInvRepo.updateD(objDetalleInventario);
     }

@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Response.*;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Request.RequestRecibirDesdeGuiaSalidaDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Response.ResponseGuiaSalidaMensajeDTO;
 import com.elhidaja.apiselhidaja.service.implementation.GuiaEntradaService;
 
 import jakarta.validation.Valid;
@@ -15,7 +17,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/guiasentrada")
 @Validated
 public class GuiaEntradaController {
-       @Autowired
+    @Autowired
     private GuiaEntradaService guiaEntradaService;
 
     @PostMapping("/getall")
@@ -52,6 +54,12 @@ public class GuiaEntradaController {
     public ResponseEntity<ResponseGuiaEntradaMensajeDTO> desactivarGuiaEntrada(
             @Valid @RequestBody RequestGuiaEntradaIdDTO id) {
         return ResponseEntity.ok(guiaEntradaService.desactivateSer(id));
+    }
+
+    @PostMapping("/receive-from-salida")
+    public ResponseEntity<ResponseGuiaSalidaMensajeDTO> recibirDesdeGuiaSalida(
+            @Valid @RequestBody RequestRecibirDesdeGuiaSalidaDTO dto) {
+        return ResponseEntity.ok(guiaEntradaService.recibirDesdeGuiaSalidaSer(dto));
     }
 
 }

@@ -20,8 +20,8 @@ public class DetalleGuiaEntradaService {
     }
 
     @Transactional
-    public ResponseDetalleGuiaEntradaMensajeDTO updateSer(RequestDetalleGuiaEntradaUpdateDTO objDetalleGuiaEntrada) {
-        return detalleRepo.updateD(objDetalleGuiaEntrada);
+    public ResponseDetalleGuiaEntradaMensajeDTO updateSer(RequestActualizarObservacionDetalleGuiaEntradaDTO objDetalleGuiaEntrada) {
+        return detalleRepo.updateObservacionD(objDetalleGuiaEntrada);
     }
 
     @Transactional

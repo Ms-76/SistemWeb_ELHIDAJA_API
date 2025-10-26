@@ -1,6 +1,7 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.SolicitudMaterialDAO;
+import com.elhidaja.apiselhidaja.util.xml.XmlBuilder;
+import com.elhidaja.apiselhidaja.util.xml.XmlDetalleSolicitudMaterialInsert;
 
 @Repository
 public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
@@ -124,7 +127,7 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
                     .withProcedureName("SP_activar_solicitud_material");
 
             Map<String, Object> inParams = Map.of(
-                     "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_solicitud_material", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -163,7 +166,7 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
                     .withProcedureName("SP_desactivar_solicitud_material");
 
             Map<String, Object> inParams = Map.of(
-                     "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_solicitud_material", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -197,16 +200,26 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
     public ResponseSolicitudMaterialMensajeDTO insertD(RequestSolicitudMaterialInsertDTO objSolicitud) {
         ResponseSolicitudMaterialMensajeDTO rp = new ResponseSolicitudMaterialMensajeDTO();
         try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_solicitud_material");
 
-            Map<String, Object> inParams = Map.of(
-                     "id_usuario_sign", objSolicitud.getIdLogin(),  
-                    "id_proyecto", objSolicitud.getIdProyecto(),
-                    "id_supervisor", objSolicitud.getIdSupervisor(),
-                    "nombre", objSolicitud.getNombre(),
-                    "descripcion", objSolicitud.getDescripcion(),
-                    "xmlDetalles", objSolicitud.getXmlDetalles());
+            List<XmlDetalleSolicitudMaterialInsert> xmlDetallesList = objSolicitud.getDetalles().stream()
+                    .map(d -> new XmlDetalleSolicitudMaterialInsert(
+                            d.getIdProducto(),
+                            d.getCantidad(),
+                            d.getObservacion()))
+                    .toList();
+
+            String xmlGenerado = XmlBuilder.toXmlDetallesSolicitudMaterialInsert(xmlDetallesList);
+
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_insertar_solicitud_material_con_detalle_xml");
+
+            Map<String, Object> inParams = new HashMap<>();
+            inParams.put("id_usuario_sign", objSolicitud.getIdLogin());
+            inParams.put("id_proyecto", objSolicitud.getIdProyecto());
+            inParams.put("id_supervisor", objSolicitud.getIdSupervisor());
+            inParams.put("nombre", objSolicitud.getNombre());
+            inParams.put("descripcion", objSolicitud.getDescripcion());
+            inParams.put("xml_detalles", xmlGenerado);
 
             Map<String, Object> result = call.execute(inParams);
 

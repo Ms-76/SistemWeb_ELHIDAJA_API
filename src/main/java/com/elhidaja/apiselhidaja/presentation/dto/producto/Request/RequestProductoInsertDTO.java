@@ -1,48 +1,48 @@
 package com.elhidaja.apiselhidaja.presentation.dto.producto.Request;
 
-import java.math.BigDecimal;
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonPropertyOrder({ "idLogin", "codigo", "nombre", "imagen", "codigoBarras", "descripcion", "idSubcategoria",
-        "costo" })
+
 public class RequestProductoInsertDTO {
     @NotNull(message = "El idLogin es obligatorio")
     @Min(value = 1, message = "El idLogin debe ser mayor o igual a 1")
     private Long idLogin;
 
-    @NotBlank(message = "El código del producto no puede estar vacío")
-    @Pattern(regexp = "^[a-zA-Z0-9\\-\\s]+$", message = "El código del producto solo puede contener letras, números, espacios y guiones")
+    @NotBlank(message = "El código del producto es obligatorio")
+    @LengthSQL(tabla = "producto", columna = "codigo")
     private String codigo;
 
-    @NotBlank(message = "El nombre no puede estar vacío")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre del producto contener letras y espacios")
+    @NotBlank(message = "El nombre del producto es obligatorio")
+    @LengthSQL(tabla = "producto", columna = "nombre")
     private String nombre;
 
+    @LengthSQL(tabla = "producto", columna = "imagen")
+    @NotBlank(message = "El nombre del producto es obligatorio")
     private String imagen;
 
-    @NotBlank(message = "El código de barras no puede estar vacío")
+    @NotBlank(message = "El código de barras es obligatorio")
+    @LengthSQL(tabla = "producto", columna = "codigo_barras")
     private String codigoBarras;
 
-    @NotBlank(message = "la descripcion  estar vacía")
-    private String descripcion;
+    @NotBlank(message = "La descripción del producto es obligatoria")
+    @LengthSQL(tabla = "producto", columna = "descripcion")
+    private String descripcionProd;
 
-    @NotNull(message = "La subcategoría es obligatoria")
-    @Min(value = 1, message = "ID de subcategoría no válido")
-    private Long idSubcategoria;
+    @NotNull(message = "El id de la subcategoría es obligatorio")
+    @Min(value = 1, message = "El id de la subcategoría debe ser mayor o igual a 1")
+    private Integer idSubcategoria;
 
-    @NotNull(message = "El costo es obligatorio")
-    @DecimalMin(value = "0.0", inclusive = false, message = "El costo debe ser mayor que cero")
-    private BigDecimal costo;
+    @NotNull(message = "El costo del producto es obligatorio")
+    @Positive(message = "El costo debe ser mayor que cero")
+    private Double costo;
 
 }

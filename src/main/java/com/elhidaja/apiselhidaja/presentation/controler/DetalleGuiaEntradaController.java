@@ -29,19 +29,12 @@ public class DetalleGuiaEntradaController {
             @Valid @RequestBody RequestDetalleGuiaEntradaFilterDTO id) {
         return ResponseEntity.ok(detalleGuiaEntradaService.getByIdSer(id));
     }
-/* 
-    @PostMapping("/create")
-    public ResponseEntity<ResponseDetalleGuiaEntradaMensajeDTO> insertarDetalleGuiaEntrada(
-            @Valid @RequestBody RequestDetalleGuiaEntradaInsertDTO dto) {
-        return ResponseEntity.ok(detalleGuiaEntradaService.insertSer(dto));
-    }
 
     @PutMapping("/update")
     public ResponseEntity<ResponseDetalleGuiaEntradaMensajeDTO> actualizarDetalleGuiaEntrada(
-            @Valid @RequestBody RequestDetalleGuiaEntradaUpdateDTO dto) {
+            @Valid @RequestBody RequestActualizarObservacionDetalleGuiaEntradaDTO dto) {
         return ResponseEntity.ok(detalleGuiaEntradaService.updateSer(dto));
     }
-*/
     @PutMapping("/activate")
     public ResponseEntity<ResponseDetalleGuiaEntradaMensajeDTO> activarDetalleGuiaEntrada(
             @Valid @RequestBody RequestDetalleGuiaEntradaIdDTO id) {

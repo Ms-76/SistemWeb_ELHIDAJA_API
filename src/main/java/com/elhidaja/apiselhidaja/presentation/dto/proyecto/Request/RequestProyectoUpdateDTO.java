@@ -2,6 +2,7 @@ package com.elhidaja.apiselhidaja.presentation.dto.proyecto.Request;
 
 import java.time.LocalDate;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -25,17 +26,23 @@ public class RequestProyectoUpdateDTO {
     private Long id;
 
     @NotBlank(message = "El nombre del proyecto no puede estar vacío")
-    @Size(min = 3, max = 200, message = "El nombre del proyecto debe tener entre 3 y 200 caracteres")
+    @LengthSQL(tabla = "proyecto", columna = "nombre")
     private String nombre;
 
-    @Size(max = 500, message = "La descripción no puede exceder los 500 caracteres")
+    @NotBlank(message = "La descripcion del proyecto no puede estar vacía")
+    @LengthSQL(tabla = "proyecto", columna = "descripcion")
     private String descripcion;
 
-    @Size(max = 300, message = "La ubicación no puede exceder los 300 caracteres")
+    @NotBlank(message = "La ubicacion del proyecto no puede estar vacío")
+    @LengthSQL(tabla = "proyecto", columna = "ubicacion")
     private String ubicacion;
 
+    @NotNull(message = "La fecha de inicio es obligatoria")
+    @FutureOrPresent(message = "La fecha de inicio no puede ser una fecha pasada")
     private LocalDate fechaInicio;
-
+    
+    @NotNull(message = "La fecha de fin es obligatoria")
+    @Future(message = "La fecha de fin debe ser una fecha futura")
     private LocalDate fechaFin;
 
     @NotNull(message = "El id del arquitecto es obligatorio")

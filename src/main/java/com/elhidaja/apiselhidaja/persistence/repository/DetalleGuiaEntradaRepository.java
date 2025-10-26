@@ -1,6 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
 import java.util.Map;
@@ -253,21 +252,16 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
     }
 
     @Override
-    public ResponseDetalleGuiaEntradaMensajeDTO updateD(RequestDetalleGuiaEntradaUpdateDTO objDetalleGuiaEntrada) {
+    public ResponseDetalleGuiaEntradaMensajeDTO updateObservacionD(RequestActualizarObservacionDetalleGuiaEntradaDTO  objDetalleGuiaEntrada) {
         ResponseDetalleGuiaEntradaMensajeDTO rp = new ResponseDetalleGuiaEntradaMensajeDTO();
 
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_actualizar_detalle_guia_entrada");
+                    .withProcedureName("SP_actualizar_observacion_detalle_guia_entrada");
 
-            Map<String, Object> inParams = Map.of(
+          Map<String, Object> inParams = Map.of(
                     "id_usuario_sign", objDetalleGuiaEntrada.getIdLogin(),
                     "id_detalle_guia_entrada", objDetalleGuiaEntrada.getIdDetalleGuiaEntrada(),
-                    "id_guia_entrada", objDetalleGuiaEntrada.getIdGuiaEntrada(),
-                    "fecha_vencimiento_producto", objDetalleGuiaEntrada.getFechaVencimientoProducto(),
-                    "id_producto", objDetalleGuiaEntrada.getIdProducto(),
-                    "cantidad", objDetalleGuiaEntrada.getCantidad(),
-                    "id_unidad_medida", objDetalleGuiaEntrada.getIdUnidadMedida(),
                     "observacion", objDetalleGuiaEntrada.getObservacion());
 
             Map<String, Object> result = call.execute(inParams);
@@ -287,12 +281,12 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
             } else {
                 rp.setExito(true);
                 rp.setCodigo("200");
-                rp.setMensaje("Detalle guía entrada actualizado correctamente.");
+                rp.setMensaje("Observación actualizada correctamente.");
             }
 
         } catch (Exception e) {
             rp.setCodigo("500");
-            rp.setMensaje("Error al actualizar el detalle guía entrada: " + e.getMessage());
+            rp.setMensaje("Error al actualizar la observación: " + e.getMessage());
         }
         return rp;
 

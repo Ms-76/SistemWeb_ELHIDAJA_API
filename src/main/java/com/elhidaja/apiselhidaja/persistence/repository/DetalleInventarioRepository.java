@@ -218,10 +218,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                 "id_usuario_sign", objDetalleInventario.getIdLogin(),  
                     "id_detalle_inventario", objDetalleInventario.getId(),
                     "stock_fisico", objDetalleInventario.getStockFisico(),
-                    "diferencia", objDetalleInventario.getDiferencia(),
                     "observacion", objDetalleInventario.getObservacion(),
-                    "fecha_fin", objDetalleInventario.getFechaFinInventario(),
-                    "nuevo", objDetalleInventario.getNuevo(),
                     "editado_manual", objDetalleInventario.getEditadoManual(),
                     "estado", objDetalleInventario.getEstado());
 
@@ -253,46 +250,4 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
 
     }
 
-    @Override
-    public ResponseDetalleInventarioMensajeDTO insertD(RequestDetalleInventarioInsertDTO objDetalleInventario) {
-
-        ResponseDetalleInventarioMensajeDTO rp = new ResponseDetalleInventarioMensajeDTO();
-        try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_detalle_inventario");
-
-            Map<String, Object> inParams = Map.of(
-                    "id_inventario", objDetalleInventario.getIdInventario(),
-                    "id_producto", objDetalleInventario.getIdProducto(),
-                    "id_usuario", objDetalleInventario.getIdUsuario());
-
-            Map<String, Object> result = call.execute(inParams);
-
-            @SuppressWarnings("unchecked")
-            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                    .findFirst()
-                    .orElse(null);
-
-            if (resultSet != null) {
-
-                Map<String, Object> errorRow = resultSet.get(0);
-                String mensajeError = (String) errorRow.get("mensaje");
-
-                rp.setCodigo("400");
-                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo registrar el detalle de inventario.");
-
-            } else {
-                rp.setExito(true);
-                rp.setCodigo("200");
-                rp.setMensaje("Detalle de inventario registrado correctamente");
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            rp.setCodigo("500");
-            rp.setMensaje("Error al insertar detalle de inventario: " + e.getMessage());
-        }
-        return rp;
-    }
 }

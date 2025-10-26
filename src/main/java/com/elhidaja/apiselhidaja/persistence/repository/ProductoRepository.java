@@ -1,19 +1,19 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
 import java.math.BigDecimal;
-import java.sql.Types;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 import org.springframework.stereotype.Repository;
 
 import com.elhidaja.apiselhidaja.presentation.dto.producto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.producto.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.ProductoDAO;
+import com.elhidaja.apiselhidaja.util.xml.XmlBuilder;
+import com.elhidaja.apiselhidaja.util.xml.XmlProductoInsert;
+import com.elhidaja.apiselhidaja.util.xml.XmlProductoUpdate;
 
 @Repository
 public class ProductoRepository implements ProductoDAO {
@@ -39,14 +39,10 @@ public class ProductoRepository implements ProductoDAO {
             @SuppressWarnings("unchecked")
             List<Map<String, Object>> rows = (List<Map<String, Object>>) result.get("#result-set-1");
 
-            // Si la lista de resultados no está vacía, la revisamos
             if (rows != null && !rows.isEmpty()) {
-                // Obtenemos la primera (y única) fila para inspeccionarla
+
                 Map<String, Object> firstRow = rows.get(0);
 
-                // Verificamos si la respuesta es de productos encontrados (contiene
-                // "id_producto")
-                // o si es una respuesta de error (no contiene "id_producto")
                 if (firstRow.containsKey("id_producto")) {
                     List<ResponseProductoDTO> productos = rows.stream().map(row -> {
                         ResponseProductoDTO dto = new ResponseProductoDTO();
@@ -69,13 +65,13 @@ public class ProductoRepository implements ProductoDAO {
                     rp.setCodigo("200");
                     rp.setMensaje("Consulta exitosa");
                 } else {
-                    // Si no tiene "id_producto", es el mensaje de error del SP
+
                     rp.setExito(false);
                     rp.setCodigo("404");
                     rp.setMensaje((String) firstRow.get("mensaje"));
                 }
             } else {
-                // El procedimiento no devolvió filas
+
                 rp.setExito(false);
                 rp.setCodigo("404");
                 rp.setMensaje("No se encontraron productos");
@@ -157,29 +153,29 @@ public class ProductoRepository implements ProductoDAO {
     }
 
     @Override
-    public ResponseProductoMensajeDTO insertD(RequestProductoInsertDTO objProducto) {
+    public ResponseProductoMensajeDTO insertD(RequestProductoXmlInsertDTO objProducto) {
         ResponseProductoMensajeDTO rp = new ResponseProductoMensajeDTO();
         try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_producto")
-                    .declareParameters(
-                            new SqlParameter("codigo", Types.VARCHAR),
-                            new SqlParameter("nombre", Types.VARCHAR),
-                            new SqlParameter("imagen", Types.VARCHAR),
-                            new SqlParameter("codigo_barras", Types.VARCHAR),
-                            new SqlParameter("descripcion", Types.VARCHAR),
-                            new SqlParameter("id_subcategoria", Types.INTEGER),
-                            new SqlParameter("costo", Types.NUMERIC));
+            List<XmlProductoInsert> xmlProductosList = objProducto.getDetalles().stream()
+                    .map(p -> new XmlProductoInsert(
+                            p.getIdLogin(),
+                            p.getCodigo(),
+                            p.getNombre(),
+                            p.getImagen(),
+                            p.getCodigoBarras(),
+                            p.getDescripcionProd(),
+                            p.getIdSubcategoria(),
+                            p.getCosto()))
+                    .toList();
 
-            Map<String, Object> inParams = new HashMap<>();
-            inParams.put("id_usuario_sign", objProducto.getIdLogin());
-            inParams.put("codigo", objProducto.getCodigo());
-            inParams.put("nombre", objProducto.getNombre());
-            inParams.put("imagen", objProducto.getImagen());
-            inParams.put("codigo_barras", objProducto.getCodigoBarras());
-            inParams.put("descripcion", objProducto.getDescripcion());
-            inParams.put("id_subcategoria", objProducto.getIdSubcategoria());
-            inParams.put("costo", objProducto.getCosto());
+            String xmlGenerado = XmlBuilder.toXmlProductosInsert(xmlProductosList);
+
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_insertar_producto_xml");
+
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objProducto.getIdLogin(),
+                    "xml_productos", xmlGenerado);
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -192,11 +188,11 @@ public class ProductoRepository implements ProductoDAO {
             if (resultSet != null) {
                 String mensaje = (String) resultSet.get(0).get("mensaje");
                 rp.setCodigo("400");
-                rp.setMensaje(mensaje != null ? mensaje : "No se pudo registrar el producto");
+                rp.setMensaje(mensaje != null ? mensaje : "No se pudo procesar el XML productos");
             } else {
                 rp.setExito(true);
                 rp.setCodigo("200");
-                rp.setMensaje("Producto registrado correctamente");
+                rp.setMensaje("Operación completada correctamente (XML)");
             }
 
         } catch (Exception e) {
@@ -207,11 +203,64 @@ public class ProductoRepository implements ProductoDAO {
     }
 
     @Override
-    public ResponseProductoMensajeDTO updateD(RequestProductoUpdateDTO objProducto) {
+    public ResponseProductoMensajeDTO updateD(RequestProductoXmlUpdateDTO objProducto) {
+        ResponseProductoMensajeDTO rp = new ResponseProductoMensajeDTO();
+        try {
+            List<XmlProductoUpdate> xmlProductosList = objProducto.getDetalles().stream()
+                    .map(p -> new XmlProductoUpdate(
+                            p.getIdLogin(),
+                            p.getId(),
+                            p.getCodigo(),
+                            p.getNombre(),
+                            p.getImagen(),
+                            p.getCodigoBarras(),
+                            p.getDescripcionProd(),
+                            p.getIdSubcategoria(),
+                            p.getCosto()))
+                    .toList();
+
+            String xmlGenerado = XmlBuilder.toXmlProductosUpdate(xmlProductosList);
+
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_actualizar_producto_xml");
+
+            Map<String, Object> inParams = Map.of(
+                    "id_usuario_sign", objProducto.getIdLogin(),
+                    "xml_productos", xmlGenerado
+
+            );
+
+            Map<String, Object> result = call.execute(inParams);
+
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
+                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
+                    .findFirst()
+                    .orElse(null);
+
+            if (resultSet != null) {
+                String mensaje = (String) resultSet.get(0).get("mensaje");
+                rp.setCodigo("400");
+                rp.setMensaje(mensaje != null ? mensaje : "No se pudo procesar el producto XML");
+            } else {
+                rp.setExito(true);
+                rp.setCodigo("200");
+                rp.setMensaje("Operación completada correctamente (XML)");
+            }
+
+        } catch (Exception e) {
+            rp.setCodigo("500");
+            rp.setMensaje("Error al actualizar producto: " + e.getMessage());
+        }
+        return rp;
+    }
+
+    @Override
+    public ResponseProductoMensajeDTO updateDIndividual(RequestProductoUpdateDTO objProducto) {
         ResponseProductoMensajeDTO rp = new ResponseProductoMensajeDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_actualizar_producto");
+                    .withProcedureName("SP_actualizar_producto_xml");
 
             Map<String, Object> inParams = Map.of(
                     "id_usuario_sign", objProducto.getIdLogin(),
@@ -220,7 +269,7 @@ public class ProductoRepository implements ProductoDAO {
                     "nombre", objProducto.getNombre(),
                     "imagen", objProducto.getImagen(),
                     "codigo_barras", objProducto.getCodigoBarras(),
-                    "descripcion", objProducto.getDescripcion(),
+                    "descripcion", objProducto.getDescripcionProd(),
                     "id_subcategoria", objProducto.getIdSubcategoria(),
                     "costo", objProducto.getCosto());
 
@@ -235,11 +284,11 @@ public class ProductoRepository implements ProductoDAO {
             if (resultSet != null) {
                 String mensaje = (String) resultSet.get(0).get("mensaje");
                 rp.setCodigo("400");
-                rp.setMensaje(mensaje != null ? mensaje : "No se pudo actualizar el producto");
+                rp.setMensaje(mensaje != null ? mensaje : "No se pudo procesar el producto XML");
             } else {
                 rp.setExito(true);
                 rp.setCodigo("200");
-                rp.setMensaje("Producto actualizado correctamente");
+                rp.setMensaje("Operación completada correctamente (XML)");
             }
 
         } catch (Exception e) {

@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -18,7 +19,7 @@ public class RequestNivelAcademicoInsertDTO {
     private Long idLogin;
 
     @NotBlank(message = "El nombre del nivel académico no puede estar vacío")
-    @Size(min = 3, max = 100, message = "El nombre del nivel académico debe tener entre 3 y 100 caracteres")
+    @LengthSQL(tabla = "nivel_academico", columna = "nombre")
     @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre del nivel académico debe contener solo letras y espacios")
     private String nombre;
 }

@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.distrito.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -21,7 +22,7 @@ public class RequestDistritoUpdateDTO {
     private Long id;
 
     @NotBlank(message = "El nombre del distrito no puede estar vacío")
-    @Size(min = 3, max = 100, message = "El nombre del distrito debe tener entre 3 y 100 caracteres")
+    @LengthSQL(tabla = "distrito", columna = "nombre")
     @Pattern(regexp = "^[a-zA-ZÁÉÍÓÚáéíóúÑñ\\s]+$", message = "El nombre del distrito debe contener solo letras y espacios")
     private String nombre;
 

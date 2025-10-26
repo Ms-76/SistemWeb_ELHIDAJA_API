@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.elhidaja.apiselhidaja.presentation.dto.RequestObjectId;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 import com.elhidaja.apiselhidaja.service.implementation.SubCategoriaService;

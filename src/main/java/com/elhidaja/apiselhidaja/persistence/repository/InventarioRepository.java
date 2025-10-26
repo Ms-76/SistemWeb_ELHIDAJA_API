@@ -10,6 +10,8 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Response.*;
 import com.elhidaja.apiselhidaja.service.DAO.InventarioDAO;
+import com.elhidaja.apiselhidaja.util.xml.XmlBuilder;
+import com.elhidaja.apiselhidaja.util.xml.XmlDetalleInventarioInsert;
 
 @Repository
 public class InventarioRepository implements InventarioDAO {
@@ -191,14 +193,30 @@ public class InventarioRepository implements InventarioDAO {
         ResponseInventarioMensajeDTO rp = new ResponseInventarioMensajeDTO();
 
         try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_inventario");
+            List<XmlDetalleInventarioInsert> xmlDetallesList = objInventario.getDetalles().stream()
+                    .map(d -> new XmlDetalleInventarioInsert(
+                            d.getId(),
+                            d.getCodigo(),
+                            d.getNombre(),
+                            d.getImagen(),
+                            d.getCodigoBarras(),
+                            d.getDescripcionProd(),
+                            d.getIdSubcategoria(),
+                            d.getCosto()))
+                    .toList();
 
+            String xmlGenerado = XmlBuilder.toXmlDetallesInventarioInsert(xmlDetallesList);
+
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+                    .withProcedureName("SP_insertar_inventario_con_detalle_xml");
             Map<String, Object> inParams = Map.of(
                     "id_usuario_sign", objInventario.getIdLogin(),
-                    "fecha", objInventario.getFecha(),
+                    "fecha_inicio_inventario", objInventario.getFechaInicioInventario(),
                     "descripcion", objInventario.getDescripcion(),
-                    "id_usuario", objInventario.getIdUsuario());
+                    "id_usuario_supervisor", objInventario.getIdUsuarioSupervisor(),
+                    "id_almacen", objInventario.getIdAlmacen(),
+                    "fecha_fin_inventario", objInventario.getFechaFinInventario(),
+                    "xml_detalles", xmlGenerado);
 
             Map<String, Object> result = call.execute(inParams);
 

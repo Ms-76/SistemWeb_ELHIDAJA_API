@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.departamento.Request;
 
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -21,7 +22,7 @@ public class RequestDepartamentoUpdateDTO {
     private Long id;
 
     @NotBlank(message = "El nombre del departamento no puede estar vacío")
-    @Size(min = 3, max = 100, message = "El nombre del departamento debe tener entre 3 y 100 caracteres")
+    @LengthSQL(tabla = "departamento", columna = "nombre")
     @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre del departamento solo puede contener letras y espacios")
     private String nombre;
 }

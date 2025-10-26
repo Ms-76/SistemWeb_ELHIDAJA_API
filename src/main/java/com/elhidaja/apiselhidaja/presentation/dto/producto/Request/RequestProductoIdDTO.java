@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 @JsonPropertyOrder({ "idLogin", "idProducto","idAlmacen" })
 public class RequestProductoIdDTO extends RequestObjectActionId{
+    
     @Override
     @JsonProperty("idProducto") 
     public Long getId() {
