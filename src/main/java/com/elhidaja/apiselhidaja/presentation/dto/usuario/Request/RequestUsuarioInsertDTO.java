@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import com.elhidaja.apiselhidaja.util.validationsPersonalisate.LengthSQL;
 import com.elhidaja.apiselhidaja.util.validationsPersonalisate.MayorDeEdad;
+import com.elhidaja.apiselhidaja.util.validationsPersonalisate.ValidPassword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.validation.constraints.*;
@@ -65,20 +66,27 @@ public class RequestUsuarioInsertDTO {
     private String idGenero;
 
     @NotBlank(message = "La contraseña no puede estar vacía")
+    @LengthSQL(tabla = "usuario", columna = "password")
+    @ValidPassword
     private String password;
 
     @NotNull(message = "El id_area es obligatorio")
+    @Min(value = 1, message = "El id_area debe ser mayor o igual a 1")
     private Integer idArea;
 
     @NotNull(message = "El id_nivel_academico es obligatorio")
+    @Min(value = 1, message = "El id_nivel_academico debe ser mayor o igual a 1")
     private Integer idNivelAcademico;
 
     @NotNull(message = "El id_oficio es obligatorio")
+    @Min(value = 1, message = "El id_oficio debe ser mayor o igual a 1")
     private Integer idOficio;
 
     @NotNull(message = "El id_puesto es obligatorio")
+    @Min(value = 1, message = "El id_puesto debe ser mayor o igual a 1")
     private Integer idPuesto;
 
     @NotNull(message = "El id_rol es obligatorio")
+    @Min(value = 1, message = "El id_rol debe ser mayor o igual a 1")
     private Integer idRol;
 }

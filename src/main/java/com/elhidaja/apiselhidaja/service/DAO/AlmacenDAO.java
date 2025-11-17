@@ -4,15 +4,15 @@ import com.elhidaja.apiselhidaja.presentation.dto.almacen.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.almacen.Request.*;
 
 public interface AlmacenDAO {
-    public ResponseAlmacenAllDTO getAllD(RequestAlmacenOptionDTO option);
+    ResponseAlmacenAllDTO getAllD(RequestAlmacenOptionDTO option);
 
-    public ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenFilterDTO id);
+    ResponseDetalleAlmacenDTO getByIdD(RequestAlmacenFilterDTO id);
 
-    public ResponseAlmacenMensajeDTO desactivateD(RequestAlmacenIdDTO id);
+    ResponseAlmacenMensajeDTO desactivateD(RequestAlmacenIdDTO id);
 
-    public ResponseAlmacenMensajeDTO activateD(RequestAlmacenIdDTO id);
+    ResponseAlmacenMensajeDTO activateD(RequestAlmacenIdDTO id);
 
-    public ResponseAlmacenMensajeDTO insertD(RequestAlmacenInsertDTO objAlmacen);
+    ResponseAlmacenMensajeDTO insertD(RequestAlmacenInsertDTO objAlmacen);
 
-    public ResponseAlmacenMensajeDTO updateD(RequestAlmacenUpdateDTO objAlmacen);
+    ResponseAlmacenMensajeDTO updateD(RequestAlmacenUpdateDTO objAlmacen);
 }

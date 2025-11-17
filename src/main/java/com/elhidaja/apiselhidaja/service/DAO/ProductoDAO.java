@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.producto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.producto.Response.*;
 
 public interface ProductoDAO {
-     ResponseProductoAllDTO getAllD(RequestProductoOptionDTO option);
+    ResponseProductoAllDTO getAllD(RequestProductoOptionDTO option);
 
     ResponseDetalleProductoDTO getByIdD(RequestProductoFilterDTO id);
 

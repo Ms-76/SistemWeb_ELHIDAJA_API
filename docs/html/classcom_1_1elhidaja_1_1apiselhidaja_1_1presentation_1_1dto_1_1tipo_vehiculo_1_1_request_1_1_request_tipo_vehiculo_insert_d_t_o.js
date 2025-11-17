@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_insert_d_t_o =
+[
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_insert_d_t_o.html#ac083301b36f1b9de50e18be9260b52ea", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_insert_d_t_o.html#a3726a4daa22ede1948fe11ba415562ee", null ]
+];

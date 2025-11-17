@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.AlmacenRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.almacen.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.almacen.Response.*;
 
 @Service
-@Validated
 public class AlmacenService {
         private final AlmacenRepository almacenRepo;
 
@@ -27,12 +25,12 @@ public class AlmacenService {
         return almacenRepo.updateD(objAlmacen);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseAlmacenAllDTO getAllSer(RequestAlmacenOptionDTO option) {
         return almacenRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleAlmacenDTO getByIdSer(RequestAlmacenFilterDTO id) {
         return almacenRepo.getByIdD(id);
     }

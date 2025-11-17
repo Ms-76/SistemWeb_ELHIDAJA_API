@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_response_1_1_response_proyecto_all_d_t_o =
+[
+    [ "proyectos", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_response_1_1_response_proyecto_all_d_t_o.html#afb091d0bcb59e18f013bfd9d7f2037d8", null ]
+];

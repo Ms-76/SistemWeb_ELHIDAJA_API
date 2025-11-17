@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_reque41d6e21f98890d64382a5fb19b3d90b0 =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_reque41d6e21f98890d64382a5fb19b3d90b0.html#aaa5287cac7dc35ed610d86518a7e8001", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_reque41d6e21f98890d64382a5fb19b3d90b0.html#ade17a206f03d8c43bca3e46d86958d22", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_reque41d6e21f98890d64382a5fb19b3d90b0.html#adc283580796d585d73b34dbbef35ab94", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_reque41d6e21f98890d64382a5fb19b3d90b0.html#aab244f9535953b31320fc6d9f0f0fdb9", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proveedor_1_1_response_1_1_response_detalle_proveedor_d_t_o =
+[
+    [ "proveedor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proveedor_1_1_response_1_1_response_detalle_proveedor_d_t_o.html#a208a063d540c177ef65cca4a6a412d85", null ]
+];

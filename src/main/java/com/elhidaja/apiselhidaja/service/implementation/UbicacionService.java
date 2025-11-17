@@ -2,13 +2,11 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.UbicacionRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.ubicacion.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.ubicacion.Response.*;
 @Service
-@Validated
 public class UbicacionService {
      private final UbicacionRepository ubicacionRepo;
 
@@ -16,22 +14,12 @@ public class UbicacionService {
         this.ubicacionRepo = ubicacionRepo;
     }
 
-    @Transactional
-    public ResponserUbicacionMensajeDTO insertSer(RequestUbicacionInsertDTO objUbicacion) {
-        return ubicacionRepo.insertD(objUbicacion);
-    }
-
-    @Transactional
-    public ResponserUbicacionMensajeDTO updateSer(RequestUbicacionUpdateDTO objUbicacion) {
-        return ubicacionRepo.updateD(objUbicacion);
-    }
-
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseUbicacionAllDTO getAllSer(RequestUbicacionOptionDTO option) {
         return ubicacionRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleUbicacionDTO getByIdSer(RequestUbicacionIdDTO id) {
         return ubicacionRepo.getByIdD(id);
     }

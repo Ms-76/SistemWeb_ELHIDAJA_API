@@ -29,7 +29,12 @@ public class IngenieroRepository implements IngenieroDAO {
                     .withProcedureName("SP_obtener_ingenieros");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_distrito", option.getIdDistrito(),
+                    "id_provincia", option.getIdProvincia(),
+                    "id_departamento", option.getIdDepartamento(),
+                    "id_documento_identidad", option.getIdDocumentoIdentidad()
+            );
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -48,7 +53,6 @@ public class IngenieroRepository implements IngenieroDAO {
                 dto.setDepartamento((String) row.get("departamento"));
                 dto.setProvincia((String) row.get("provincia"));
                 dto.setDistrito((String) row.get("distrito"));
-                dto.setStatus((Boolean) row.get("status"));
                 dto.setEspecialidad((String) row.get("especialidad"));
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;

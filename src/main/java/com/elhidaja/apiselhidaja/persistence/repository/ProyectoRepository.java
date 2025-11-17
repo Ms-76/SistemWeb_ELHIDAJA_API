@@ -1,6 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +29,11 @@ public class ProyectoRepository implements ProyectoDAO {
                     .withProcedureName("SP_obtener_proyectos");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_arquitecto", option.getIdArquitecto(),
+                    "id_ingeniero", option.getIdIngeniero(),
+                    "id_maestro_obra", option.getIdMaestroObra(),
+                    "id_supervisor", option.getIdSupervisor());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -44,8 +47,8 @@ public class ProyectoRepository implements ProyectoDAO {
                 dto.setNombre((String) row.get("nombre"));
                 dto.setDescripcion((String) row.get("descripcion"));
                 dto.setUbicacion((String) row.get("ubicacion"));
-                dto.setFechaInicio((LocalDateTime) row.get("fecha_inicio"));
-                dto.setFechaFin((LocalDateTime) row.get("fecha_fin"));
+                dto.setFechaInicio(((java.sql.Date) row.get("fecha_inicio")).toLocalDate());
+                dto.setFechaFin(((java.sql.Date) row.get("fecha_fin")).toLocalDate());
                 dto.setNombreArquitecto((String) row.get("arquitecto"));
                 dto.setNombreIngeniero((String) row.get("ingeniero"));
                 dto.setNombreMaestroObra((String) row.get("maestro_obra"));
@@ -94,8 +97,8 @@ public class ProyectoRepository implements ProyectoDAO {
                     dto.setNombre((String) row.get("nombre"));
                     dto.setDescripcion((String) row.get("descripcion"));
                     dto.setUbicacion((String) row.get("ubicacion"));
-                    dto.setFechaInicio((LocalDateTime) row.get("fecha_inicio"));
-                    dto.setFechaFin((LocalDateTime) row.get("fecha_fin"));
+                    dto.setFechaInicio(((java.sql.Date) row.get("fecha_inicio")).toLocalDate());
+                    dto.setFechaFin(((java.sql.Date) row.get("fecha_fin")).toLocalDate());
                     dto.setNombreArquitecto((String) row.get("arquitecto"));
                     dto.setNombreIngeniero((String) row.get("ingeniero"));
                     dto.setNombreMaestroObra((String) row.get("maestro_obra"));

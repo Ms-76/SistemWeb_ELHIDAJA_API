@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_response_1_1_re7da46803da1d030ab12b415492ed8720 =
+[
+    [ "tipoVehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_response_1_1_re7da46803da1d030ab12b415492ed8720.html#abefbb2cfd745dbe5c950773276d14fb3", null ]
+];

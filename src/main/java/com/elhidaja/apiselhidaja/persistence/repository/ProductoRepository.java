@@ -32,7 +32,11 @@ public class ProductoRepository implements ProductoDAO {
 
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen());
+                    "id_almacen", option.getIdAlmacen(),
+                    "id_categoria", option.getIdCategoria(),
+                    "id_sub_categoria", option.getIdSubcategoria(),
+                    "id_unidad_medida", option.getIdUnidadMedida()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 

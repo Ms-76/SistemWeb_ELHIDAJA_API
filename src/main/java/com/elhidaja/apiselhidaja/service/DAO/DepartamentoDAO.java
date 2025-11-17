@@ -1,16 +1,18 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Request.*;
-public interface  DepartamentoDAO {
-    public ResponseDepartamentoAllDTO getAll(RequestDepartamentoOptionDTO option);
 
-    public ResponseDetalleDepartamentoDTO getById(RequestDepartamentoFilterDTO id);
+public interface DepartamentoDAO {
+    ResponseDepartamentoAllDTO getAll(RequestDepartamentoOptionDTO option);
 
-    public ResponseDepartamentoMensajeDTO desactivate(RequestDepartamentoIdDTO id);
+    ResponseDetalleDepartamentoDTO getById(RequestDepartamentoFilterDTO id);
 
-    public ResponseDepartamentoMensajeDTO activate(RequestDepartamentoIdDTO id);
+    ResponseDepartamentoMensajeDTO desactivate(RequestDepartamentoIdDTO id);
 
-    public ResponseDepartamentoMensajeDTO insert(RequestDepartamentoInsertDTO objDepartamento);
+    ResponseDepartamentoMensajeDTO activate(RequestDepartamentoIdDTO id);
 
-    public ResponseDepartamentoMensajeDTO update(RequestDepartamentoUpdateDTO objDepartamento);
+    ResponseDepartamentoMensajeDTO insert(RequestDepartamentoInsertDTO objDepartamento);
+
+    ResponseDepartamentoMensajeDTO update(RequestDepartamentoUpdateDTO objDepartamento);
 }

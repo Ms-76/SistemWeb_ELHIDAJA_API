@@ -4,15 +4,15 @@ import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.unidadMedida.Resquest.*;
 
 public interface UnidadMedidaDAO {
-     public ResponseUnidadMedidaAllDTO getAllD(RequestUnidadMedidaOptionDTO option);
+    ResponseUnidadMedidaAllDTO getAllD(RequestUnidadMedidaOptionDTO option);
 
-    public ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaFilterDTO id);
+    ResponseDetalleUnidadMedidaDTO getByIdD(RequestUnidadMedidaFilterDTO id);
 
-    public ResponseUnidadMedidaMensajeDTO desactivateD(RequestUnidadMedidaIdDTO id);
+    ResponseUnidadMedidaMensajeDTO desactivateD(RequestUnidadMedidaIdDTO id);
 
-    public ResponseUnidadMedidaMensajeDTO activateD(RequestUnidadMedidaIdDTO id);
+    ResponseUnidadMedidaMensajeDTO activateD(RequestUnidadMedidaIdDTO id);
 
-    public ResponseUnidadMedidaMensajeDTO insertD(RequestUnidadMedidaInsertDTO objUnidad);
+    ResponseUnidadMedidaMensajeDTO insertD(RequestUnidadMedidaInsertDTO objUnidad);
 
-    public ResponseUnidadMedidaMensajeDTO updateD(RequestUnidadMedidaUpdateDTO objUnidad);
+    ResponseUnidadMedidaMensajeDTO updateD(RequestUnidadMedidaUpdateDTO objUnidad);
 }

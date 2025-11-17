@@ -1,0 +1,14 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o =
+[
+    [ "codigoInterno", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#aa76caa999844d5eb34f2b5b55ad72966", null ],
+    [ "codigoSunat", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ae8db1b53d1d9c88e5d72f823d3417554", null ],
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ad72f011b3221110de1e4a70ca0c21590", null ],
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#a1f49f06644101e605fd7e5f00955d2c5", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#afd9222a0e534e8d9f7e0a4d20e1fb171", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ae11bab845270ebb0039fa2a7d8367dcc", null ],
+    [ "idProveedor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ad989c8f7784fe15a725de1f9321c1511", null ],
+    [ "idSerie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#a399e853b89604f904842f2ea2395461a", null ],
+    [ "idTipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ac105f69f14c901b5388e045d71fcb9c7", null ],
+    [ "idTipoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#ac9f63bf88186d5f4a9737d79750a333f", null ],
+    [ "idUsuario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_request_guia_salida_insert_d_t_o.html#a894cf0a039b45c8da5269ef0aee68f39", null ]
+];

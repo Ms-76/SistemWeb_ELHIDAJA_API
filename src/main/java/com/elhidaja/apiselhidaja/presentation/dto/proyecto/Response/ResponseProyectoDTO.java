@@ -1,6 +1,6 @@
 package com.elhidaja.apiselhidaja.presentation.dto.proyecto.Response;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,8 +14,8 @@ public class ResponseProyectoDTO {
     private String nombre;
     private String descripcion;
     private String ubicacion;
-    private LocalDateTime fechaInicio;
-    private LocalDateTime fechaFin;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private String nombreArquitecto;
     private String nombreIngeniero;
     private String nombreMaestroObra;

@@ -1,0 +1,14 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1 =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a510d6d8ef8359f62c0f725901de77dc2", null ],
+    [ "codigo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a0a57f8c0368eb97687004c214b60e137", null ],
+    [ "codigoBarras", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#ac5ee6621c78c59995d08a35816dbf064", null ],
+    [ "costo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a87d8836fb45e6471feb46295337ed232", null ],
+    [ "descripcionProd", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a41c93727ebf33c7ef8dd75ee308b84f1", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a6c68da8d0846de4805f485e7ca0511bd", null ],
+    [ "idSubcategoria", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#aa15b192db30f9358663cd67c945894a1", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#acd6f1c785ac08567134735c10b90b37e", null ],
+    [ "imagen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a61d69259d63d682ef50a0e7d7298145d", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a90618c8e8260dae08d52dadc3bd7d6c4", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re10a9cad44732003dd8cd383ecd1ffed1.html#a65bcae404db22b8b04cb4b6c36f65c73", null ]
+];

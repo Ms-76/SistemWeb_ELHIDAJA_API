@@ -1,6 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.ZoneId;
 import java.util.List;
 import java.util.Map;
 
@@ -31,6 +30,7 @@ public class DetalleGuiaSalidaRepository implements DetalleGuiaSalidaDAO {
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
                     "id_almacen_origen", option.getIdAlmacenOrigen(),
+                    "id_guia_salida", option.getIdGuiaSalida(),
                     "tipo_destino", option.getTipoDestino());
 
             Map<String, Object> result = call.execute(inParams);
@@ -52,16 +52,7 @@ public class DetalleGuiaSalidaRepository implements DetalleGuiaSalidaDAO {
                         dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
                         dto.setSerie((String) row.get("serie"));
                         dto.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
-
-                        Object fechaObj = row.get("fecha_vencimiento_producto");
-                        if (fechaObj instanceof java.sql.Timestamp) {
-                            dto.setFechaVencimientoProducto(((java.sql.Timestamp) fechaObj).toLocalDateTime());
-                        } else if (fechaObj instanceof java.util.Date) {
-                            dto.setFechaVencimientoProducto(((java.util.Date) fechaObj).toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
-                        } else {
-                            dto.setFechaVencimientoProducto(null);
-                        }
-
+                        dto.setTipoDestino((String) row.get("tipo_destino"));
                         dto.setProducto((String) row.get("producto"));
                         dto.setCantidad(((Number) row.get("cantidad")).longValue());
                         dto.setUnidadMedida((String) row.get("unidad_medida"));
@@ -104,7 +95,7 @@ public class DetalleGuiaSalidaRepository implements DetalleGuiaSalidaDAO {
 
             Map<String, Object> inParams = Map.of(
                     "id_detalle_guia_salida", id.getId(),
-                    "status", 1  // si necesitas filtrar por estado, aquí puedes parametrizar
+                    "status", 1 // si necesitas filtrar por estado, aquí puedes parametrizar
             );
 
             Map<String, Object> result = call.execute(inParams);
@@ -121,29 +112,20 @@ public class DetalleGuiaSalidaRepository implements DetalleGuiaSalidaDAO {
                     rp.setCodigo("404");
                 } else {
                     ResponseDetalleGuiaSalidaDTOInner dto = new ResponseDetalleGuiaSalidaDTOInner();
-                    dto.setIdDetalleGuiaSalida(((Number) row.get("id_detalle_guia_salida")).longValue());
-                    dto.setIdGuiaSalida(((Number) row.get("guia_salida")).longValue());
-                    dto.setTipoOperacion((String) row.get("tipo_operacion"));
-                    dto.setTipoDocumento((String) row.get("tipo_documento"));
-                    dto.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
-                    dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
-                    dto.setSerie((String) row.get("serie"));
-                    dto.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
-
-                    Object fechaObj = row.get("fecha_vencimiento_producto");
-                    if (fechaObj instanceof java.sql.Timestamp) {
-                        dto.setFechaVencimientoProducto(((java.sql.Timestamp) fechaObj).toLocalDateTime());
-                    } else if (fechaObj instanceof java.util.Date) {
-                        dto.setFechaVencimientoProducto(((java.util.Date) fechaObj).toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
-                    } else {
-                        dto.setFechaVencimientoProducto(null);
-                    }
-
-                    dto.setProducto((String) row.get("producto"));
-                    dto.setCantidad(((Number) row.get("cantidad")).longValue());
-                    dto.setUnidadMedida((String) row.get("unidad_medida"));
-                    dto.setObservacion((String) row.get("observacion"));
-                    dto.setStatus((Boolean) row.get("status"));
+                        dto.setIdDetalleGuiaSalida(((Number) row.get("id_detalle_guia_salida")).longValue());
+                        dto.setIdGuiaSalida(((Number) row.get("guia_salida")).longValue());
+                        dto.setTipoOperacion((String) row.get("tipo_operacion"));
+                        dto.setTipoDocumento((String) row.get("tipo_documento"));
+                        dto.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
+                        dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
+                        dto.setSerie((String) row.get("serie"));
+                        dto.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
+                        dto.setTipoDestino((String) row.get("tipo_destino"));
+                        dto.setProducto((String) row.get("producto"));
+                        dto.setCantidad(((Number) row.get("cantidad")).longValue());
+                        dto.setUnidadMedida((String) row.get("unidad_medida"));
+                        dto.setObservacion((String) row.get("observacion"));
+                        dto.setStatus((Boolean) row.get("status"));
 
                     rp.setDetalleGuiaSalida(dto);
                     rp.setExito(true);

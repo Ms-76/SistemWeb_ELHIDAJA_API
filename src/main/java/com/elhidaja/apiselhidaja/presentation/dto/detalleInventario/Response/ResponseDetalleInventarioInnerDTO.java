@@ -2,7 +2,7 @@ package com.elhidaja.apiselhidaja.presentation.dto.detalleInventario.Response;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -19,10 +19,10 @@ public class ResponseDetalleInventarioInnerDTO {
     private Integer stockFisico;
     private Integer diferencia;
     private String observacion;
-    private LocalDateTime fechaInicioInventario;
-    private LocalDateTime fechaFinInventario;
+    private LocalDate fechaInicioInventario;
+    private LocalDate fechaFinInventario;
     private Boolean nuevo;
     private Boolean editadoManual;
-    private Integer estado;
+    private String estado;
     private Boolean status;
 }

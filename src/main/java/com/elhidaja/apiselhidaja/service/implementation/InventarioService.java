@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.InventarioRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Response.*;
 
 @Service
-@Validated
 public class InventarioService {
 
     private final InventarioRepository inventarioRepo;
@@ -28,12 +26,12 @@ public class InventarioService {
         return inventarioRepo.updateD(objInventario);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseInventarioAllDTO getAllSer(RequestInventarioOptionDTO option) {
         return inventarioRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleInventarioDTO getByIdSer(RequestInventarioFilterDTO id) {
         return inventarioRepo.getByIdD(id);
     }

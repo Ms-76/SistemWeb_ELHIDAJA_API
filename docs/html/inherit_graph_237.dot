@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="com.elhidaja.apiselhidaja.presentation.dto.unidad\lMedidaProducto.Request.RequestProductoUnidadMedida\lUpdateDTO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques87b6c3241735ab037be7b8c8aa0e5c50.html",tooltip=" "];
+}

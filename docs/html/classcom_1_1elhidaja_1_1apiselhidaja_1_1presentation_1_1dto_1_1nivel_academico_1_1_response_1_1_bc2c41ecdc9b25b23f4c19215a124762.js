@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_bc2c41ecdc9b25b23f4c19215a124762 =
+[
+    [ "nivelAcademico", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_bc2c41ecdc9b25b23f4c19215a124762.html#a28088f802be62fc2016669970e832d44", null ]
+];

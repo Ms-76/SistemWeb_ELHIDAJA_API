@@ -35,18 +35,6 @@ public class UbicacionController {
         return ResponseEntity.ok(ubicacionService.getByIdSer(id));
     }
 
-    @PostMapping("/create")
-    public ResponseEntity<ResponserUbicacionMensajeDTO> insertarUbicacion(
-            @Valid @RequestBody RequestUbicacionInsertDTO dto) {
-        return ResponseEntity.ok(ubicacionService.insertSer(dto));
-    }
-
-    @PutMapping("/update")
-    public ResponseEntity<ResponserUbicacionMensajeDTO> actualizarUbicacion(
-            @Valid @RequestBody RequestUbicacionUpdateDTO dto) {
-        return ResponseEntity.ok(ubicacionService.updateSer(dto));
-    }
-
     @PutMapping("/activate")
     public ResponseEntity<ResponserUbicacionMensajeDTO> activarUbicacion(
             @Valid @RequestBody RequestUbicacionIdDTO id) {

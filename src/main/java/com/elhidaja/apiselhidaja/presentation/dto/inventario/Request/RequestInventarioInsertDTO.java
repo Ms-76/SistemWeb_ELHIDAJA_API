@@ -29,14 +29,6 @@ public class RequestInventarioInsertDTO {
     @LengthSQL(tabla = "inventario", columna = "descripcion")
     private String descripcion;
 
-    @NotNull(message = "El id del usuario es obligatorio")
-    @Min(value = 1, message = "El id del usuario debe ser mayor a 0")
-    private Long idUsuario;
-
-    @NotNull(message = "El id del usuario supervisor es obligatorio")
-    @Min(value = 1, message = "El id del usuario supervisor debe ser mayor a 0")
-    private Long idUsuarioSupervisor;
-
     @NotNull(message = "El id del almacén es obligatorio")
     @Min(value = 1, message = "El id del almacén debe ser mayor o igual a 1")
     private Long idAlmacen;

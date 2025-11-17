@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.AreaRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.area.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.area.Response.*;
 
 @Service
-@Validated
 public class AreaService {
     private final AreaRepository areaRepo;
 
@@ -27,12 +25,12 @@ public class AreaService {
         return areaRepo.updateD(objArea);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseAreaAllDTO getAllSer(RequestAreaOptionDTO option) {
         return areaRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleAreaDTO getByIdSer(RequestAreaFilterDTO id) {
         return areaRepo.getByIdD(id);
     }

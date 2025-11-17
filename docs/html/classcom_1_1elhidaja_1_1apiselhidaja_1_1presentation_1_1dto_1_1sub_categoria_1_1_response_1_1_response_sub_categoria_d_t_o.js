@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categoria_d_t_o =
+[
+    [ "categoria", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categoria_d_t_o.html#a7111fad53a9981fcd89e524e2fb22563", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categoria_d_t_o.html#a73c2339eac51b0e75399931d12521dbb", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categoria_d_t_o.html#a8ac341b62f7e64ba5b18e12e90a2c62e", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categoria_d_t_o.html#a3764531f5f3475abd43fa1ae231339e0", null ]
+];

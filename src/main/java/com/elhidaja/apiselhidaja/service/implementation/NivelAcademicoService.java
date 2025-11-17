@@ -2,20 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.NivelAcademicoRepository;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoFilterDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoIdDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoInsertDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoOptionDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoUpdateDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.ResponseDetalleNivelAcademicoDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.ResponseNivelAcademicoAllDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.ResponseNivelAcademicoMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.*;
+import com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Response.*;
 
 @Service
-@Validated
 public class NivelAcademicoService {
        private final NivelAcademicoRepository nivelRepo;
 
@@ -33,12 +25,12 @@ public class NivelAcademicoService {
         return nivelRepo.updateD(objNivel);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseNivelAcademicoAllDTO getAllSer(RequestNivelAcademicoOptionDTO option) {
         return nivelRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleNivelAcademicoDTO getByIdSer(RequestNivelAcademicoFilterDTO id) {
         return nivelRepo.getByIdD(id);
     }

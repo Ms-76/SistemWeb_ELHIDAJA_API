@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_respon2b36084f081859fa94c163d40e9de6ee =
+[
+    [ "ProductoUnidadMedidas", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_respon2b36084f081859fa94c163d40e9de6ee.html#afb4f7dc7179f2e999f9db22231e817a4", null ]
+];

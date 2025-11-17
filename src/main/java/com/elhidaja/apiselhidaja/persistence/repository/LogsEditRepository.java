@@ -30,8 +30,9 @@ public class LogsEditRepository implements LogsEditDAO {
             // Parámetros de entrada del SP
             Map<String, Object> inParams = new HashMap<>();
             inParams.put("id_usuario", option.getIdUsuario());
-            inParams.put("fecha_inicio", option.getFechaInicio() != null ? option.getFechaInicio() : 0);
-            inParams.put("fecha_fin", option.getFechaFin() != null ? option.getFechaFin() : 0);
+            inParams.put("fecha_inicio", option.getFechaInicio());
+            inParams.put("fecha_fin", option.getFechaFin());
+            inParams.put("tipo_accion", option.getTipoAccion());
             // Ejecutar el SP
             Map<String, Object> result = call.execute(inParams);
 

@@ -1,0 +1,4 @@
+var _request_detalle_guia_entrada_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaEntrada.Request.RequestDetalleGuiaEntradaInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486" ]
+];

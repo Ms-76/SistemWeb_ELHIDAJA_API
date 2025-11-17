@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_r1f8b4b831361968f276207c670715f1b =
+[
+    [ "tiposDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_r1f8b4b831361968f276207c670715f1b.html#a4ebd19134ab763efd4acc030037c5ef4", null ]
+];

@@ -1,16 +1,16 @@
 package com.elhidaja.apiselhidaja.service.implementation;
+
 import com.elhidaja.apiselhidaja.presentation.dto.distrito.Response.*;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.DistritoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.distrito.Request.*;
+
 @Service
-@Validated
 public class DistritoService {
-        private final DistritoRepository distritoRepo;
+    private final DistritoRepository distritoRepo;
 
     public DistritoService(DistritoRepository distritoRepo) {
         this.distritoRepo = distritoRepo;
@@ -26,12 +26,12 @@ public class DistritoService {
         return distritoRepo.updateD(objDistrito);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDistritoAllDTO getAllSer(RequestDistritoOptionDTO option) {
         return distritoRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleDistritoDTO getByIdSer(RequestDistritoFilterDTO id) {
         return distritoRepo.getByIdD(id);
     }

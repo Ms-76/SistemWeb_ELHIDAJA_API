@@ -2,7 +2,7 @@ package com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaEntrada.Response;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -20,7 +20,7 @@ public class ResponseDetalleGuiaEntradaDTOInner {
     private Long codigoInterno;
     private String serie;
     private Long ultimoCorrelativo;
-    private LocalDateTime fechaVencimientoProducto;
+    private LocalDate fechaVencimientoProducto;
     private String producto;
     private Long cantidad;
     private String unidadMedida;

@@ -1,0 +1,12 @@
+digraph "src/main/java/com/elhidaja/apiselhidaja/presentation/dto/loginLogs/Request"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_1eaad179d2eb221d39d571bd91ea25e1 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="loginLogs", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_1eaad179d2eb221d39d571bd91ea25e1.html",tooltip=""]
+  dir_686321405dc1c2b31fe7e41a8fd3c512 [label="Request", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_686321405dc1c2b31fe7e41a8fd3c512.html",tooltip=""];
+  }
+}

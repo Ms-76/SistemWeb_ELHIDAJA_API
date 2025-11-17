@@ -1,0 +1,17 @@
+digraph "src/main/java/com/elhidaja/apiselhidaja/presentation/dto/guiaSalida"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_3fbdfc0b9d20ff6aa049a8b39be95fa4 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="dto", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_3fbdfc0b9d20ff6aa049a8b39be95fa4.html",tooltip=""]
+  subgraph clusterdir_c60a84e6972b23b452fa28ee4b5af5a7 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_c60a84e6972b23b452fa28ee4b5af5a7.html",tooltip=""]
+    dir_c60a84e6972b23b452fa28ee4b5af5a7 [shape=plaintext, label="guiaSalida"];
+  dir_b0b5f9c6caab16f9d197dc9311115045 [label="Request", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_b0b5f9c6caab16f9d197dc9311115045.html",tooltip=""];
+  dir_01402ac5460214aafd40f75f127d84e6 [label="Response", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_01402ac5460214aafd40f75f127d84e6.html",tooltip=""];
+  }
+  }
+}

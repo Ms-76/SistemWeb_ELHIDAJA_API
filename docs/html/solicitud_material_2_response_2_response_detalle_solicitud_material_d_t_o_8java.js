@@ -1,0 +1,4 @@
+var solicitud_material_2_response_2_response_detalle_solicitud_material_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Response.ResponseDetalleSolicitudMaterialDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_181228970e332e30ae86b79a1cb02658b.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_181228970e332e30ae86b79a1cb02658b" ]
+];

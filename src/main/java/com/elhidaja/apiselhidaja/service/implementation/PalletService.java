@@ -2,18 +2,15 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.PalletRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.pallet.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.pallet.Response.*;
-import com.elhidaja.apiselhidaja.service.DAO.PalletDAO;
 
 @Service
-@Validated
 public class PalletService {
     
-    private final PalletDAO palletRepo;
+    private final PalletRepository palletRepo;
 
     public PalletService(PalletRepository palletRepo) {
         this.palletRepo = palletRepo;
@@ -29,12 +26,12 @@ public class PalletService {
         return palletRepo.updateD(objPallet);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponsePalletAllDTO getAllSer(RequestPalletOptionDTO option) {
         return palletRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetallePalletDTO getByIdSer(RequestPalletFilterDTO id) {
         return palletRepo.getByIdD(id);
     }

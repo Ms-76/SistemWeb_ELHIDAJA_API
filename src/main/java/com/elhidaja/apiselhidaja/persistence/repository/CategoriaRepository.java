@@ -10,16 +10,28 @@ import org.springframework.stereotype.Repository;
 import com.elhidaja.apiselhidaja.presentation.dto.categoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.categoria.Resquest.*;
 import com.elhidaja.apiselhidaja.service.DAO.CategoriaDAO;
-
+/**
+ * @class CategoriaRepository
+ * @brief Repositorio para operaciones CRUD sobre la entidad Categoría usando JdbcTemplate y procedimientos almacenados.
+ * 
+ * Implementa la interfaz CategoriaDAO y maneja la comunicación con la base de datos.
+ */
 @Repository
 public class CategoriaRepository implements CategoriaDAO {
 
     private final JdbcTemplate jdbc;
-
+    /**
+     * @brief Constructor que inyecta el JdbcTemplate para acceso a la base de datos.
+     * @param jdbc JdbcTemplate para ejecutar consultas y procedimientos.
+     */
     public CategoriaRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
-
+    /**
+     * @brief Obtiene todas las categorías según las opciones proporcionadas.
+     * @param option DTO con filtros y opciones de consulta.
+     * @return ResponseCategoriAllDTO con la lista de categorías y resultado de la operación.
+     */
     @Override
     public ResponseCategoriAllDTO getAllD(ResquestCategoriaOptionDTO option) {
         ResponseCategoriAllDTO rp = new ResponseCategoriAllDTO();
@@ -59,7 +71,11 @@ public class CategoriaRepository implements CategoriaDAO {
         }
         return rp;
     }
-
+    /**
+     * @brief Obtiene los detalles de una categoría por su ID.
+     * @param id DTO que contiene el ID de la categoría.
+     * @return ResponseDetalleCategoriaDTO con los detalles de la categoría.
+     */
     @Override
     public ResponseDetalleCategoriaDTO getByIdD(RequestCategoriaFilterDTO id) {
         ResponseDetalleCategoriaDTO rp = new ResponseDetalleCategoriaDTO();
@@ -110,7 +126,11 @@ public class CategoriaRepository implements CategoriaDAO {
         }
         return rp;
     }
-
+    /**
+     * @brief Inserta una nueva categoría en la base de datos.
+     * @param objCategoria DTO con los datos de la categoría a insertar.
+     * @return ResponserCategoriaMensajeDTO con el resultado de la operación.
+     */
     @Override
     public ResponserCategoriaMensajeDTO activateD(RequesteCategoriaIdDTO id) {
         ResponserCategoriaMensajeDTO rp = new ResponserCategoriaMensajeDTO();
@@ -151,7 +171,11 @@ public class CategoriaRepository implements CategoriaDAO {
         }
         return rp;
     }
-
+    /**
+     * @brief Actualiza una categoría existente en la base de datos.
+     * @param objCategoria DTO con los datos de la categoría a actualizar.
+     * @return ResponserCategoriaMensajeDTO con el resultado de la operación.
+     */
     @Override
     public ResponserCategoriaMensajeDTO desactivateD(RequesteCategoriaIdDTO id) {
 
@@ -193,7 +217,11 @@ public class CategoriaRepository implements CategoriaDAO {
         }
         return rp;
     }
-
+    /**
+     * @brief Activa una categoría por su ID.
+     * @param id DTO que contiene el ID de la categoría a activar.
+     * @return ResponserCategoriaMensajeDTO con el resultado de la operación.
+     */
     @Override
     public ResponserCategoriaMensajeDTO updateD(RequestCategoriaUpdateDTO objCategoria) {
         ResponserCategoriaMensajeDTO rp = new ResponserCategoriaMensajeDTO();
@@ -236,7 +264,11 @@ public class CategoriaRepository implements CategoriaDAO {
         return rp;
 
     }
-
+    /**
+     * @brief Desactiva una categoría por su ID.
+     * @param id DTO que contiene el ID de la categoría a desactivar.
+     * @return ResponserCategoriaMensajeDTO con el resultado de la operación.
+     */
     @Override
     public ResponserCategoriaMensajeDTO insertD(RequestCategoriaInsertDTO objCategoria) {
 

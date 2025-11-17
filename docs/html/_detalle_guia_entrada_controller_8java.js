@@ -1,0 +1,4 @@
+var _detalle_guia_entrada_controller_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.controler.DetalleGuiaEntradaController", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1_detalle_guia_entrada_controller.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1_detalle_guia_entrada_controller" ]
+];

@@ -5,15 +5,15 @@ import com.elhidaja.apiselhidaja.presentation.dto.unidadMedidaProducto.Response.
 
 public interface UnidadMedidaProductoDAO {
 
-    public ResponseProductoUnidadMedidaAllDTO getAllD(RequestProductoUnidadMedidaOptionDTO option);
+    ResponseProductoUnidadMedidaAllDTO getAllD(RequestProductoUnidadMedidaOptionDTO option);
 
-    public ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestUnidadMedidaProductoFilterDTO id);
+    ResponseDetalleProductoUnidadMedidaDTO getByIdD(RequestUnidadMedidaProductoFilterDTO id);
 
-    public ResponserProductoUnidadMedidaMensajeDTO desactivateD(RequestProductoUnidadMedidaIdDTO id);
+    ResponserProductoUnidadMedidaMensajeDTO desactivateD(RequestProductoUnidadMedidaIdDTO id);
 
-    public ResponserProductoUnidadMedidaMensajeDTO activateD(RequestProductoUnidadMedidaIdDTO id);
+    ResponserProductoUnidadMedidaMensajeDTO activateD(RequestProductoUnidadMedidaIdDTO id);
 
-    public ResponserProductoUnidadMedidaMensajeDTO insertD(RequestProductoUnidadMedidaInsertDTO objProductoUnidadMedida);
+    ResponserProductoUnidadMedidaMensajeDTO insertD(RequestProductoUnidadMedidaInsertDTO objProductoUnidadMedida);
 
-    public ResponserProductoUnidadMedidaMensajeDTO updateD(RequestProductoUnidadMedidaUpdateDTO objProductoUnidadMedida);
+    ResponserProductoUnidadMedidaMensajeDTO updateD(RequestProductoUnidadMedidaUpdateDTO objProductoUnidadMedida);
 }

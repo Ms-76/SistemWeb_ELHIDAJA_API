@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_response_tipo_documento_d_t_o =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_response_tipo_documento_d_t_o.html#a60abd62d6fe0193db7bd5ae742505621", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_response_tipo_documento_d_t_o.html#a65e54552e6b47e058385e85e5063ed7a", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_response_tipo_documento_d_t_o.html#aa77006eb7f1ddc3a3b1beedb0a864a27", null ]
+];

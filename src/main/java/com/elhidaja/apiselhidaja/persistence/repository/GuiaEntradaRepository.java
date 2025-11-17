@@ -1,9 +1,10 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.ZoneId;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.sql.Timestamp;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -34,7 +35,12 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
 
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen());
+                    "id_almacen", option.getIdAlmacen(),
+                    "id_proveedor", option.getIdProveedor(),
+                    "id_serie_documento", option.getIdSerieDocumento(),
+                    "fecha_inicio", option.getFechaInicio(),
+                    "fecha_fin", option.getFechaFin(),
+                    "id_usuario", option.getIdUsuario());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -51,20 +57,17 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
                     List<ResponseGuiaEntradaDTO> guiasEntrada = rows.stream().map(row -> {
                         ResponseGuiaEntradaDTO dto = new ResponseGuiaEntradaDTO();
                         dto.setId(((Number) row.get("id_guia_entrada")).longValue());
+                        dto.setTipoOperacion((String) row.get("tipo_operacion"));
+                        dto.setTipoDocumento((String) row.get("tipo_documento"));
+                        dto.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
+                        dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
+                        dto.setSerie((String) row.get("serie"));
+                        dto.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
                         dto.setProveedor((String) row.get("proveedor"));
-                        dto.setTrabajador((String) row.get("trabajador")); // corregido "trajabador"
+                        dto.setTrabajador((String) row.get("trajabador"));
                         dto.setDescripcion((String) row.get("descripcion"));
-
-                        Object fechaObj = row.get("fecha_creacion");
-                        if (fechaObj instanceof java.sql.Timestamp) {
-                            java.sql.Timestamp timestamp = (java.sql.Timestamp) fechaObj;
-                            dto.setFechaEntrada(timestamp.toLocalDateTime().toLocalDate());
-                        } else if (fechaObj instanceof java.util.Date) {
-                            java.util.Date fecha = (java.util.Date) fechaObj;
-                            dto.setFechaEntrada(fecha.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-                        } else {
-                            dto.setFechaEntrada(null);
-                        }
+                        Timestamp ts = (Timestamp) row.get("fecha_entrada");
+                        dto.setFechaEntrada(ts.toLocalDateTime());
                         return dto;
                     }).toList();
 
@@ -119,19 +122,16 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
 
                     ResponseGuiaEntradaDTO rcd = new ResponseGuiaEntradaDTO();
                     rcd.setId(((Number) row.get("id_guia_entrada")).longValue());
-                    rcd.setProveedor(((String) row.get("proveedor")));
-                    rcd.setTrabajador(((String) row.get("trajabador")));
+                    rcd.setTipoOperacion((String) row.get("tipo_operacion"));
+                    rcd.setTipoDocumento((String) row.get("tipo_documento"));
+                    rcd.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
+                    rcd.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
+                    rcd.setSerie((String) row.get("serie"));
+                    rcd.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
+                    rcd.setProveedor((String) row.get("proveedor"));
+                    rcd.setTrabajador((String) row.get("trabajador"));
                     rcd.setDescripcion((String) row.get("descripcion"));
-                    Object fechaObj = row.get("fecha_creacion");
-                    if (fechaObj instanceof java.sql.Timestamp) {
-                        java.sql.Timestamp timestamp = (java.sql.Timestamp) fechaObj;
-                        rcd.setFechaEntrada(timestamp.toLocalDateTime().toLocalDate());
-                    } else if (fechaObj instanceof java.util.Date) {
-                        java.util.Date fecha = (java.util.Date) fechaObj;
-                        rcd.setFechaEntrada(fecha.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-                    } else {
-                        rcd.setFechaEntrada(null);
-                    }
+                    rcd.setFechaEntrada((LocalDateTime) row.get("fecha_entrada"));
 
                     rp.setGuiaEntrada(rcd);
                     rp.setExito(true);
@@ -294,8 +294,27 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
 
                     ))
                     .toList();
-
+            /*
+             * System.out.println("===== Detalles de la guía =====");
+             * for (XmlDetalleGuiaEntrada detalle : xmlDetallesList) {
+             * System.out.println("idProducto: " + detalle.getIdProducto());
+             * System.out.println("codigo: " + detalle.getCodigo());
+             * System.out.println("nombre: " + detalle.getNombre());
+             * System.out.println("imagen: " + detalle.getImagen());
+             * System.out.println("codigoBarras: " + detalle.getCodigoBarras());
+             * System.out.println("descripcionProd: " + detalle.getDescripcionProd());
+             * System.out.println("idSubcategoria: " + detalle.getIdSubcategoria());
+             * System.out.println("costo: " + detalle.getCosto());
+             * System.out.println("cantidad: " + detalle.getCantidad());
+             * System.out.println("idUnidadMedida: " + detalle.getIdUnidadMedida());
+             * System.out.println("observacion: " + detalle.getObservacion());
+             * System.out.println("-------------------------------");
+             * }
+             */
             String xmlGenerado = XmlBuilder.toXmlGuiaEntrada(xmlDetallesList);
+
+            // System.out.println(xmlGenerado);
+
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_insertar_guia_entrada_con_detalle_xml");
 
@@ -341,7 +360,8 @@ public class GuiaEntradaRepository implements GuiaEntradaDAO {
         }
         return rp;
     }
-       @Override
+
+    @Override
     public ResponseGuiaSalidaMensajeDTO recibirDesdeGuiaSalida(RequestRecibirDesdeGuiaSalidaDTO r) {
         ResponseGuiaSalidaMensajeDTO rp = new ResponseGuiaSalidaMensajeDTO();
         try {

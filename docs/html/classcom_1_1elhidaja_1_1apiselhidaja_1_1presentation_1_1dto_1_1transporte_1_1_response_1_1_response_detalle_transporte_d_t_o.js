@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_response_1_1_response_detalle_transporte_d_t_o =
+[
+    [ "transporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_response_1_1_response_detalle_transporte_d_t_o.html#a4c4270e64a8f0f971e2e85afdcfb8b17", null ]
+];

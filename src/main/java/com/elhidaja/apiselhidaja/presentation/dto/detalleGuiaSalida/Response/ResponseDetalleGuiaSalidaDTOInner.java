@@ -1,5 +1,4 @@
 package com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaSalida.Response;
-import java.time.LocalDateTime;
 import lombok.*;
 
 @Data
@@ -14,7 +13,7 @@ public class ResponseDetalleGuiaSalidaDTOInner {
     private Long codigoInterno;
     private String serie;
     private Long ultimoCorrelativo;
-    private LocalDateTime fechaVencimientoProducto;
+    private String tipoDestino;
     private String producto;
     private Long cantidad;
     private String unidadMedida;

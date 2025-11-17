@@ -1,0 +1,11 @@
+digraph "com.elhidaja.apiselhidaja.util.xml.XmlBuilder.toXmlDetallesInventarioInsert"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="com.elhidaja.apiselhidaja.util.xml.\lXmlBuilder.toXmlDetallesInventarioInsert",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="com.elhidaja.apiselhidaja.persistence.repository.\lInventarioRepository.insertD",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_inventario_repository.html#a8af0ca20b3094b0c8c60fe1ed0b5f6a9",tooltip=" "];
+}

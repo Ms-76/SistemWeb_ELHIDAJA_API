@@ -1,0 +1,12 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#a7887400b5a0c67965af49eeb811f0f93", null ],
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#ac8ec3165b9e626006e031f076525ff33", null ],
+    [ "fechaFinInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#aa049d2e66f89613c8339f329158e6666", null ],
+    [ "fechaInicioInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#ab461d2640b2bf9e523c8d2449f5de6d8", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#a5d85977f07f740280422ad32aeb2eb64", null ],
+    [ "idinventariador", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#ac40a1b78ade665caca668d78b5279da5", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#ab153489156452d52f2866da9e51349d5", null ],
+    [ "idUsuario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#a960fadd6b33c68e7dff57ee4bc344c74", null ],
+    [ "idUsuarioSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_insert_d_t_o.html#a52228d27e744ecdd12d9888ebd771377", null ]
+];

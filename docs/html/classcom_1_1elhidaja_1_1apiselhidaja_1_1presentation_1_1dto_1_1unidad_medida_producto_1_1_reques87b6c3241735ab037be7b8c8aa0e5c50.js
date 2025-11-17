@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques87b6c3241735ab037be7b8c8aa0e5c50 =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques87b6c3241735ab037be7b8c8aa0e5c50.html#a798c09965256c624df6e321f806e7796", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques87b6c3241735ab037be7b8c8aa0e5c50.html#ac18e63a82c7feea7e3172ba609a8af07", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques87b6c3241735ab037be7b8c8aa0e5c50.html#a7926bc4faaed6b92f5487108084ba28f", null ]
+];

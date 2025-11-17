@@ -1,15 +1,15 @@
 package com.elhidaja.apiselhidaja.service.implementation;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.ProyectoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.proyecto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.proyecto.Response.*;
+
 @Service
-@Validated
 public class ProyectoService {
-        private final ProyectoRepository proyRepo;
+    private final ProyectoRepository proyRepo;
 
     public ProyectoService(ProyectoRepository proyRepo) {
         this.proyRepo = proyRepo;
@@ -25,12 +25,12 @@ public class ProyectoService {
         return proyRepo.updateD(objProyecto);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseProyectoAllDTO getAllSer(RequestProyectoOptionDTO option) {
         return proyRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleProyectoDTO getByIdSer(RequestProyectoFilterDTO id) {
         return proyRepo.getByIdD(id);
     }

@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['bulto_0',['bulto',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#aae561220286e212c32806328537bfba1',1,'com.elhidaja.apiselhidaja.presentation.dto.transporteDetalle.Request.RequestTransporteDetalleInsertDTO.bulto'],['../classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#a601f4fa82230746b805b789a33882413',1,'com.elhidaja.apiselhidaja.presentation.dto.transporteDetalle.Response.ResponseTransporteDetalleDTO.bulto'],['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_transporte.html#a332d84639758a25c0a86f8ec5ebc30c2',1,'com.elhidaja.apiselhidaja.util.xml.XmlDetalleTransporte.bulto']]]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ingeniero_1_1_response_1_1_response_ingeniero_all_d_t_o =
+[
+    [ "ingenieros", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ingeniero_1_1_response_1_1_response_ingeniero_all_d_t_o.html#a967217e775a6de09aee2710f1e34dc9b", null ]
+];

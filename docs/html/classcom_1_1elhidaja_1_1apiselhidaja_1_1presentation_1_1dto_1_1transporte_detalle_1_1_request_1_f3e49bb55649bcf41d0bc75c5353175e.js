@@ -1,0 +1,9 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e =
+[
+    [ "bulto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#aae561220286e212c32806328537bfba1", null ],
+    [ "costoBulto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#aef9b508a9955f4c2564827c3ccfe8c15", null ],
+    [ "costoPasaje", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#a0ba82852825a5ba852b2c37a7a1208eb", null ],
+    [ "idPasajero", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#a812d040ff3be214dc19166b63ae23508", null ],
+    [ "idTipoPasajero", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#a64a205cf4f11f89bc6b435809e897341", null ],
+    [ "idTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_request_1_f3e49bb55649bcf41d0bc75c5353175e.html#a5c7ea8486dd18ace5cf25e230e7acfae", null ]
+];

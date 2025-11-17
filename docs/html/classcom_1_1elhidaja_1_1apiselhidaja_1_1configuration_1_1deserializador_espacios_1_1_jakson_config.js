@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1deserializador_espacios_1_1_jakson_config =
+[
+    [ "customStringDeserializer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1deserializador_espacios_1_1_jakson_config.html#a424147e3928c5f252e93e4babb879b0f", null ]
+];

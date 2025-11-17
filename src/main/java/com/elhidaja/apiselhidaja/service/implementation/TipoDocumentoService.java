@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.TipoDocumentoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.tipoDocumento.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.tipoDocumento.Response.*;
 
 @Service
-@Validated
 public class TipoDocumentoService {
     private final TipoDocumentoRepository tipoDocRepo;
 
@@ -27,12 +25,12 @@ public class TipoDocumentoService {
         return tipoDocRepo.updateD(objTipoDocumento);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseTipoDocumentoAllDTO getAllSer(RequestTipoDocumentoOptionDTO option) {
         return tipoDocRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleTipoDocumentoDTO getByIdSer(RequestTipoDocumentoFilterDTO id) {
         return tipoDocRepo.getByIdD(id);
     }

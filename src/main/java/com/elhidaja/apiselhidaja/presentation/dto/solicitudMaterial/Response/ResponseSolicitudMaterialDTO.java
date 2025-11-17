@@ -15,7 +15,7 @@ public class ResponseSolicitudMaterialDTO {
     private String nombreSupervisor;
     private String nombreSolicitud;
     private String descripcion;
-    private Integer estado;
+    private String estado;
     private LocalDateTime fechaSolicitud;
     private Boolean status;
 }

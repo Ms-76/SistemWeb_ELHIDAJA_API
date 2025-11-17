@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categori_all_d_t_o =
+[
+    [ "subCategorias", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_response_sub_categori_all_d_t_o.html#a0cbb97efda79d8f586fccc06de91cb90", null ]
+];

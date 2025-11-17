@@ -26,7 +26,12 @@ public class DocumentoOperacionRepository implements DocumentoOperacionDAO {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_obtener_documentos_operacion");
 
-            Map<String, Object> inParams = Map.of("status", option.getEstado());
+            Map<String, Object> inParams = Map.of(
+                "status", option.getEstado(),
+                "id_tipo_operacion", option.getId_tipo_operacion(),
+                "id_tipo_documento", option.getId_tipo_documento(),
+                "codigo_interno", option.getCodigo_interno()
+            );
 
             Map<String, Object> result = call.execute(inParams);
 

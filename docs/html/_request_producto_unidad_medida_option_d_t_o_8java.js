@@ -1,0 +1,4 @@
+var _request_producto_unidad_medida_option_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.unidadMedidaProducto.Request.RequestProductoUnidadMedidaOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques5f39ca8f955ead7feeea21cfe92781ca.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_producto_1_1_reques5f39ca8f955ead7feeea21cfe92781ca" ]
+];

@@ -1,0 +1,4 @@
+var _response_detalle_area_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.area.Response.ResponseDetalleAreaDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1area_1_1_response_1_1_response_detalle_area_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1area_1_1_response_1_1_response_detalle_area_d_t_o" ]
+];

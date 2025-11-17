@@ -1,0 +1,4 @@
+var _request_estante_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o" ]
+];

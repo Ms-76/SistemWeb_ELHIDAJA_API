@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_response_1_1_response_login_log_by_id_d_t_o =
+[
+    [ "userLogs", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_response_1_1_response_login_log_by_id_d_t_o.html#ac85fcbfe0f994ce04dc79391a7f5e9d6", null ]
+];

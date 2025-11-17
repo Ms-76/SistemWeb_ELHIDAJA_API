@@ -1,0 +1,9 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35 =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#a873677b6885d32299cc02b1b8ef37571", null ],
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#afdac521a15fab4de5d70f35096c6b33f", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#a5f5e3aa3d33fa9a00c00f366922c8526", null ],
+    [ "idProyecto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#a8a3d27938286d06a5cc8011ef0855c1e", null ],
+    [ "idSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#ad0e1c67d151010172c87372a5e6655d9", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d0e3afb61e8a2b7235f93b8082a36c35.html#a7abe1109fd24873c69f598164d7d8c80", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_response_1_1_resce4c2587cd3260b5f9af11f724c662d5 =
+[
+    [ "guiaEntrada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_response_1_1_resce4c2587cd3260b5f9af11f724c662d5.html#a16693d5ba222ea9ac75e25e17b4722fe", null ]
+];

@@ -4,8 +4,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import com.elhidaja.apiselhidaja.presentation.dto.usuario.Response.*;
@@ -14,6 +16,10 @@ import com.elhidaja.apiselhidaja.service.DAO.UsuarioDAO;
 
 @Repository
 public class UsuarioRepository implements UsuarioDAO {
+
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+
     private final JdbcTemplate jdbc;
 
     public UsuarioRepository(JdbcTemplate jdbc) {
@@ -28,7 +34,16 @@ public class UsuarioRepository implements UsuarioDAO {
                     .withProcedureName("SP_obtener_usuarios");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_provincia", option.getIdProvincia(),
+                    "id_departamento", option.getIdDepartamento(),
+                    "id_distrito", option.getIdDistrito(),
+                    "id_documento_identidad", option.getIdDocumentoIdentidad(),
+                    "id_area", option.getIdArea(),
+                    "id_nivel_academico", option.getIdNivelAcademico(),
+                    "id_oficio", option.getIdOficio(),
+                    "id_puesto", option.getIdPuesto(),
+                    "id_rol", option.getIdRol());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -256,6 +271,9 @@ public class UsuarioRepository implements UsuarioDAO {
     public ResponseUsuarioMensajeDTO insertD(RequestUsuarioInsertDTO objUsuario) {
         ResponseUsuarioMensajeDTO rp = new ResponseUsuarioMensajeDTO();
         try {
+
+            String hashedPassword = passwordEncoder.encode(objUsuario.getPassword());
+
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_insertar_usuario");
 
@@ -271,7 +289,7 @@ public class UsuarioRepository implements UsuarioDAO {
             inParams.put("id_estado_civil", objUsuario.getIdEstadoCivil());
             inParams.put("fecha_nacimiento", objUsuario.getFechaNacimiento());
             inParams.put("id_genero", objUsuario.getIdGenero());
-            inParams.put("password", objUsuario.getPassword());
+            inParams.put("password", hashedPassword);
             inParams.put("id_area", objUsuario.getIdArea());
             inParams.put("id_nivel_academico", objUsuario.getIdNivelAcademico());
             inParams.put("id_oficio", objUsuario.getIdOficio());
@@ -304,4 +322,6 @@ public class UsuarioRepository implements UsuarioDAO {
         }
         return rp;
     }
+
+
 }

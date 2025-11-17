@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler =
+[
+    [ "ErrorResponse", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler_1_1_error_response.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler_1_1_error_response" ],
+    [ "handleJsonParseError", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler.html#ab38a74e1b2e6d44a7ed799f630e11bcd", null ],
+    [ "handleValidationExceptions", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler.html#a585d55ebefbfafbf58675d1f801b1bf3", null ]
+];

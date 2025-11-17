@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_response_1_1_response_detalle_estante_d_t_o =
+[
+    [ "estante", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_response_1_1_response_detalle_estante_d_t_o.html#a11615a823913c3aebec70ad0620cf312", null ]
+];

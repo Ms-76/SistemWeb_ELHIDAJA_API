@@ -1,0 +1,8 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request =
+[
+    [ "RequestAlmacenFilterDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_filter_d_t_o.html", null ],
+    [ "RequestAlmacenIdDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_id_d_t_o.html", null ],
+    [ "RequestAlmacenInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o" ],
+    [ "RequestAlmacenOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_option_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_option_d_t_o" ],
+    [ "RequestAlmacenUpdateDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_update_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_update_d_t_o" ]
+];

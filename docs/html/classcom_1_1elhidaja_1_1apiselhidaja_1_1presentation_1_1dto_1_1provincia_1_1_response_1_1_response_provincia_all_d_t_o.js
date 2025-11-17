@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_response_1_1_response_provincia_all_d_t_o =
+[
+    [ "provincias", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_response_1_1_response_provincia_all_d_t_o.html#a9263654499b02c9473649f8026ddc59b", null ]
+];

@@ -1,0 +1,9 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#a292a59bd99670dcf5753d48e27448325", null ],
+    [ "fechaFin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#ad482e84172f8c2a1bde820e7dabaa94f", null ],
+    [ "fechaInicio", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#a29c9da76e00816cbe57388d90a71b5b6", null ],
+    [ "idInventariador", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#a7e8d1b254c6ae0248aa76395baf518cd", null ],
+    [ "idInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#a99924ab091112a964c5bb346081d194d", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_a413bb3f189b131f71df04e863d50932.html#a377ed0e7b1743fa914253a3b94ee2da5", null ]
+];

@@ -1,0 +1,14 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o =
+[
+    [ "chofer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a264f828bbedbf01c94316d694ff72c0a", null ],
+    [ "fechaTranslado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#acc96b96fb15ebd340cc520c5d50f6114", null ],
+    [ "idGuiaSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a5305f89898d7a22d7d0e1ac9ca4c2939", null ],
+    [ "idGuiaTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#acc628213006fc57c74e0d3f6ea998b07", null ],
+    [ "nombrePuntoLlegada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a8c0292ed79b4f8da04343e101aa69d98", null ],
+    [ "nombrePuntoPartida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#acb84e1ed958f7c39760110aa070f8ab1", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#ab07e653df69a422c0788a31010a4cd8e", null ],
+    [ "puntoLlegada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a4233ab87a2980f748e291ad4a86c1bba", null ],
+    [ "puntoPartida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a910d3848a453ba143ec65738ac19724e", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a9e2a31943af05c53a990c46047234621", null ],
+    [ "vehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_response_1_1_response_guia_transporte_d_t_o.html#a8445f944fddade16c293f4bce34b89f0", null ]
+];

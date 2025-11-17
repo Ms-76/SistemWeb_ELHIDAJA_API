@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_response_1_1_response_detalle_ubicacion_d_t_o =
+[
+    [ "ubicacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_response_1_1_response_detalle_ubicacion_d_t_o.html#aaf9c896b1cbf628c0eef34703f2b64d6", null ]
+];

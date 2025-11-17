@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_resquest_1_1_re3bd78d1abc5b9f3d3116cf42a3410508 =
+[
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_resquest_1_1_re3bd78d1abc5b9f3d3116cf42a3410508.html#acef29a5f9798028afde22c2d1653e091", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_resquest_1_1_re3bd78d1abc5b9f3d3116cf42a3410508.html#af629b72fea68850d8c49beec6d9a6393", null ]
+];

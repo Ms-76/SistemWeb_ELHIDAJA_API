@@ -1,0 +1,28 @@
+# --- General ---
+PROJECT_NAME           = "ApiElhidaja"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = src/main/java
+RECURSIVE              = YES
+INPUT_ENCODING         = UTF-8
+
+# --- Extraer información ---
+EXTRACT_ALL            = YES           # Extrae todo aunque no tenga comentarios
+EXTRACT_PRIVATE        = YES           # Incluye campos/métodos privados
+EXTRACT_PROTECTED      = YES           # Incluye campos/métodos protegidos
+EXTRACT_PACKAGE        = YES           # Incluye miembros con visibilidad default (package)
+EXTRACT_STATIC         = YES           # Incluye métodos y campos estáticos
+
+# --- Documentación estilo JavaDoc ---
+JAVADOC_AUTOBRIEF      = YES           # Reconocer comentarios estilo JavaDoc
+MULTILINE_CPP_IS_BRIEF = YES           # Permite comentarios JavaDoc en varias líneas
+
+# --- HTML ---
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO            # No generar PDF
+
+# --- Diagramas (opcional, pero útil) ---
+HAVE_DOT               = YES           # Si tienes Graphviz instalado
+DOT_IMAGE_FORMAT       = svg
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES

@@ -1,0 +1,17 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2 =
+[
+    [ "diferencia", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a742a2d51ac65faf4089900ad25b9ab7b", null ],
+    [ "editadoManual", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#ab712be38dad4043e466c5dbeb80f1b49", null ],
+    [ "empleado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a7429673b6ae571daf8062cc48a817e67", null ],
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a5612c5870a30a335e2b4366021f28d5a", null ],
+    [ "fechaFinInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#ab4a519e7e9be83a12ff4aa98618d125b", null ],
+    [ "fechaInicioInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a9079b433c2d8c9ea7bf185d500a7d0ee", null ],
+    [ "idDetalleInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#acbb9c3888f7755ff9159c9d5237c17b0", null ],
+    [ "idInventario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#aa6cb8ea2bcada4e844b2672ad7aaf16a", null ],
+    [ "nuevo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#afbdd721830734c9a4ce266b4a7a87b8a", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#ae0f4a8cee01daeeeaf5db74b620fe140", null ],
+    [ "producto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a933907f7bba807433f10dcff5bb9e90d", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#aa47605c0122b3d43bd6b48525801a3ba", null ],
+    [ "stockFisico", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a17451c35b5d90b26ed3859013bd290dc", null ],
+    [ "stockSistema", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_119b93497885c9cefdce98e07f29516e2.html#a53ad0fdef8514daea93b653e6907810b", null ]
+];

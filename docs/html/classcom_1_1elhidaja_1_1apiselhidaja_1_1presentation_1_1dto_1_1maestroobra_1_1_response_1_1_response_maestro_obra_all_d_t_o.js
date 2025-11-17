@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_response_1_1_response_maestro_obra_all_d_t_o =
+[
+    [ "maestrosObra", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_response_1_1_response_maestro_obra_all_d_t_o.html#a51b5d1f73cb5a3d37bc2e4567c51ab79", null ]
+];

@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_rf746b6c542bb066d7ea5ec41d40d215b =
+[
+    [ "idDocumentoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_rf746b6c542bb066d7ea5ec41d40d215b.html#a4c2a7bcedef86e5dc5b00a4d80840a91", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_rf746b6c542bb066d7ea5ec41d40d215b.html#ab9896cca290c4457ca8a49cfc000b053", null ],
+    [ "idSerie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_rf746b6c542bb066d7ea5ec41d40d215b.html#a5189d5e5c95893cdd481b2c101a49a41", null ],
+    [ "ultimoCorrelativo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_rf746b6c542bb066d7ea5ec41d40d215b.html#a97fb6a0622601a095fa0a93f0f524073", null ]
+];

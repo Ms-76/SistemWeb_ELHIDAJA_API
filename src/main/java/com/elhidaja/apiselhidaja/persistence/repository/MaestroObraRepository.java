@@ -28,7 +28,11 @@ public class MaestroObraRepository implements MaestroObraDAO {
                     .withProcedureName("SP_obtener_maestros_obra");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_distrito", option.getIdDistrito(),
+                    "id_provincia", option.getIdProvincia(),
+                    "id_departamento", option.getIdDepartamento(),
+                    "id_documento_identidad", option.getIdDocumentoIdentidad());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -43,7 +47,7 @@ public class MaestroObraRepository implements MaestroObraDAO {
                 dto.setNombre((String) row.get("nombre"));
                 dto.setEmail((String) row.get("email"));
                 dto.setTelefono((String) row.get("telefono"));
-                dto.setDireccion((String) row.get("direcion"));
+                dto.setDireccion((String) row.get("direccion"));
                 dto.setDepartamento((String) row.get("departamento"));
                 dto.setProvincia((String) row.get("provincia"));
                 dto.setDistrito((String) row.get("distrito"));
@@ -94,7 +98,7 @@ public class MaestroObraRepository implements MaestroObraDAO {
                     dto.setNombre((String) row.get("nombre"));
                     dto.setEmail((String) row.get("email"));
                     dto.setTelefono((String) row.get("telefono"));
-                    dto.setDireccion((String) row.get("direcion"));
+                    dto.setDireccion((String) row.get("direccion"));
                     dto.setDepartamento((String) row.get("departamento"));
                     dto.setProvincia((String) row.get("provincia"));
                     dto.setDistrito((String) row.get("distrito"));

@@ -14,12 +14,12 @@ public class DetalleGuiaSalidaService {
         this.repo = repo;
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleGuiaSalidaAllDTO getAllSer(RequestDetalleGuiaSalidaOptionDTO option) {
         return repo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleGuiaSalidaDTO getByIdSer(RequestDetalleGuiaSalidaFilterDTO id) {
         return repo.getByIdD(id);
     }

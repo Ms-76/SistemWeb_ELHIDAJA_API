@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_1_1_request_1_1_request_vehiculo_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_1_1_request_1_1_request_vehiculo_option_d_t_o.html#af5710b8648e1f104325b29a476be7424", null ],
+    [ "idTipoVehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_1_1_request_1_1_request_vehiculo_option_d_t_o.html#ae9caed9adea1a6d7aa2a35bf721c3606", null ]
+];

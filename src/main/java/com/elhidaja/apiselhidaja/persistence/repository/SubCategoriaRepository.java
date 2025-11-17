@@ -27,7 +27,9 @@ public class SubCategoriaRepository implements SubCategoriaDAO {
                     .withProcedureName("SP_obtener_sub_categorias");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_categoria", option.getIdCategoria()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 

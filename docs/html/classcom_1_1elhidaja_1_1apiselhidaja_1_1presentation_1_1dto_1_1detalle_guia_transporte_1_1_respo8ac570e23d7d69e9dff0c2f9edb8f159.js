@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respo8ac570e23d7d69e9dff0c2f9edb8f159 =
+[
+    [ "detalleGuia", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respo8ac570e23d7d69e9dff0c2f9edb8f159.html#a7aa1dc0947f1ff550b03282a8360e917", null ]
+];

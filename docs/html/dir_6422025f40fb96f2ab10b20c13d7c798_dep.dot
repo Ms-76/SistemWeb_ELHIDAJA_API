@@ -1,0 +1,17 @@
+digraph "src/main/java/com/elhidaja/apiselhidaja/presentation/dto/unidadMedida"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_3fbdfc0b9d20ff6aa049a8b39be95fa4 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="dto", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_3fbdfc0b9d20ff6aa049a8b39be95fa4.html",tooltip=""]
+  subgraph clusterdir_6422025f40fb96f2ab10b20c13d7c798 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_6422025f40fb96f2ab10b20c13d7c798.html",tooltip=""]
+    dir_6422025f40fb96f2ab10b20c13d7c798 [shape=plaintext, label="unidadMedida"];
+  dir_a2aeb3dc153909506e199369092fa959 [label="Response", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_a2aeb3dc153909506e199369092fa959.html",tooltip=""];
+  dir_b36a3ec7b8352c9a6139fc98745e749f [label="Resquest", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_b36a3ec7b8352c9a6139fc98745e749f.html",tooltip=""];
+  }
+  }
+}

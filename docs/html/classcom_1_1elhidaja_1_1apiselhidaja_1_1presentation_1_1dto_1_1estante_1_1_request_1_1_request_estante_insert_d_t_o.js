@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o =
+[
+    [ "codigo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o.html#aa32da20d7512384974be78233476b862", null ],
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o.html#a94efbda684c2871039b0a198b004648c", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_insert_d_t_o.html#a91c81ca9a15fe8eea3355cf36b07df4c", null ]
+];

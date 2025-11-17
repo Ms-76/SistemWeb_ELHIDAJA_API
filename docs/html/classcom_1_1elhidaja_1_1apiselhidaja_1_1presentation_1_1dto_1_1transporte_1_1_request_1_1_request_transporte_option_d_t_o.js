@@ -1,0 +1,10 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a3a57d3de6523905b91c94fe4a7300245", null ],
+    [ "fechaFin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a7d241aa68ef3e7253525bbcf541fee30", null ],
+    [ "fechaInicio", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a87fa534b8b2ff65c35b81972e5b3c4b9", null ],
+    [ "idAsignacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#adc007de322c262f042a29efa73779e49", null ],
+    [ "idTipoDestino", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a032d1e06e020d05f5bf0d39b0128adc3", null ],
+    [ "idTipoOrigen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a3e32f5848267c0364efdf6af57ceb4f4", null ],
+    [ "idTipoTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_1_1_request_1_1_request_transporte_option_d_t_o.html#a9fe557180171a016583d950d7708a731", null ]
+];

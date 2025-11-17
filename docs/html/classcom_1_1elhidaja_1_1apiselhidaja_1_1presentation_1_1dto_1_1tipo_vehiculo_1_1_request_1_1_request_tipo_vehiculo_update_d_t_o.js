@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_update_d_t_o =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_update_d_t_o.html#adc63f865bb94842b3c0809a96bd66623", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_update_d_t_o.html#af3c1b847635dd9a04bb1260597d2d9e8", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_update_d_t_o.html#a669b0b2a38af66140084810350ce5956", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_vehiculo_1_1_request_1_1_request_tipo_vehiculo_update_d_t_o.html#aa301fa34651240203c866c207617cb72", null ]
+];

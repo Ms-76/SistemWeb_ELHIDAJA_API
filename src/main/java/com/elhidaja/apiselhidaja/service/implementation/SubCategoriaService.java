@@ -25,12 +25,12 @@ public class SubCategoriaService {
         return subCatRepo.updateD(dto);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseSubCategoriAllDTO getAllSer(ResquestSubCategoriaOptionDTO option) {
         return subCatRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleSubCategoriaDTO getByIdSer(RequestSubCategoriaFilterDTO id) {
         return subCatRepo.getByIdD(id);
     }

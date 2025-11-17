@@ -1,0 +1,5 @@
+var _global_exception_handler_8java =
+[
+    [ "com.elhidaja.apiselhidaja.service.exeption.GlobalExceptionHandler", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler" ],
+    [ "com.elhidaja.apiselhidaja.service.exeption.GlobalExceptionHandler.ErrorResponse", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler_1_1_error_response.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler_1_1_error_response" ]
+];

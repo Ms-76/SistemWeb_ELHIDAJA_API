@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_insert_d_t_o =
+[
+    [ "idDepartamento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_insert_d_t_o.html#a01cabadb1f95e0014b6159cd5f1b5227", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_insert_d_t_o.html#ac4778f5f1fe9ab4a1c368552124de842", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_insert_d_t_o.html#a20c760b8c63e5a7e18e13fbc1b23a741", null ]
+];

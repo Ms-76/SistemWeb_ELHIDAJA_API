@@ -1,18 +1,19 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request.*;
 
 public interface DocumentoIdentidadDAO {
 
-    public ResponseDocumentoIdentidadAllDTO getAllD(RequestDocumentoIdentidadOptionDTO option);
+    ResponseDocumentoIdentidadAllDTO getAllD(RequestDocumentoIdentidadOptionDTO option);
 
-    public ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadFilterDTO id);
+    ResponseDetalleDocumentoIdentidadDTO getByIdD(RequestDocumentoIdentidadFilterDTO id);
 
-    public ResponseDocumentoIdentidadMensajeDTO desactivateD(RequestDocumentoIdentidadIdDTO id);
+    ResponseDocumentoIdentidadMensajeDTO desactivateD(RequestDocumentoIdentidadIdDTO id);
 
-    public ResponseDocumentoIdentidadMensajeDTO activateD(RequestDocumentoIdentidadIdDTO id);
+    ResponseDocumentoIdentidadMensajeDTO activateD(RequestDocumentoIdentidadIdDTO id);
 
-    public ResponseDocumentoIdentidadMensajeDTO insertD(RequestDocumentoIdentidadInsertDTO objDocumentoIdentidad);
+    ResponseDocumentoIdentidadMensajeDTO insertD(RequestDocumentoIdentidadInsertDTO objDocumentoIdentidad);
 
-    public ResponseDocumentoIdentidadMensajeDTO updateD(RequestDocumentoIdentidadUpdateDTO objDocumentoIdentidad);
+    ResponseDocumentoIdentidadMensajeDTO updateD(RequestDocumentoIdentidadUpdateDTO objDocumentoIdentidad);
 }

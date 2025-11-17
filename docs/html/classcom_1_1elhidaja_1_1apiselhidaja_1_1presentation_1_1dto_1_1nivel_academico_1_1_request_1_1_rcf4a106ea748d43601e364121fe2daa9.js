@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_rcf4a106ea748d43601e364121fe2daa9 =
+[
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_rcf4a106ea748d43601e364121fe2daa9.html#a2e9314f210da7f7c3c34edc7870f2c9d", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_rcf4a106ea748d43601e364121fe2daa9.html#af6abb838561854cd19a59f870d73fe72", null ]
+];

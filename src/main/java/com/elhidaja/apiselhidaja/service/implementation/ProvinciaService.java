@@ -1,14 +1,12 @@
 package com.elhidaja.apiselhidaja.service.implementation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.ProvinciaRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.provincia.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.provincia.Response.*;
 
 @Service
-@Validated
 public class ProvinciaService {
         private final ProvinciaRepository provinciaRepo;
 
@@ -26,12 +24,12 @@ public class ProvinciaService {
         return provinciaRepo.updateD(objProvincia);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseProvinciaAllDTO getAllSer(RequestProvinciaOptionDTO option) {
         return provinciaRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleProvinciaDTO getByIdSer(RequestProvinciaFilterDTO id) {
         return provinciaRepo.getByIdD(id);
     }

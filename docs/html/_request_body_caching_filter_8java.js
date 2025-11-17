@@ -1,0 +1,4 @@
+var _request_body_caching_filter_8java =
+[
+    [ "com.elhidaja.apiselhidaja.configuration.interceptors.RequestBodyCachingFilter", "classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1interceptors_1_1_request_body_caching_filter.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1interceptors_1_1_request_body_caching_filter" ]
+];

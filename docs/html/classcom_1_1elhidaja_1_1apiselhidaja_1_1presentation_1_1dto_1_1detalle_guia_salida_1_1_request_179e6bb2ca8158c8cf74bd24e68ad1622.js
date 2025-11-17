@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_179e6bb2ca8158c8cf74bd24e68ad1622 =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_179e6bb2ca8158c8cf74bd24e68ad1622.html#a7b7a8a71855be39c46513b78d71ff799", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_179e6bb2ca8158c8cf74bd24e68ad1622.html#a5a76b3d1970b7b8c3f02d379f28cfc8f", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_179e6bb2ca8158c8cf74bd24e68ad1622.html#ae51ad212c8879cca291a64af86064eac", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_179e6bb2ca8158c8cf74bd24e68ad1622.html#ab8929ab71d74f06e2bd43261c5e71d28", null ]
+];

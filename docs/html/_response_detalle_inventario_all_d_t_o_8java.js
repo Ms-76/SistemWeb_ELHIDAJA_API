@@ -1,0 +1,4 @@
+var _response_detalle_inventario_all_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleInventario.Response.ResponseDetalleInventarioAllDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_1c3756e16ff2465d9ce2a9ec2c6558c44.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_1c3756e16ff2465d9ce2a9ec2c6558c44" ]
+];

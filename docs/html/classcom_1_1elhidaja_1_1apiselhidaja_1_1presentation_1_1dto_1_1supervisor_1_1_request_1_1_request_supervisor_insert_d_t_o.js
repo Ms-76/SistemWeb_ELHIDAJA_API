@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o =
+[
+    [ "idEntidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o.html#a6df8c0bd8af84d4dbd083d6e450d921c", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o.html#afc96d8330091775525aa9fe3190fff49", null ],
+    [ "tipoSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o.html#a40d8e998edb4f4a93f71075cfd04fb6c", null ]
+];

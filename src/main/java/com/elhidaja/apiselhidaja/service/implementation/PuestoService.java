@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.PuestoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.puesto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.puesto.Response.*;
 
 @Service
-@Validated
 public class PuestoService {
     private final PuestoRepository puestoRepo;
 
@@ -27,12 +25,12 @@ public class PuestoService {
         return puestoRepo.updateD(objPuesto);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponsePuestoAllDTO getAllSer(RequestPuestoOptionDTO option) {
         return puestoRepo.getAllD(option);
     }
 
-    @Transactional
+     @Transactional(readOnly = true)
     public ResponseDetallePuestoDTO getByIdSer(RequestPuestoFilterDTO id) {
         return puestoRepo.getByIdD(id);
     }

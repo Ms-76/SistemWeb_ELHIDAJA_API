@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_response_tipo_operacion_d_t_o =
+[
+    [ "abreviatura", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_response_tipo_operacion_d_t_o.html#a4efb7aa130b18975b62909d5ddbd8b4a", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_response_tipo_operacion_d_t_o.html#aec0f85e2087bbc6b00c6189aa1c6bbc2", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_response_tipo_operacion_d_t_o.html#a96f9dfa7101f3658b3ca071392ed6e2b", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_response_tipo_operacion_d_t_o.html#a3be4aa00a12bf4f4b75e4d731d7399c3", null ]
+];

@@ -2,17 +2,18 @@ package com.elhidaja.apiselhidaja.service.DAO;
 
 import com.elhidaja.apiselhidaja.presentation.dto.proyecto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.proyecto.Response.*;
+
 public interface ProyectoDAO {
-    
-    public ResponseProyectoAllDTO getAllD(RequestProyectoOptionDTO option);
 
-    public ResponseDetalleProyectoDTO getByIdD(RequestProyectoFilterDTO id);
+    ResponseProyectoAllDTO getAllD(RequestProyectoOptionDTO option);
 
-    public ResponseProyectoMensajeDTO desactivateD(RequestProyectoIdDTO id);
+    ResponseDetalleProyectoDTO getByIdD(RequestProyectoFilterDTO id);
 
-    public ResponseProyectoMensajeDTO activateD(RequestProyectoIdDTO id);
+    ResponseProyectoMensajeDTO desactivateD(RequestProyectoIdDTO id);
 
-    public ResponseProyectoMensajeDTO insertD(RequestProyectoInsertDTO objProyecto);
+    ResponseProyectoMensajeDTO activateD(RequestProyectoIdDTO id);
 
-    public ResponseProyectoMensajeDTO updateD(RequestProyectoUpdateDTO objProyecto);
+    ResponseProyectoMensajeDTO insertD(RequestProyectoInsertDTO objProyecto);
+
+    ResponseProyectoMensajeDTO updateD(RequestProyectoUpdateDTO objProyecto);
 }

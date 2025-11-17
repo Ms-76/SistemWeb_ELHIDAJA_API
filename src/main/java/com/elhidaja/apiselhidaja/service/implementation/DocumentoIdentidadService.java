@@ -2,13 +2,11 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.DocumentoIdentidadRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request.*;
 @Service
-@Validated
 public class DocumentoIdentidadService {
   
     private final DocumentoIdentidadRepository docRepo;
@@ -27,12 +25,12 @@ public class DocumentoIdentidadService {
         return docRepo.updateD(obj);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDocumentoIdentidadAllDTO getAllSer(RequestDocumentoIdentidadOptionDTO option) {
         return docRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleDocumentoIdentidadDTO getByIdSer(RequestDocumentoIdentidadFilterDTO id) {
         return docRepo.getByIdD(id);
     }

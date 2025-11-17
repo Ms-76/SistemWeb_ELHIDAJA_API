@@ -1,5 +1,6 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -25,10 +26,17 @@ public class UbicacionRepository implements UbicacionDAO {
         ResponseUbicacionAllDTO rp = new ResponseUbicacionAllDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_obtener_ubicaciones");
+                    .withProcedureName("SP_obtener_detalle_producto_almacen");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_almacen", option.getIdAlmacen(),
+                    "id_categoria", option.getIdCategoria(),
+                    "id_sub_categoria", option.getIdSubcategoria(),
+                    "id_unidad_medida", option.getIdUnidadMedida(),
+                    "id_estante", option.getIdEstante(),
+                    "id_pallet", option.getIdPallet()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -37,11 +45,20 @@ public class UbicacionRepository implements UbicacionDAO {
 
             List<ResponseUbicacionDTO> ubicaciones = rows.stream().map(row -> {
                 ResponseUbicacionDTO dto = new ResponseUbicacionDTO();
-                dto.setId(((Number) row.get("id_ubicacion")).longValue());
+                dto.setId(((Number) row.get("id_producto")).longValue());
+                dto.setCategoria((String) row.get("nombre_categoria"));
+                dto.setSubCategoria((String) row.get("nombre_sub_categoria"));
+                dto.setNombre((String) row.get("nombre_producto"));
+                dto.setCodigo((String) row.get("codigo_producto"));
+                dto.setCodigoBarras((String) row.get("codigo_barras"));
+                dto.setDescripcion((String) row.get("descripcion"));
+                dto.setUnidadMedida((String) row.get("unidad_medida"));
+                dto.setStock_total(((Number) row.get("stock_total")).longValue());
+                dto.setCosto(((BigDecimal) row.get("costo")).doubleValue());
+                dto.setStatus((Boolean) row.get("status"));
                 dto.setCodigoAlmacen((String) row.get("codigo_almacen"));
                 dto.setCodigoEstante((String) row.get("codigo_estante"));
-                dto.setDescripcion((String) row.get("descripcion"));
-                dto.setStatus((Boolean) row.get("status"));
+                dto.setCodigoPallet((String) row.get("codigo_pallet"));
                 return dto;
             }).toList();
 
@@ -63,10 +80,11 @@ public class UbicacionRepository implements UbicacionDAO {
         ResponseDetalleUbicacionDTO rp = new ResponseDetalleUbicacionDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_obtener_ubicacion_por_id");
+                    .withProcedureName("SP_obtener_detalle_producto_almacen_por_id");
 
             Map<String, Object> inParams = Map.of(
-                    "id_ubicacion", id.getId_ubicacion());
+                    "id_detalle_producto_almacen", id.getId(),
+                    "id_almacen", id.getIdAlmacen());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -82,11 +100,20 @@ public class UbicacionRepository implements UbicacionDAO {
                     rp.setCodigo("404");
                 } else {
                     ResponseUbicacionDTO rcd = new ResponseUbicacionDTO();
-                    rcd.setId(((Number) row.get("id_ubicacion")).longValue());
+                    rcd.setId(((Number) row.get("id_producto")).longValue());
+                    rcd.setCategoria((String) row.get("nombre_categoria"));
+                    rcd.setSubCategoria((String) row.get("nombre_sub_categoria"));
+                    rcd.setNombre((String) row.get("nombre_producto"));
+                    rcd.setCodigo((String) row.get("codigo_producto"));
+                    rcd.setCodigoBarras((String) row.get("codigo_barras"));
+                    rcd.setDescripcion((String) row.get("descripcion"));
+                    rcd.setUnidadMedida((String) row.get("unidad_medida"));
+                    rcd.setStock_total(((Number) row.get("stock_total")).longValue());
+                    rcd.setCosto(((BigDecimal) row.get("costo")).doubleValue());
+                    rcd.setStatus((Boolean) row.get("status"));
                     rcd.setCodigoAlmacen((String) row.get("codigo_almacen"));
                     rcd.setCodigoEstante((String) row.get("codigo_estante"));
-                    rcd.setDescripcion((String) row.get("descripcion"));
-                    rcd.setStatus((Boolean) row.get("status"));
+                    rcd.setCodigoPallet((String) row.get("codigo_pallet"));
 
                     rp.setUbicacion(rcd);
                     rp.setExito(true);
@@ -113,10 +140,11 @@ public class UbicacionRepository implements UbicacionDAO {
 
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_activar_ubicacion");
+                    .withProcedureName("SP_activar_detalle_producto_almacen");
 
             Map<String, Object> inParams = Map.of(
-                    "id_ubicacion", id.getId_ubicacion());
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_producto_almacen", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -151,10 +179,11 @@ public class UbicacionRepository implements UbicacionDAO {
 
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_desactivar_ubicacion");
+                    .withProcedureName("SP_desactivar_detalle_producto_almacen");
 
             Map<String, Object> inParams = Map.of(
-                    "id_ubicacion", id.getId_ubicacion());
+                    "id_usuario_sign", id.getIdLogin(),
+                    "id_detalle_producto_almacen", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -183,83 +212,4 @@ public class UbicacionRepository implements UbicacionDAO {
         return rp;
     }
 
-    @Override
-    public ResponserUbicacionMensajeDTO updateD(RequestUbicacionUpdateDTO objUbicacion) {
-        ResponserUbicacionMensajeDTO rp = new ResponserUbicacionMensajeDTO();
-
-        try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_actualizar_ubicacion");
-
-            Map<String, Object> inParams = Map.of(
-                    "id_ubicacion", objUbicacion.getId(),
-                    "id_almacen", objUbicacion.getIdAlmacen(),
-                    "id_estante", objUbicacion.getIdEstante(),
-                    "descripcion", objUbicacion.getDescripcion());
-
-            Map<String, Object> result = call.execute(inParams);
-
-            @SuppressWarnings("unchecked")
-            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                    .findFirst()
-                    .orElse(null);
-
-            if (resultSet != null) {
-                Map<String, Object> errorRow = resultSet.get(0);
-                String mensajeError = (String) errorRow.get("mensaje");
-                rp.setCodigo("400");
-                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo actualizar la ubicación.");
-            } else {
-                rp.setExito(true);
-                rp.setCodigo("200");
-                rp.setMensaje("Ubicación actualizada correctamente.");
-            }
-
-        } catch (Exception e) {
-            rp.setCodigo("500");
-            rp.setMensaje("Error al actualizar la ubicación: " + e.getMessage());
-        }
-        return rp;
-    }
-
-    @Override
-    public ResponserUbicacionMensajeDTO insertD(RequestUbicacionInsertDTO objUbicacion) {
-        ResponserUbicacionMensajeDTO rp = new ResponserUbicacionMensajeDTO();
-        try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_ubicacion");
-
-            Map<String, Object> inParams = Map.of(
-                    "id_almacen", objUbicacion.getIdAlmacen(),
-                    "id_estante", objUbicacion.getIdEstante(),
-                    "descripcion", objUbicacion.getDescripcion());
-
-            Map<String, Object> result = call.execute(inParams);
-
-            @SuppressWarnings("unchecked")
-            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                    .findFirst()
-                    .orElse(null);
-
-            if (resultSet != null) {
-                Map<String, Object> errorRow = resultSet.get(0);
-                String mensajeError = (String) errorRow.get("mensaje");
-
-                rp.setCodigo("400");
-                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo registrar la ubicación.");
-            } else {
-                rp.setExito(true);
-                rp.setCodigo("200");
-                rp.setMensaje("Ubicación registrada correctamente.");
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            rp.setCodigo("500");
-            rp.setMensaje("Error al insertar ubicación: " + e.getMessage());
-        }
-        return rp;
-    }
 }

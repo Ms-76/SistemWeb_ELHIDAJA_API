@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_r14aa5863e7aed24f13f2c9e8d6d4e1f1 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_r14aa5863e7aed24f13f2c9e8d6d4e1f1.html#a6e2b1f4e2856fc7a7dd761fc27898345", null ],
+    [ "idDocumentoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_r14aa5863e7aed24f13f2c9e8d6d4e1f1.html#a2b83add611f828ab16eb29fc4403ca62", null ],
+    [ "idSerie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_documento_1_1_request_1_1_r14aa5863e7aed24f13f2c9e8d6d4e1f1.html#aa65d5078f58b76bb7c8a06967deed40e", null ]
+];

@@ -5,10 +5,10 @@ import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
-@XStreamAlias("detalles")
+@XStreamAlias("productos")
 public class XmlDetallesGuiaEntrada {
 
-    @XStreamImplicit(itemFieldName = "detalle")
+    @XStreamImplicit(itemFieldName = "producto")
     private List<XmlDetalleGuiaEntrada> detalle;
 
     public XmlDetallesGuiaEntrada(List<XmlDetalleGuiaEntrada> detalle) {

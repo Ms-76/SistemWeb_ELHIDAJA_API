@@ -1,9 +1,9 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.sql.Timestamp;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
@@ -32,7 +32,11 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
 
             Map<String, Object> inParams = Map.of(
                     "id_proyecto", option.getIdProyecto(),
-                    "status", option.getEstado());
+                    "status", option.getStatus(),
+                    "estado", option.getEstado(),
+                    "id_supervisor", option.getIdSupervisor(),
+                    "fecha_inicio", option.getFechaInicio(),
+                    "fecha_fin", option.getFechaFin());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -46,8 +50,9 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
                 dto.setNombreSupervisor((String) row.get("supervisor"));
                 dto.setNombreSolicitud((String) row.get("nombre_solicitud"));
                 dto.setDescripcion((String) row.get("descripcion"));
-                dto.setEstado((Integer) row.get("estado"));
-                dto.setFechaSolicitud((LocalDateTime) row.get("fecha_solicitud"));
+                dto.setEstado((String) row.get("estado_descripcion"));
+                dto.setFechaSolicitud(
+                        ((Timestamp) row.get("fecha_solicitud")).toLocalDateTime());
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;
             }).toList();
@@ -95,8 +100,9 @@ public class SolicitudMaterialRepository implements SolicitudMaterialDAO {
                     dto.setNombreSupervisor((String) row.get("supervisor"));
                     dto.setNombreSolicitud((String) row.get("nombre_solicitud"));
                     dto.setDescripcion((String) row.get("descripcion"));
-                    dto.setEstado((Integer) row.get("estado"));
-                    dto.setFechaSolicitud((LocalDateTime) row.get("fecha_solicitud"));
+                    dto.setEstado((String) row.get("estado_descripcion"));
+                    dto.setFechaSolicitud(
+                            ((Timestamp) row.get("fecha_solicitud")).toLocalDateTime());
                     dto.setStatus((Boolean) row.get("status"));
 
                     rp.setSolicitudMaterial(dto);

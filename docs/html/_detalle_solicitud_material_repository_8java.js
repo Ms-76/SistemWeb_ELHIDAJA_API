@@ -1,0 +1,4 @@
+var _detalle_solicitud_material_repository_8java =
+[
+    [ "com.elhidaja.apiselhidaja.persistence.repository.DetalleSolicitudMaterialRepository", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_detalle_solicitud_material_repository.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_detalle_solicitud_material_repository" ]
+];

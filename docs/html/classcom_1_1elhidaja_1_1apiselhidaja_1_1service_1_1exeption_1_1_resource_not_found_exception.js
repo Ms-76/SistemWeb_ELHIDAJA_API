@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_not_found_exception =
+[
+    [ "ResourceNotFoundException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_not_found_exception.html#ada2d94ec695b936ac5f6e61322615b8d", null ]
+];

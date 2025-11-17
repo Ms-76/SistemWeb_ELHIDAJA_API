@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_request_1_1_red88cb9f3142a8d40582c7cbe44effa31 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_request_1_1_red88cb9f3142a8d40582c7cbe44effa31.html#a4d26fe8e1fa0fe38b952dcbfab6c02f9", null ]
+];

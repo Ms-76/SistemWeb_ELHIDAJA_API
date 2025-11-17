@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.ProductoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.producto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.producto.Response.*;
 
 @Service
-@Validated
 public class ProductoService {
     private final ProductoRepository productoRepo;
 

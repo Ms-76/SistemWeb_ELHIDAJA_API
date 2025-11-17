@@ -1,0 +1,8 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption =
+[
+    [ "GlobalExceptionHandler", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_global_exception_handler" ],
+    [ "InvalidOperationException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_invalid_operation_exception.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_invalid_operation_exception" ],
+    [ "InvalidStateException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_invalid_state_exception.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_invalid_state_exception" ],
+    [ "ResourceAlreadyExistsException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_already_exists_exception.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_already_exists_exception" ],
+    [ "ResourceNotFoundException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_not_found_exception.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_not_found_exception" ]
+];

@@ -1,17 +1,19 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.area.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.area.Request.*;
-public interface  AreaDAO {
-    
-    public ResponseAreaAllDTO getAllD(RequestAreaOptionDTO option);
 
-    public ResponseDetalleAreaDTO getByIdD(RequestAreaFilterDTO id);
+public interface AreaDAO {
 
-    public ResponseAreaMensajeDTO desactivateD(RequestAreaIdDTO id);
+    ResponseAreaAllDTO getAllD(RequestAreaOptionDTO option);
 
-    public ResponseAreaMensajeDTO activateD(RequestAreaIdDTO id);
+    ResponseDetalleAreaDTO getByIdD(RequestAreaFilterDTO id);
 
-    public ResponseAreaMensajeDTO insertD(RequestAreaInsertDTO objArea);
+    ResponseAreaMensajeDTO desactivateD(RequestAreaIdDTO id);
 
-    public ResponseAreaMensajeDTO updateD(RequestAreaUpdateDTO objArea);
+    ResponseAreaMensajeDTO activateD(RequestAreaIdDTO id);
+
+    ResponseAreaMensajeDTO insertD(RequestAreaInsertDTO objArea);
+
+    ResponseAreaMensajeDTO updateD(RequestAreaUpdateDTO objArea);
 }

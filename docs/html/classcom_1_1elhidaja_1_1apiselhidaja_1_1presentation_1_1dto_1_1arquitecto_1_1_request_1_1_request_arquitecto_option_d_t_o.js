@@ -1,0 +1,8 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o.html#aef84f8eef9fcc7610b3a3d15a9608177", null ],
+    [ "idDepartamento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o.html#a6a8a5223a394edf6ef9e93089b68d138", null ],
+    [ "idDistrito", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o.html#aa6dbce734148901e67415abf89b0d452", null ],
+    [ "idDocumentoIdentidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o.html#a2f0e61624d98eb17609ce552e29005e0", null ],
+    [ "idProvincia", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1arquitecto_1_1_request_1_1_request_arquitecto_option_d_t_o.html#a30a49d78d2d4ea879f795085ef8d9761", null ]
+];

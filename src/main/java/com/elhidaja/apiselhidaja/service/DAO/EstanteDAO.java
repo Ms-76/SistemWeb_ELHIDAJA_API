@@ -4,15 +4,15 @@ import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.*;
 
 public interface EstanteDAO {
-    public ResponseEstanteAllDTO getAllD(RequestEstanteOptionDTO option);
+    ResponseEstanteAllDTO getAllD(RequestEstanteOptionDTO option);
 
-    public ResponseDetalleEstanteDTO getByIdD(RequestEstanteFilterDTO id);
+    ResponseDetalleEstanteDTO getByIdD(RequestEstanteFilterDTO id);
 
-    public ResponseEstanteMensajeDTO desactivateD(RequestEstanteIdDTO id);
+    ResponseEstanteMensajeDTO desactivateD(RequestEstanteIdDTO id);
 
-    public ResponseEstanteMensajeDTO activateD(RequestEstanteIdDTO id);
+    ResponseEstanteMensajeDTO activateD(RequestEstanteIdDTO id);
 
-    public ResponseEstanteMensajeDTO insertD(RequestEstanteInsertDTO objEstante);
+    ResponseEstanteMensajeDTO insertD(RequestEstanteInsertDTO objEstante);
 
-    public ResponseEstanteMensajeDTO updateD(RequestEstanteUpdateDTO objEstante);
+    ResponseEstanteMensajeDTO updateD(RequestEstanteUpdateDTO objEstante);
 }

@@ -1,6 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.ZoneId;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +29,10 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
 
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen());
+                    "id_almacen", option.getIdAlmacen(),
+                    "id_producto", option.getIdProducto(),
+                    "id_unidad_medida", option.getIdUnidadMedida(),
+                    "id_guia_entrada", option.getIdGuiaEntrada());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -46,7 +48,7 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                 if (firstRow.containsKey("id_detalle_guia_entrada")) {
                     List<ResponseDetalleGuiaEntradaDTOInner> detalles = rows.stream().map(row -> {
                         ResponseDetalleGuiaEntradaDTOInner dto = new ResponseDetalleGuiaEntradaDTOInner();
-
+                        dto.setIdGuiaEntrada(((Number) row.get("guia_entrada")).longValue());
                         dto.setIdDetalleGuiaEntrada(((Number) row.get("id_detalle_guia_entrada")).longValue());
                         dto.setIdGuiaEntrada(((Number) row.get("guia_entrada")).longValue());
                         dto.setTipoOperacion((String) row.get("tipo_operacion"));
@@ -55,24 +57,13 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                         dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
                         dto.setSerie((String) row.get("serie"));
                         dto.setUltimoCorrelativo(((Number) row.get("correlativo")).longValue());
-
-                        // Manejo seguro de fecha_vencimiento_producto
-                        Object fechaObj = row.get("fecha_vencimiento_producto");
-                        if (fechaObj instanceof java.sql.Timestamp) {
-                            dto.setFechaVencimientoProducto(((java.sql.Timestamp) fechaObj).toLocalDateTime());
-                        } else if (fechaObj instanceof java.util.Date) {
-                            dto.setFechaVencimientoProducto(
-                                    ((java.util.Date) fechaObj).toInstant().atZone(ZoneId.systemDefault())
-                                            .toLocalDateTime());
-                        } else {
-                            dto.setFechaVencimientoProducto(null);
-                        }
-
+                        dto.setFechaVencimientoProducto(((java.sql.Date) row.get("fecha_vencimiento_producto")).toLocalDate());
                         dto.setProducto((String) row.get("producto"));
                         dto.setCantidad(((Number) row.get("cantidad")).longValue());
                         dto.setUnidadMedida((String) row.get("unidad_medida"));
                         dto.setObservacion((String) row.get("observacion"));
                         dto.setStatus((Boolean) row.get("status"));
+
                         return dto;
                     }).toList();
 
@@ -137,16 +128,7 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
                     dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
                     dto.setSerie((String) row.get("serie"));
                     dto.setUltimoCorrelativo((Long) row.get("correlativo"));
-                    Object fechaObj = row.get("fecha_vencimiento_producto");
-                    if (fechaObj instanceof java.sql.Timestamp) {
-                        dto.setFechaVencimientoProducto(((java.sql.Timestamp) fechaObj).toLocalDateTime());
-                    } else if (fechaObj instanceof java.util.Date) {
-                        dto.setFechaVencimientoProducto(
-                                ((java.util.Date) fechaObj).toInstant().atZone(ZoneId.systemDefault())
-                                        .toLocalDateTime());
-                    } else {
-                        dto.setFechaVencimientoProducto(null);
-                    }
+                    dto.setFechaVencimientoProducto(((java.sql.Date) row.get("fecha_vencimiento_producto")).toLocalDate());
                     dto.setProducto((String) row.get("producto"));
                     dto.setCantidad(((Number) row.get("cantidad")).longValue());
                     dto.setUnidadMedida((String) row.get("unidad_medida"));
@@ -252,14 +234,15 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
     }
 
     @Override
-    public ResponseDetalleGuiaEntradaMensajeDTO updateObservacionD(RequestActualizarObservacionDetalleGuiaEntradaDTO  objDetalleGuiaEntrada) {
+    public ResponseDetalleGuiaEntradaMensajeDTO updateObservacionD(
+            RequestActualizarObservacionDetalleGuiaEntradaDTO objDetalleGuiaEntrada) {
         ResponseDetalleGuiaEntradaMensajeDTO rp = new ResponseDetalleGuiaEntradaMensajeDTO();
 
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
                     .withProcedureName("SP_actualizar_observacion_detalle_guia_entrada");
 
-          Map<String, Object> inParams = Map.of(
+            Map<String, Object> inParams = Map.of(
                     "id_usuario_sign", objDetalleGuiaEntrada.getIdLogin(),
                     "id_detalle_guia_entrada", objDetalleGuiaEntrada.getIdDetalleGuiaEntrada(),
                     "observacion", objDetalleGuiaEntrada.getObservacion());
@@ -292,50 +275,4 @@ public class DetalleGuiaEntradaRepository implements DetalleGuiaEntradaDAO {
 
     }
 
-    @Override
-    public ResponseDetalleGuiaEntradaMensajeDTO insertD(RequestDetalleGuiaEntradaInsertDTO objDetalleGuiaEntrada) {
-
-        ResponseDetalleGuiaEntradaMensajeDTO rp = new ResponseDetalleGuiaEntradaMensajeDTO();
-        try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_insertar_detalle_guia_entrada");
-
-            Map<String, Object> inParams = Map.of(
-                    "id_usuario_sign", objDetalleGuiaEntrada.getIdLogin(),
-                    "id_guia_entrada", objDetalleGuiaEntrada.getIdGuiaEntrada(),
-                    "fecha_vencimiento_producto", objDetalleGuiaEntrada.getFechaVencimientoProducto(),
-                    "id_producto", objDetalleGuiaEntrada.getIdProducto(),
-                    "cantidad", objDetalleGuiaEntrada.getCantidad(),
-                    "id_unidad_medida", objDetalleGuiaEntrada.getIdUnidadMedida(),
-                    "observacion", objDetalleGuiaEntrada.getObservacion());
-
-            Map<String, Object> result = call.execute(inParams);
-
-            @SuppressWarnings("unchecked")
-            List<Map<String, Object>> resultSet = (List<Map<String, Object>>) result.values().stream()
-                    .filter(v -> v instanceof List && !((List<?>) v).isEmpty())
-                    .findFirst()
-                    .orElse(null);
-
-            if (resultSet != null) {
-
-                Map<String, Object> errorRow = resultSet.get(0);
-                String mensajeError = (String) errorRow.get("mensaje");
-
-                rp.setCodigo("400");
-                rp.setMensaje(mensajeError != null ? mensajeError : "No se pudo registrar el detalle guía entrada.");
-
-            } else {
-                rp.setExito(true);
-                rp.setCodigo("200");
-                rp.setMensaje("Detalle guía entrada registrado correctamente");
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            rp.setCodigo("500");
-            rp.setMensaje("Error al insertar detalle guía entrada : " + e.getMessage());
-        }
-        return rp;
-    }
 }

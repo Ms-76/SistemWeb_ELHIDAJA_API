@@ -1,0 +1,4 @@
+var _request_tipo_documento_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.tipoDocumento.Request.RequestTipoDocumentoInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_request_1_1_ref6a8d0880db62bc17d8441218c90f192.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_request_1_1_ref6a8d0880db62bc17d8441218c90f192" ]
+];

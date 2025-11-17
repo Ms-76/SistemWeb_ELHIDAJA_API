@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_r3c1cd9000b4085d3744bd95e9dd00d9a =
+[
+    [ "tipoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_response_1_1_r3c1cd9000b4085d3744bd95e9dd00d9a.html#ad1b53ce0358de301a384edbb579a59cd", null ]
+];

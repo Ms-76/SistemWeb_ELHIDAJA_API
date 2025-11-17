@@ -1,0 +1,12 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8 =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#acf8a05f80908c29c9b3b6214de7c35ab", null ],
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a87f421e6263b6a1f547ca3f14bbf1f88", null ],
+    [ "fechaCreacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a3e9d341f8d1c8711b4f83be064ab97d9", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#add1dc7d205cdb4339609db0bdd24044a", null ],
+    [ "idSolicitudMaterial", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a6848270c42d6477bcd669e1e8c49765d", null ],
+    [ "nombreSolicitud", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#aff1eef5d5427db755d7269d07050d471", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a63a7523605e2cd70998bd0cf4765cb6a", null ],
+    [ "producto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a0dc43510231a180aa54adc6bf64f054d", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_refa99e2480d96d79a1a7e24d719657ef8.html#a1c2564fe1766a92c16ea737496c715d1", null ]
+];

@@ -1,0 +1,4 @@
+var _request_documento_identidad_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Request.RequestDocumentoIdentidadInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_request_10be74a90d2549a602999019f58955ea2.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_request_10be74a90d2549a602999019f58955ea2" ]
+];

@@ -1,0 +1,4 @@
+var _response_documento_identidad_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.documentoIdentidad.Response.ResponseDocumentoIdentidadDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459" ]
+];

@@ -28,7 +28,10 @@ public class DistritoRepository implements DistritoDAO {
                     .withProcedureName("SP_obtener_distritos");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_departamento", option.getIdDepartamento(),
+                    "id_provincia", option.getIdProvincia()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 

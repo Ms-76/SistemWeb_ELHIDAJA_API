@@ -30,7 +30,11 @@ public class InventarioRepository implements InventarioDAO {
                     .withProcedureName("SP_obtener_inventarios");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_almacen", option.getIdAlmacen(),
+                    "supervisor", option.getIdSupervisor(),
+                    "fecha_inicio", option.getFechaInicio(),
+                    "fecha_fin", option.getFechaFin());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -39,11 +43,14 @@ public class InventarioRepository implements InventarioDAO {
 
             List<ResponseInventarioDTO> inventarios = rows.stream().map(row -> {
                 ResponseInventarioDTO dto = new ResponseInventarioDTO();
-                dto.setId(((Number) row.get("id_inventario")).longValue());
-                dto.setFecha(((java.sql.Date) row.get("fecha")).toLocalDate());
-                dto.setDescripcion((String) row.get("descripcion"));
-                dto.setSupervisor(((String) row.get("supervisor")));
-                dto.setStatus((Boolean) row.get("status"));
+                    dto.setId(((Number) row.get("id_inventario")).longValue());
+                    dto.setFechaInicio(((java.sql.Date) row.get("fecha_inicio_inventario")).toLocalDate());
+                    dto.setFechaFin(((java.sql.Date) row.get("fecha_fin_inventario")).toLocalDate());
+                    dto.setDescripcion((String) row.get("descripcion"));
+                    dto.setSupervisor(((String) row.get("supervisor")));
+                    dto.setInventariador(((String) row.get("inventariador")));
+                    dto.setEstado((String) row.get("estado_inventario"));
+                    
                 return dto;
             }).toList();
 
@@ -84,10 +91,12 @@ public class InventarioRepository implements InventarioDAO {
                 } else {
                     ResponseInventarioDTO dto = new ResponseInventarioDTO();
                     dto.setId(((Number) row.get("id_inventario")).longValue());
-                    dto.setFecha(((java.sql.Date) row.get("fecha")).toLocalDate());
+                    dto.setFechaInicio(((java.sql.Date) row.get("fecha_inicio_inventario")).toLocalDate());
+                    dto.setFechaFin(((java.sql.Date) row.get("fecha_fin_inventario")).toLocalDate());
                     dto.setDescripcion((String) row.get("descripcion"));
                     dto.setSupervisor(((String) row.get("supervisor")));
-                    dto.setStatus((Boolean) row.get("status"));
+                    dto.setInventariador(((String) row.get("inventariador")));
+                    dto.setEstado((String) row.get("estado_inventario"));
 
                     rp.setInventario(dto);
                     rp.setExito(true);
@@ -213,7 +222,7 @@ public class InventarioRepository implements InventarioDAO {
                     "id_usuario_sign", objInventario.getIdLogin(),
                     "fecha_inicio_inventario", objInventario.getFechaInicioInventario(),
                     "descripcion", objInventario.getDescripcion(),
-                    "id_usuario_supervisor", objInventario.getIdUsuarioSupervisor(),
+                    "id_usuario_inventariador", objInventario.getIdinventariador(),
                     "id_almacen", objInventario.getIdAlmacen(),
                     "fecha_fin_inventario", objInventario.getFechaFinInventario(),
                     "xml_detalles", xmlGenerado);
@@ -257,9 +266,10 @@ public class InventarioRepository implements InventarioDAO {
             Map<String, Object> inParams = Map.of(
                     "id_usuario_sign", objInventario.getIdLogin(),
                     "id_inventario", objInventario.getId(),
-                    "fecha", objInventario.getFecha(),
-                    "descripcion", objInventario.getDescripcion(),
-                    "id_usuario", objInventario.getIdUsuario());
+                    "fecha_inicio_inventario", objInventario.getFechaInicioInventario(),
+                    "fecha_fin_inventario", objInventario.getFechaFinInventario(),
+                    "id_usuario_inventariador", objInventario.getIdinventariador(),
+                    "descripcion", objInventario.getDescripcion());
 
             Map<String, Object> result = call.execute(inParams);
 

@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_request_1_1_request_login_log_insert_d_t_o =
+[
+    [ "email", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_request_1_1_request_login_log_insert_d_t_o.html#ab8603c5d08e6425c7a0ca622cfd5f90f", null ],
+    [ "password", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_request_1_1_request_login_log_insert_d_t_o.html#a7cc8eb7b7c3e3d75a712e5b9c8d1c957", null ]
+];

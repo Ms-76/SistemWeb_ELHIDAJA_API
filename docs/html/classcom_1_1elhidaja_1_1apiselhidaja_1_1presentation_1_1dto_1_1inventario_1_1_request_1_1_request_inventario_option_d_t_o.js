@@ -1,0 +1,8 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o.html#a39d33d1526ecab580a09c87690988beb", null ],
+    [ "fechaFin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o.html#ad9ec6c610afac4eabc0b49691b6c89c1", null ],
+    [ "fechaInicio", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o.html#a85ce94fa011eb43cafa803cc14c7fe85", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o.html#a9c62711000f29db7da6aea91d30bffba", null ],
+    [ "idSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1inventario_1_1_request_1_1_request_inventario_option_d_t_o.html#a081e1d900dce5e913cf3ea28650164f7", null ]
+];

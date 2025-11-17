@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1producto_1_1_request_1_1_request_producto_xml_update_d_t_o =
+[
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1producto_1_1_request_1_1_request_producto_xml_update_d_t_o.html#af88739577f2176338fc8dcf0bcfb5344", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1producto_1_1_request_1_1_request_producto_xml_update_d_t_o.html#a8da6df7b83a92c45fc31cdadbc44e1e9", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re8c53266948b5df80aed33307e121e47f =
+[
+    [ "detalleSolicitudMaterial", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re8c53266948b5df80aed33307e121e47f.html#a8915c2b56c3841a2f2a6190ed9839be7", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_operacion_1_1_response_7e6cf7658be5b58a38fee22bd831e6b4 =
+[
+    [ "documento_operacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_operacion_1_1_response_7e6cf7658be5b58a38fee22bd831e6b4.html#aa769bcc1008d2a043f10ab8533360b7a", null ]
+];

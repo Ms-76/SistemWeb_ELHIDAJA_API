@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_update_d_t_o =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_update_d_t_o.html#a87614bcf8dd328c4e559935c6faf8146", null ],
+    [ "idDepartamento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_update_d_t_o.html#a24674d02cde220995529ea9f5aceb9de", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_update_d_t_o.html#a61ef578e73e8458c8b2c0fb9f4c8c4d6", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_update_d_t_o.html#a00fb6236a3401e203afa555c8ad9b207", null ]
+];

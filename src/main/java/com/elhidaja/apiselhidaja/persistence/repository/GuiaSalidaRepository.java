@@ -1,6 +1,5 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.ZoneId;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +32,12 @@ public class GuiaSalidaRepository implements GuiaSalidaDAO {
 
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen());
+                    "id_almacen_origen", option.getIdAlmacenOrigen(),
+                    "tipo_destino", option.getTipoDestino(),
+                    "fecha_inicio", option.getFechaInicio(),
+                    "fecha_fin", option.getFechaFin()
+
+            );
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -46,20 +50,15 @@ public class GuiaSalidaRepository implements GuiaSalidaDAO {
                     List<ResponseGuiaSalidaDTO> guiasSalida = rows.stream().map(row -> {
                         ResponseGuiaSalidaDTO dto = new ResponseGuiaSalidaDTO();
                         dto.setId(((Number) row.get("id_guia_salida")).longValue());
-                        dto.setProveedor((String) row.get("proveedor"));
+                        dto.setTipoOperacion((String) row.get("tipo_operacion"));
+                        dto.setTipoDocumento((String) row.get("tipo_documento"));
                         dto.setTrabajador((String) row.get("trabajador"));
+                        dto.setTipoDestino((String) row.get("tipo_destino"));
+                        dto.setDestino(((String) row.get("destino")));
+                        java.sql.Date sqlDate = (java.sql.Date) row.get("fecha_salida");
+                        dto.setFechaSalida(sqlDate.toLocalDate());
                         dto.setDescripcion((String) row.get("descripcion"));
-
-                        Object fechaObj = row.get("fecha_creacion");
-                        if (fechaObj instanceof java.sql.Timestamp) {
-                            java.sql.Timestamp timestamp = (java.sql.Timestamp) fechaObj;
-                            dto.setFechaSalida(timestamp.toLocalDateTime().toLocalDate());
-                        } else if (fechaObj instanceof java.util.Date) {
-                            java.util.Date fecha = (java.util.Date) fechaObj;
-                            dto.setFechaSalida(fecha.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-                        } else {
-                            dto.setFechaSalida(null);
-                        }
+                        dto.setStatus((Boolean) row.get("status"));
                         return dto;
                     }).toList();
 
@@ -111,19 +110,15 @@ public class GuiaSalidaRepository implements GuiaSalidaDAO {
                 } else {
                     ResponseGuiaSalidaDTO rcd = new ResponseGuiaSalidaDTO();
                     rcd.setId(((Number) row.get("id_guia_salida")).longValue());
-                    rcd.setProveedor(((String) row.get("proveedor")));
-                    rcd.setTrabajador(((String) row.get("trabajador")));
+                    rcd.setTipoOperacion((String) row.get("tipo_operacion"));
+                    rcd.setTipoDocumento((String) row.get("tipo_documento"));
+                    rcd.setTrabajador((String) row.get("trabajador"));
+                    rcd.setTipoDestino((String) row.get("tipo_destino"));
+                    rcd.setDestino(((String) row.get("destino")));
+                    java.sql.Date sqlDate = (java.sql.Date) row.get("fecha_salida");
+                    rcd.setFechaSalida(sqlDate.toLocalDate());
                     rcd.setDescripcion((String) row.get("descripcion"));
-                    Object fechaObj = row.get("fecha_creacion");
-                    if (fechaObj instanceof java.sql.Timestamp) {
-                        java.sql.Timestamp timestamp = (java.sql.Timestamp) fechaObj;
-                        rcd.setFechaSalida(timestamp.toLocalDateTime().toLocalDate());
-                    } else if (fechaObj instanceof java.util.Date) {
-                        java.util.Date fecha = (java.util.Date) fechaObj;
-                        rcd.setFechaSalida(fecha.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-                    } else {
-                        rcd.setFechaSalida(null);
-                    }
+                    rcd.setStatus((Boolean) row.get("status"));
 
                     rp.setGuiaSalida(rcd);
                     rp.setExito(true);
@@ -285,8 +280,11 @@ public class GuiaSalidaRepository implements GuiaSalidaDAO {
             inParams.put("id_serie", objGuiaSalida.getIdSerie());
             inParams.put("id_proveedor", objGuiaSalida.getIdProveedor());
             inParams.put("id_usuario", objGuiaSalida.getIdUsuario());
-            inParams.put("id_almacen", objGuiaSalida.getIdAlmacen());
+            inParams.put("id_almacen_origen", objGuiaSalida.getIdAlmacen()); 
             inParams.put("descripcion", objGuiaSalida.getDescripcion());
+            inParams.put("tipo_destino", objGuiaSalida.getTipoDestino());
+            inParams.put("id_destino", objGuiaSalida.getIdDestino());
+            inParams.put("fecha", objGuiaSalida.getFecha());
             inParams.put("xml_detalles", xmlGenerado);
 
             Map<String, Object> result = call.execute(inParams);
@@ -318,5 +316,4 @@ public class GuiaSalidaRepository implements GuiaSalidaDAO {
         return rp;
     }
 
- 
 }

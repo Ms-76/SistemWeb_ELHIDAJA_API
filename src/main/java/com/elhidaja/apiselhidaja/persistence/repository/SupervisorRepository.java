@@ -27,7 +27,8 @@ public class SupervisorRepository implements SupervisorDAO {
                     .withProcedureName("SP_obtener_supervisores");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "tipo_supervisor", option.getTipoSupervisor());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -37,9 +38,17 @@ public class SupervisorRepository implements SupervisorDAO {
             List<ResponseSupervisorDTO> supervisores = rows.stream().map(row -> {
                 ResponseSupervisorDTO dto = new ResponseSupervisorDTO();
                 dto.setId(((Number) row.get("id_supervisor")).longValue());
-                dto.setIdEntidad(((Number) row.get("id_entidad")).longValue());
                 dto.setTipoSupervisor((String) row.get("tipo_supervisor"));
-                dto.setFechaCreacion(row.get("fecha_creacion").toString());
+                dto.setDocumento((String) row.get("documento"));
+                dto.setNumeroDocumento((String) row.get("numero_documento"));
+                dto.setNombre((String) row.get("nombre"));
+                dto.setEspecialidad((String) row.get("especialidad"));
+                dto.setEmail((String) row.get("email"));
+                dto.setTelefono((String) row.get("telefono"));
+                dto.setDireccion((String) row.get("direccion"));
+                dto.setDepartamento((String) row.get("departamento"));
+                dto.setProvincia((String) row.get("provincia"));
+                dto.setDistrito((String) row.get("distrito"));
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;
             }).toList();
@@ -81,9 +90,17 @@ public class SupervisorRepository implements SupervisorDAO {
                 } else {
                     ResponseSupervisorDTO dto = new ResponseSupervisorDTO();
                     dto.setId(((Number) row.get("id_supervisor")).longValue());
-                    dto.setIdEntidad(((Number) row.get("id_entidad")).longValue());
                     dto.setTipoSupervisor((String) row.get("tipo_supervisor"));
-                    dto.setFechaCreacion(row.get("fecha_creacion").toString());
+                    dto.setDocumento((String) row.get("documento"));
+                    dto.setNumeroDocumento((String) row.get("numero_documento"));
+                    dto.setNombre((String) row.get("nombre"));
+                    dto.setEspecialidad((String) row.get("especialidad"));
+                    dto.setEmail((String) row.get("email"));
+                    dto.setTelefono((String) row.get("telefono"));
+                    dto.setDireccion((String) row.get("direccion"));
+                    dto.setDepartamento((String) row.get("departamento"));
+                    dto.setProvincia((String) row.get("provincia"));
+                    dto.setDistrito((String) row.get("distrito"));
                     dto.setStatus((Boolean) row.get("status"));
 
                     rp.setSupervisor(dto);

@@ -1,0 +1,17 @@
+digraph "src/main/java/com/elhidaja/apiselhidaja/persistence"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_b0ef8495bfb576cfc10de1b4c528beab {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="apiselhidaja", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_b0ef8495bfb576cfc10de1b4c528beab.html",tooltip=""]
+  subgraph clusterdir_649e1a3af136225365e8457cafdab512 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_649e1a3af136225365e8457cafdab512.html",tooltip=""]
+    dir_649e1a3af136225365e8457cafdab512 [shape=plaintext, label="persistence"];
+  dir_bc4d5995973bf09b29f585144477dcb6 [label="entity", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_bc4d5995973bf09b29f585144477dcb6.html",tooltip=""];
+  dir_e0f47b33638a2ab27cc255fbd2ffc048 [label="repository", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e0f47b33638a2ab27cc255fbd2ffc048.html",tooltip=""];
+  }
+  }
+}

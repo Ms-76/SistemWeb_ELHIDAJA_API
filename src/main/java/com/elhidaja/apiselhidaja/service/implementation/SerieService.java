@@ -1,15 +1,15 @@
 package com.elhidaja.apiselhidaja.service.implementation;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.SerieRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.serie.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.serie.Response.*;
+
 @Service
-@Validated
 public class SerieService {
-      private final SerieRepository serieRepo;
+    private final SerieRepository serieRepo;
 
     public SerieService(SerieRepository serieRepo) {
         this.serieRepo = serieRepo;
@@ -25,12 +25,12 @@ public class SerieService {
         return serieRepo.updateD(objSerie);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseSerieAllDTO getAllSer(RequestSerieOptionDTO option) {
         return serieRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleSerieDTO getByIdSer(RequestSerieFilterDTO id) {
         return serieRepo.getByIdD(id);
     }

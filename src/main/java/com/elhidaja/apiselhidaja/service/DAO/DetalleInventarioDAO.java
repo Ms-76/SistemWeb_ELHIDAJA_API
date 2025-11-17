@@ -5,14 +5,14 @@ import com.elhidaja.apiselhidaja.presentation.dto.detalleInventario.Response.*;
 
 public interface DetalleInventarioDAO {
 
-    public ResponseDetalleInventarioAllDTO getAllD(RequestDetalleInventarioOptionDTO option);
+    ResponseDetalleInventarioAllDTO getAllD(RequestDetalleInventarioOptionDTO option);
 
-    public ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioFilterDTO id);
+    ResponseDetalleInventarioDTO getByIdD(RequestDetalleInventarioFilterDTO id);
 
-    public ResponseDetalleInventarioMensajeDTO desactivateD(RequestDetalleInventarioIdDTO id);
+    ResponseDetalleInventarioMensajeDTO desactivateD(RequestDetalleInventarioIdDTO id);
 
-    public ResponseDetalleInventarioMensajeDTO activateD(RequestDetalleInventarioIdDTO id);
+    ResponseDetalleInventarioMensajeDTO activateD(RequestDetalleInventarioIdDTO id);
 
-    public ResponseDetalleInventarioMensajeDTO updateD(RequestDetalleInventarioUpdateDTO objDetalleInventario);
+    ResponseDetalleInventarioMensajeDTO updateD(RequestDetalleInventarioUpdateDTO objDetalleInventario);
 
 }

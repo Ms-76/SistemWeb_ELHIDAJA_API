@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405 =
+[
+    [ "idAsignacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405.html#af6bcaea76a0997f152c33d67f262dcfa", null ],
+    [ "idChofer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405.html#a1fe9d6a6b55dad7c7b8fdc74264862b3", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405.html#afe28d3a28b9a22ed73424b6ea226d886", null ],
+    [ "idVehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405.html#ab8056be37618c09b21d5e7b22de37fbe", null ]
+];

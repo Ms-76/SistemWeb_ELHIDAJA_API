@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.UsuarioRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.usuario.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.usuario.Response.*;
 
 @Service
-@Validated
 public class UsuarioService {
     private final UsuarioRepository usuarioRepo;
 
@@ -27,12 +25,12 @@ public class UsuarioService {
         return usuarioRepo.updateD(objUsuario);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseUsuarioAllDTO getAllSer(RequestUsuarioOptionDTO option) {
         return usuarioRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleUsuarioDTO getByIdSer(RequestUsuarioFilterDTO id) {
         return usuarioRepo.getByIdD(id);
     }

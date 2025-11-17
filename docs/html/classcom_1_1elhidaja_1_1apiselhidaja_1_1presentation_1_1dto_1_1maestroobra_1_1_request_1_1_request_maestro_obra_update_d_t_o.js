@@ -1,0 +1,13 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o =
+[
+    [ "direccion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#ab3c9d58df5329266f3fb03d38ae189c3", null ],
+    [ "email", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#a7e81925daf36b86465551ff3ca73fa92", null ],
+    [ "experienciaAnios", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#ab1259fcb35ffa46bd20644c8705699b8", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#a3ac62290fee84a705039d22f4ac333a3", null ],
+    [ "idDistrito", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#a81e0a4cc4208a5b624b6d163bf511347", null ],
+    [ "idDocumentoIdentidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#ab3a7f5890e6eb3e296e75981b22437da", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#aed8f4866edb3c8b50b0a4929097d8997", null ],
+    [ "nombres", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#aead7271ed17e5c0721078a3821875c00", null ],
+    [ "numeroDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#a9a7efc64d971e5c08c30703368927374", null ],
+    [ "telefono", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_update_d_t_o.html#aaa0a415822993986eab29d49715ca1ad", null ]
+];

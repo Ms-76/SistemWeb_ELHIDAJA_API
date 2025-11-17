@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re244956146401adbc7f9eb9152ab457a8 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re244956146401adbc7f9eb9152ab457a8.html#a13986a0d94507bfec826a573f784e4e9", null ],
+    [ "idCategoria", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re244956146401adbc7f9eb9152ab457a8.html#ae7362682c3d9f004bcd1d79d28344f7a", null ]
+];

@@ -1,0 +1,4 @@
+var _request_tipo_operacion_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.tipoOperacion.Request.RequestTipoOperacionInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_request_1_1_recb7b0b7e30a0ad4bf7b87ac859373a38.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_operacion_1_1_request_1_1_recb7b0b7e30a0ad4bf7b87ac859373a38" ]
+];

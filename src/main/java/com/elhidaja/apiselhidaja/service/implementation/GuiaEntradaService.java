@@ -2,7 +2,6 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.GuiaEntradaRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.guiaEntrada.Request.*;
@@ -11,7 +10,6 @@ import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Request.RequestReci
 import com.elhidaja.apiselhidaja.presentation.dto.guiaSalida.Response.ResponseGuiaSalidaMensajeDTO;
 
 @Service
-@Validated
 public class GuiaEntradaService {
     private final GuiaEntradaRepository guiaEntradaRepo;
 
@@ -29,12 +27,12 @@ public class GuiaEntradaService {
         return guiaEntradaRepo.updateD(objGuiaEntrada);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseGuiaEntradaAllDTO getAllSer(RequestGuiaEntradaOptionDTO option) {
         return guiaEntradaRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleGuiaEntradaDTO getByIdSer(RequestGuiaEntradaFilterDTO id) {
         return guiaEntradaRepo.getByIdD(id);
     }

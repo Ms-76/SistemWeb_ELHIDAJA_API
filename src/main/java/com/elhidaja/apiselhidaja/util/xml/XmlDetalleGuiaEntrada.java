@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@XStreamAlias("detalle")
+@XStreamAlias("producto")
 public class XmlDetalleGuiaEntrada {
     @XStreamAlias("id_producto")
     private Integer idProducto;

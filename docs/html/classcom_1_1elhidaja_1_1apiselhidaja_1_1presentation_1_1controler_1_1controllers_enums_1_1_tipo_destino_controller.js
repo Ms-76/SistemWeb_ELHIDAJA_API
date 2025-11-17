@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_tipo_destino_controller =
+[
+    [ "getTiposDestino", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_tipo_destino_controller.html#a3f9a49992541d9cba1dcadd45f1b08e7", null ]
+];

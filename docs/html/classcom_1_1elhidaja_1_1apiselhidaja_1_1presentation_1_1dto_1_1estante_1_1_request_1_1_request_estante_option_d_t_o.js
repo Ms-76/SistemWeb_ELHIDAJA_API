@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_option_d_t_o.html#a548d32de0b8f42b6ada4e8409d0c1a2c", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1estante_1_1_request_1_1_request_estante_option_d_t_o.html#af18326a69b2c55d5582bafed891ff1a0", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_tipo_documento_controllery =
+[
+    [ "getTiposDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_tipo_documento_controllery.html#a581174cba40f109eb948a7e42489673f", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_reda90d71b62884b1d75851ebd62a03be3 =
+[
+    [ "subCategoria", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_reda90d71b62884b1d75851ebd62a03be3.html#ac210f6afe4d615ba22ae8bb14d33f75c", null ]
+];

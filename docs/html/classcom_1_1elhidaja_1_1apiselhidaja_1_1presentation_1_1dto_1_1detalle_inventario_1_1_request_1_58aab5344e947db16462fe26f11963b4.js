@@ -1,0 +1,11 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4 =
+[
+    [ "codigo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#acfd32e0ecf38b3a7036430fe05db4eb4", null ],
+    [ "codigoBarras", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a2fd2c9bc129a12ed68569f1ed4a6c315", null ],
+    [ "costo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a3bc69f7efa8028aa15978ed9a4dff80c", null ],
+    [ "descripcionProd", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a33ad75be1c47f73846629c265fb9c497", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a377227a7d4079d819c84bd5631e2b292", null ],
+    [ "idSubcategoria", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a35a108655cfa2d2315ecfe33c41af285", null ],
+    [ "imagen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#a3a6234a1b9f667d3e3e21530be27bc43", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html#ae4615961463b5cbe48820c35399647f5", null ]
+];

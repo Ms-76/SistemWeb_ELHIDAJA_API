@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_estado_civil_controller =
+[
+    [ "getEstadosCiviles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1controllers_enums_1_1_estado_civil_controller.html#aee6e2172c6c7eab38a78e79361ff6f4a", null ]
+];

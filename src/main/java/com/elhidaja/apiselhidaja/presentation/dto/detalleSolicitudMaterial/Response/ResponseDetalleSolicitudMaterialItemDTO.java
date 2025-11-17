@@ -15,7 +15,7 @@ public class ResponseDetalleSolicitudMaterialItemDTO {
     private Integer cantidad;
     private String observacion;
     private String nombreSolicitud;
-    private Integer estado;
-    private LocalDateTime fechaCreacion;
+    private String estado;
+    private LocalDateTime FechaSolicitud;
     private Boolean status;
 }

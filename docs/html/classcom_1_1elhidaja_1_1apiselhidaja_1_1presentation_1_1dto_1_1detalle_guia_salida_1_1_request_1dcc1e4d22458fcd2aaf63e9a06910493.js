@@ -1,0 +1,7 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_1dcc1e4d22458fcd2aaf63e9a06910493 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_1dcc1e4d22458fcd2aaf63e9a06910493.html#a78a4086b2b104645a188577776b93916", null ],
+    [ "idAlmacenOrigen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_1dcc1e4d22458fcd2aaf63e9a06910493.html#a88fae01a7f6d5a70eb02de49c107fb37", null ],
+    [ "idGuiaSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_1dcc1e4d22458fcd2aaf63e9a06910493.html#a617d2982fc816701149655e498ff393e", null ],
+    [ "tipoDestino", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_salida_1_1_request_1dcc1e4d22458fcd2aaf63e9a06910493.html#ab48ac6dea70fd791f825cf3deb1810cc", null ]
+];

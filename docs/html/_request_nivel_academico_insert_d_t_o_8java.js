@@ -1,0 +1,4 @@
+var _request_nivel_academico_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.nivelAcademico.Request.RequestNivelAcademicoInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_rcf4a106ea748d43601e364121fe2daa9.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_rcf4a106ea748d43601e364121fe2daa9" ]
+];

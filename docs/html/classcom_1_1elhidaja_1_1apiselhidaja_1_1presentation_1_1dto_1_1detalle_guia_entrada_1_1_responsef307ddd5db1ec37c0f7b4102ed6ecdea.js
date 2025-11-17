@@ -1,0 +1,17 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#acc98230358fc7b63b3406eaa33bb97d1", null ],
+    [ "codigoInterno", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a627814bba14ea66aac2c04dd10267a9a", null ],
+    [ "codigoSunat", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#ad1723179393925c57eff7e39d97d8569", null ],
+    [ "fechaVencimientoProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a5335393978930c414d80112395ca47b8", null ],
+    [ "idDetalleGuiaEntrada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a2e10d339c3190570e0d282c82cd90f8a", null ],
+    [ "idGuiaEntrada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a49867bbd0048183d3bc462690368ed05", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a8844accc97a99ff945996371f2a1809c", null ],
+    [ "producto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#afdb46746070c3affd7b7ee598e8d766a", null ],
+    [ "serie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a8975c30c9e979f148d5df77b0e984d29", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a1bb0809ab7ec859df7888c473fe2fd68", null ],
+    [ "tipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a7bce9b4d7f8b7cceb9973afd158fade2", null ],
+    [ "tipoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#ac9e4484f5374ae433011ace3ff66e629", null ],
+    [ "ultimoCorrelativo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#a5793482bbcc09a5e7f63f86822e78685", null ],
+    [ "unidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_responsef307ddd5db1ec37c0f7b4102ed6ecdea.html#abbdf021280720a211854dd3b5a000b01", null ]
+];

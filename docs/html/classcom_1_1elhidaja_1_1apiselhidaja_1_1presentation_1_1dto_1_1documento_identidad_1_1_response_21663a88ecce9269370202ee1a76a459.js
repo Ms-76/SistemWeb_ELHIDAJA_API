@@ -1,0 +1,9 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459 =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#a5d26a5e30cbe93ae3b48f2cce39edfe4", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#a5540fb6d7e9319658bd72ba67a5183b4", null ],
+    [ "longitud", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#a247b86d1f4f15a64175e866b05c5e007", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#a4306bc39985c4443f65c3c7926ca389a", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#abcbf021228e39275934787e951e81f3f", null ],
+    [ "tipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_identidad_1_1_response_21663a88ecce9269370202ee1a76a459.html#a23a865781b177b7ec3ec46cc7306284e", null ]
+];

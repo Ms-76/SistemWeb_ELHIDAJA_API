@@ -1,0 +1,4 @@
+var _tipo_operacion_repository_8java =
+[
+    [ "com.elhidaja.apiselhidaja.persistence.repository.TipoOperacionRepository", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_tipo_operacion_repository.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_tipo_operacion_repository" ]
+];

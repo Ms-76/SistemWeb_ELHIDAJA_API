@@ -11,8 +11,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class ResponseInventarioDTO {
     private Long id;
-    private LocalDate fecha;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private String supervisor;
+    private String inventariador;
     private String descripcion;
-    private Boolean status;
+    private String estado;
 }

@@ -1,0 +1,4 @@
+var _request_login_log_id_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.loginLogs.Request.RequestLoginLogIdDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_request_1_1_request_login_log_id_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1login_logs_1_1_request_1_1_request_login_log_id_d_t_o" ]
+];

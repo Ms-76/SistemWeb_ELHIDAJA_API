@@ -1,0 +1,4 @@
+var _tipo_documento_repository_8java =
+[
+    [ "com.elhidaja.apiselhidaja.persistence.repository.TipoDocumentoRepository", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_tipo_documento_repository.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1persistence_1_1repository_1_1_tipo_documento_repository" ]
+];

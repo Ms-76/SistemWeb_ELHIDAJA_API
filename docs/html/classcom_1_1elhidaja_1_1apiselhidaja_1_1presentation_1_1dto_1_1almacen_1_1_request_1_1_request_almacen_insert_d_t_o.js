@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o =
+[
+    [ "codigo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o.html#a105aab26d18a6244651911c9cbd6fd12", null ],
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o.html#ae4066f1699fbe2ce60cab67660ae63c1", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1almacen_1_1_request_1_1_request_almacen_insert_d_t_o.html#aafa92e8ce7ebb08ddc30c741a39002eb", null ]
+];

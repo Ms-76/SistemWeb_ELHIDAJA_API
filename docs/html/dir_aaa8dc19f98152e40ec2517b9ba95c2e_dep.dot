@@ -1,0 +1,12 @@
+digraph "src/main/java/com/elhidaja/apiselhidaja/presentation/dto/unidadMedidaProducto/Response"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_83cf1c393ceaf9b31a5e5020b8587e75 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="unidadMedidaProducto", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_83cf1c393ceaf9b31a5e5020b8587e75.html",tooltip=""]
+  dir_aaa8dc19f98152e40ec2517b9ba95c2e [label="Response", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_aaa8dc19f98152e40ec2517b9ba95c2e.html",tooltip=""];
+  }
+}

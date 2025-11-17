@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o.html#a57ccb91d298583db8ab41f22915cc57b", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o.html#a93fd7e656af724c5a02b16cdf314e998", null ],
+    [ "idEstante", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o.html#a99a99fa786d729403a60d89a8b9250ca", null ]
+];

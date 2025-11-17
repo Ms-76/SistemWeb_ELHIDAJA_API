@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re6a8a08672ea5b5b889e36728cda24202 =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re6a8a08672ea5b5b889e36728cda24202.html#a12f407ecb55485db9a55afa6f423cb37", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re6a8a08672ea5b5b889e36728cda24202.html#a9c60d4b47b80562b81b54a4f4689b979", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re6a8a08672ea5b5b889e36728cda24202.html#a4615fe4ff2814333da3d301312e77fbe", null ]
+];

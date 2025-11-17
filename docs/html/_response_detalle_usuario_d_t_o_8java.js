@@ -1,0 +1,4 @@
+var _response_detalle_usuario_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.usuario.Response.ResponseDetalleUsuarioDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1usuario_1_1_response_1_1_response_detalle_usuario_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1usuario_1_1_response_1_1_response_detalle_usuario_d_t_o" ]
+];

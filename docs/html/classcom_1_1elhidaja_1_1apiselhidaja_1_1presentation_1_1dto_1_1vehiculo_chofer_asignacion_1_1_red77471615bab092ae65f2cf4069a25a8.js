@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_red77471615bab092ae65f2cf4069a25a8 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_red77471615bab092ae65f2cf4069a25a8.html#a422abf3e230af99b023f9817eb1c5b5f", null ],
+    [ "idChofer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_red77471615bab092ae65f2cf4069a25a8.html#a0de5fd6e53d9566503bad1f0b62c4e33", null ]
+];

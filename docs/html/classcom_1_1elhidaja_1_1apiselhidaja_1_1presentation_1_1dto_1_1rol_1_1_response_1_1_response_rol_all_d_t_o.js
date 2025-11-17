@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_response_1_1_response_rol_all_d_t_o =
+[
+    [ "roles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_response_1_1_response_rol_all_d_t_o.html#a90df1a9bc8f3d3cd0472c824d662bf9e", null ]
+];

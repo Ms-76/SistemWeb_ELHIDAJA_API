@@ -1,0 +1,4 @@
+var _request_solicitud_material_option_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.solicitudMaterial.Request.RequestSolicitudMaterialOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d8995afb0c0a6b505901f74fa5367f09.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_request_1_d8995afb0c0a6b505901f74fa5367f09" ]
+];

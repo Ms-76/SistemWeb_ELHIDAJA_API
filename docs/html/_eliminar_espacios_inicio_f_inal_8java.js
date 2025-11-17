@@ -1,0 +1,4 @@
+var _eliminar_espacios_inicio_f_inal_8java =
+[
+    [ "com.elhidaja.apiselhidaja.util.deserializador.EliminarEspaciosInicioFInal", "classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1deserializador_1_1_eliminar_espacios_inicio_f_inal.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1deserializador_1_1_eliminar_espacios_inicio_f_inal" ]
+];

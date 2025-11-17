@@ -1,0 +1,8 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o.html#a51d8ef61a7d445507c80d44afb543877", null ],
+    [ "idArquitecto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o.html#afe5bee63a0e249c5e388fb8a0119ded9", null ],
+    [ "idIngeniero", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o.html#af7710d1d2f4c9852bcd112285afee980", null ],
+    [ "idMaestroObra", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o.html#aa170a464b9be75896a7cf8dd0216f6fa", null ],
+    [ "idSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1proyecto_1_1_request_1_1_request_proyecto_option_d_t_o.html#acda8c4934482fb646443c2a3f4da4a99", null ]
+];

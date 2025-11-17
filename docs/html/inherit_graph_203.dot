@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="com.elhidaja.apiselhidaja.presentation.dto.sub\lCategoria.Resquest.RequestSubCategoriaUpdateDTO",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_resquest_1_1_re6a8a08672ea5b5b889e36728cda24202.html",tooltip=" "];
+}

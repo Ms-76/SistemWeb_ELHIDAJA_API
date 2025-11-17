@@ -1,0 +1,16 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9 =
+[
+    [ "codigoInterno", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a2c96f025273d8a2eaaade16d276f0445", null ],
+    [ "codigoSunat", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a6fea690e7324d1fb0b490fe4c4bc34be", null ],
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#ae63d55f1e221547279f15be32367200c", null ],
+    [ "fechaTranslado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a9ccffbf142e05159a125d999721646f5", null ],
+    [ "idAlmacenSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#ae355694d71a4b819c8b45ccc08bceb65", null ],
+    [ "idAsignacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a6a0be422107c6a6b8b6a8069ecc0aac2", null ],
+    [ "idGuiaSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a60473435e883569a37361617fc95e013", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#aa04d03fcc91e6056b97eeed11c744118", null ],
+    [ "idSerie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a96e6469aba4053c3f0c89d200b0e64b9", null ],
+    [ "idTipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a68d8f96b34db92d781a393bb4bd922f2", null ],
+    [ "idTipoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a0b67a2bcdabfb4aab70eb8a6c143509c", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a62870e2feceb1341c5416b36fe741602", null ],
+    [ "puntoLlegada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r7550829d9f9b27291e9bf01af1dce3d9.html#a2a82c35924153084779541f6f0c357b6", null ]
+];

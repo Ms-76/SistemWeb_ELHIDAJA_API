@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1065456238978f2e5bc9f1995069c8e71 =
+[
+    [ "detalles", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1065456238978f2e5bc9f1995069c8e71.html#af3c92881e1120399d46021f81cc0bdf6", null ]
+];

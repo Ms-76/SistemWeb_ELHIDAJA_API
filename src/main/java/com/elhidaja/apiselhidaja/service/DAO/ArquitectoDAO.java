@@ -4,10 +4,15 @@ import com.elhidaja.apiselhidaja.presentation.dto.arquitecto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.arquitecto.Response.*;
 
 public interface ArquitectoDAO {
-    public ResponseArquitectoAllDTO getAllD(RequestArquitectoOptionDTO option);
-    public ResponseDetalleArquitectoDTO getByIdD(RequestArquitectoFilterDTO id);
-    public ResponseArquitectoMensajeDTO desactivateD(RequestArquitectoIdDTO id);
-    public ResponseArquitectoMensajeDTO activateD(RequestArquitectoIdDTO id);
-    public ResponseArquitectoMensajeDTO insertD(RequestArquitectoInsertDTO obj);
-    public ResponseArquitectoMensajeDTO updateD(RequestArquitectoUpdateDTO obj);
+    ResponseArquitectoAllDTO getAllD(RequestArquitectoOptionDTO option);
+
+    ResponseDetalleArquitectoDTO getByIdD(RequestArquitectoFilterDTO id);
+
+    ResponseArquitectoMensajeDTO desactivateD(RequestArquitectoIdDTO id);
+
+    ResponseArquitectoMensajeDTO activateD(RequestArquitectoIdDTO id);
+
+    ResponseArquitectoMensajeDTO insertD(RequestArquitectoInsertDTO obj);
+
+    ResponseArquitectoMensajeDTO updateD(RequestArquitectoUpdateDTO obj);
 }

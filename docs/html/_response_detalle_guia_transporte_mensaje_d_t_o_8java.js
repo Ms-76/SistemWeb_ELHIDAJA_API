@@ -1,0 +1,4 @@
+var _response_detalle_guia_transporte_mensaje_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaTransporte.Response.ResponseDetalleGuiaTransporteMensajeDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respo2f03244c0913902221b9aab800208617.html", null ]
+];

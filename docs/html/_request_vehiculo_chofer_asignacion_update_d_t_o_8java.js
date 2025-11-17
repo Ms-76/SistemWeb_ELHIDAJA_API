@@ -1,0 +1,4 @@
+var _request_vehiculo_chofer_asignacion_update_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.vehiculoChoferAsignacion.Request.RequestVehiculoChoferAsignacionUpdateDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_refb914346bfc738425f780149f2da5405" ]
+];

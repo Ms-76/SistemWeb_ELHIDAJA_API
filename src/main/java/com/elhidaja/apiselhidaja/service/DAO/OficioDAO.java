@@ -1,18 +1,19 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.oficio.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.oficio.Response.*;
 
 public interface OficioDAO {
-    public ResponseOficioAllDTO getAllD(RequestOficioOptionDTO option);
+    ResponseOficioAllDTO getAllD(RequestOficioOptionDTO option);
 
-    public ResponseDetalleOficioDTO getByIdD(RequestOficioFilterDTO id);
+    ResponseDetalleOficioDTO getByIdD(RequestOficioFilterDTO id);
 
-    public ResponseOficioMensajeDTO deactivateD(RequestOficioIdDTO id);
+    ResponseOficioMensajeDTO deactivateD(RequestOficioIdDTO id);
 
-    public ResponseOficioMensajeDTO activateD(RequestOficioIdDTO id);
+    ResponseOficioMensajeDTO activateD(RequestOficioIdDTO id);
 
-    public ResponseOficioMensajeDTO insertD(RequestOficioInsertDTO objOficio);
+    ResponseOficioMensajeDTO insertD(RequestOficioInsertDTO objOficio);
 
-    public ResponseOficioMensajeDTO updateD(RequestOficioUpdateDTO objOficio);
+    ResponseOficioMensajeDTO updateD(RequestOficioUpdateDTO objOficio);
 
 }

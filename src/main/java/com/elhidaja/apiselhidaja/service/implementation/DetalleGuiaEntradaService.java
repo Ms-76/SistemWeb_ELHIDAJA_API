@@ -15,21 +15,17 @@ public class DetalleGuiaEntradaService {
     }
 
     @Transactional
-    public ResponseDetalleGuiaEntradaMensajeDTO insertSer(RequestDetalleGuiaEntradaInsertDTO objDetalleGuiaEntrada) {
-        return detalleRepo.insertD(objDetalleGuiaEntrada);
-    }
-
-    @Transactional
-    public ResponseDetalleGuiaEntradaMensajeDTO updateSer(RequestActualizarObservacionDetalleGuiaEntradaDTO objDetalleGuiaEntrada) {
+    public ResponseDetalleGuiaEntradaMensajeDTO updateSer(
+            RequestActualizarObservacionDetalleGuiaEntradaDTO objDetalleGuiaEntrada) {
         return detalleRepo.updateObservacionD(objDetalleGuiaEntrada);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleGuiaEntradaAllDTO getAllSer(RequestDetalleGuiaEntradaOptionDTO option) {
         return detalleRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleGuiaEntradaDTO getByIdSer(RequestDetalleGuiaEntradaFilterDTO id) {
         return detalleRepo.getByIdD(id);
     }

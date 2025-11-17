@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.MaestroObraRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.maestroobra.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.maestroobra.Response.*;
 
 @Service
-@Validated
 public class MaestroObraService {
     private final MaestroObraRepository maestroObraRepo;
 
@@ -27,12 +25,12 @@ public class MaestroObraService {
         return maestroObraRepo.updateD(obj);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseMaestroObraAllDTO getAllSer(RequestMaestroObraOptionDTO option) {
         return maestroObraRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleMaestroObraDTO getByIdSer(RequestMaestroObraFilterDTO id) {
         return maestroObraRepo.getByIdD(id);
     }

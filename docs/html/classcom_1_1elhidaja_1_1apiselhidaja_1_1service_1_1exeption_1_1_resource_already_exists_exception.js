@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_already_exists_exception =
+[
+    [ "ResourceAlreadyExistsException", "classcom_1_1elhidaja_1_1apiselhidaja_1_1service_1_1exeption_1_1_resource_already_exists_exception.html#a67cbe66971c921767dec172bae899a39", null ]
+];

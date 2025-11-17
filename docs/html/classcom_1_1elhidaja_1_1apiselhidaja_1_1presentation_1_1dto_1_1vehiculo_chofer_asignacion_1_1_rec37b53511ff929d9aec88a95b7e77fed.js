@@ -1,0 +1,14 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed =
+[
+    [ "documento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#aba3309d1abfd7fea090e7ba37d33ad60", null ],
+    [ "email", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a9182450f0f1cdd26fdf21e921bda599b", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#af53db4d484fec78acf800eb54c3d6bae", null ],
+    [ "idChofer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a6fea8e157449acb43b445d578b7561e3", null ],
+    [ "idVehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#ad77ef86e08bdb59d703a72e5412cfbcc", null ],
+    [ "licencia", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a0f2b28d54cd38cb80196e8d3782d149a", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#afda2e8acd7a6f411a7ab22a3fe780654", null ],
+    [ "numeroDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a132ca7c3c117997dd9ebdadaa892280a", null ],
+    [ "placa", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a7f16158a38f63b370f8afc3d7815803a", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#a46f7dff888a9ab7a7afb0a9ae7b0d548", null ],
+    [ "telefono", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_rec37b53511ff929d9aec88a95b7e77fed.html#af16d8ea292fd685e0c15548f72d49df7", null ]
+];

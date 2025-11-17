@@ -1,0 +1,4 @@
+var detalle_guia_transporte_2_response_2_response_detalle_guia_transporte_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleGuiaTransporte.Response.ResponseDetalleGuiaTransporteDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respo8ac570e23d7d69e9dff0c2f9edb8f159.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respo8ac570e23d7d69e9dff0c2f9edb8f159" ]
+];

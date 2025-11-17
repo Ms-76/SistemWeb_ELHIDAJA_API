@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_requedc45047474424e4ff5abb284e540bf4b =
+[
+    [ "getId", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_requedc45047474424e4ff5abb284e540bf4b.html#acc67f40c3926c6b08bb0af029d96d13b", null ],
+    [ "setId", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_requedc45047474424e4ff5abb284e540bf4b.html#adf62e768b7dbcdc6cddf636c7bb28461", null ]
+];

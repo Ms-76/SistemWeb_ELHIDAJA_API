@@ -1,0 +1,10 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#aad4594d0af84764fe2271ba784c34a31", null ],
+    [ "fechaFin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#a6679542aed32f514a395bbc1f112a60f", null ],
+    [ "fechaInicio", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#abf58429fcc49c4443203f66473a3350d", null ],
+    [ "idChofer", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#ad193f9afa90a4785cb0820091a697aa7", null ],
+    [ "idVehiculo", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#a4564f52bf639c6f8a832852267c50664", null ],
+    [ "puntoLlegada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#ab378f257692e7656aefd6d8d2e8664cb", null ],
+    [ "puntoPartida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r2abb4e3e57152a5ba74d71795bb4e023.html#a88c46fd7286bd5fed3b5959c1df208e4", null ]
+];

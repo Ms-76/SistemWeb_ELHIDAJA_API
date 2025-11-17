@@ -1,0 +1,7 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response =
+[
+    [ "ResponseDetalleSerieDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_detalle_serie_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_detalle_serie_d_t_o" ],
+    [ "ResponseSerieAllDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_serie_all_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_serie_all_d_t_o" ],
+    [ "ResponseSerieDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_serie_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_serie_d_t_o" ],
+    [ "ResponseSerieMensajeDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1serie_1_1_response_1_1_response_serie_mensaje_d_t_o.html", null ]
+];

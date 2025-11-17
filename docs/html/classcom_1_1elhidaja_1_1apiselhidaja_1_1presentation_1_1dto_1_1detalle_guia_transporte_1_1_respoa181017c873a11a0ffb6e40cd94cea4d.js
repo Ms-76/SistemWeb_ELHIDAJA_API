@@ -1,0 +1,12 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#a82680bba4ff71ceb2c09439cd7869111", null ],
+    [ "codigoProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#ab8e8eab4db1e6bad62a0a56d1faed571", null ],
+    [ "fechaCreacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#ad550eaaecc5839ad206aef6d13c360c2", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#a4c0b6a854218690dea3abd4f3123ea7f", null ],
+    [ "idGuiaTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#aaaa2b850fb216f88137f725ad00f95ed", null ],
+    [ "nombreProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#aea0b2d1bb6aa8b062187aad898fc3be7", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#a98a92bc00b232862253a6c6a267b068a", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#a7d9fc89b645592c051889afe04f9629f", null ],
+    [ "unidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_transporte_1_1_respoa181017c873a11a0ffb6e40cd94cea4d.html#ac0d707664e437f6c0d22249d7df5249b", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_id_d_t_o =
+[
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_id_d_t_o.html#a8cdd60c562229d1dc30587b128a51b5b", null ]
+];

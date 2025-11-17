@@ -27,7 +27,12 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_obtener_proveedores");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_provincia", option.getIdProvincia(),
+                    "id_departamento", option.getIdDepartamento(),
+                    "id_distrito", option.getIdDistrito(),
+                    "id_documento_identidad", option.getIdDocumentoIdentidad()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -127,7 +132,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_activar_proveedor");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_proveedor", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -167,7 +172,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_desactivar_proveedor");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_proveedor", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -207,15 +212,14 @@ public class ProveedorRepository implements ProveedorDAO {
                     .withProcedureName("SP_insertar_proveedor");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", objProveedor.getIdLogin(),  
+                    "id_usuario_sign", objProveedor.getIdLogin(),
                     "numero_documento", objProveedor.getNumeroDocumento(),
                     "nombres", objProveedor.getNombres(),
                     "id_documento_identidad", objProveedor.getIdDocumentoIdentidad(),
                     "direccion", objProveedor.getDireccion(),
                     "telefono", objProveedor.getTelefono(),
                     "email", objProveedor.getEmail(),
-                    "id_distrito", objProveedor.getIdDistrito()
-                    );
+                    "id_distrito", objProveedor.getIdDistrito());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -258,8 +262,7 @@ public class ProveedorRepository implements ProveedorDAO {
                     "direccion", objProveedor.getDireccion(),
                     "telefono", objProveedor.getTelefono(),
                     "email", objProveedor.getEmail(),
-                    "id_distrito", objProveedor.getIdDistrito()
-                    );
+                    "id_distrito", objProveedor.getIdDistrito());
 
             Map<String, Object> result = call.execute(inParams);
 

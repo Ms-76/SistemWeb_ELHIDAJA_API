@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_1c3756e16ff2465d9ce2a9ec2c6558c44 =
+[
+    [ "detalleInventarios", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_response_1c3756e16ff2465d9ce2a9ec2c6558c44.html#ad4745101b94a9203bfe5887347ac31b6", null ]
+];

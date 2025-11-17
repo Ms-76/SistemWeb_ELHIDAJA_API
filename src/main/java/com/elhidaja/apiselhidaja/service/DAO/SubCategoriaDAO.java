@@ -4,7 +4,7 @@ import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.*;
 import com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Resquest.*;
 
 public interface SubCategoriaDAO {
-     ResponseSubCategoriAllDTO getAllD(ResquestSubCategoriaOptionDTO option);
+    ResponseSubCategoriAllDTO getAllD(ResquestSubCategoriaOptionDTO option);
 
     ResponseDetalleSubCategoriaDTO getByIdD(RequestSubCategoriaFilterDTO id);
 

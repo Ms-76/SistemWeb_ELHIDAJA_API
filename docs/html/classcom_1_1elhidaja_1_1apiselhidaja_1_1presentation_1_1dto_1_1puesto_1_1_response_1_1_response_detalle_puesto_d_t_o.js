@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1puesto_1_1_response_1_1_response_detalle_puesto_d_t_o =
+[
+    [ "puesto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1puesto_1_1_response_1_1_response_detalle_puesto_d_t_o.html#a4080f890b812e986793c624f2affdefb", null ]
+];

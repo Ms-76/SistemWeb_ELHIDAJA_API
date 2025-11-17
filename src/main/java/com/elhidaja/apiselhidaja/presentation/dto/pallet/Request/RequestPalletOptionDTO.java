@@ -8,13 +8,18 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-@JsonPropertyOrder({ "estado", "idAlmacen"})
+@JsonPropertyOrder({ "estado", "idAlmacen" })
 public class RequestPalletOptionDTO {
-       @NotNull(message = "El estado es obligatorio")
+    
+    @NotNull(message = "El estado es obligatorio")
     @ValidOption
     private Long estado;
-    
+
     @NotNull(message = "El id del almacen es obligatorio")
     @Min(value = 0, message = "El id del almacen debe ser mayor o igual a 0")
     private Long idAlmacen;
+
+    @NotNull(message = "El id del estante es obligatorio")
+    @Min(value = 0, message = "El id del estante debe ser mayor o igual a 0")
+    private Long idEstante;
 }

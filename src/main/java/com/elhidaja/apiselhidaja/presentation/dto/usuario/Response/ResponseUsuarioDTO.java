@@ -22,4 +22,6 @@ public class ResponseUsuarioDTO {
     private String provincia;
     private String distrito;
     private Boolean status;
+    //imagen
+    private String urlImagen;
 }

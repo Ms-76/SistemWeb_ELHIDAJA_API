@@ -1,0 +1,4 @@
+var _solicitud_material_controller_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.controler.SolicitudMaterialController", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1_solicitud_material_controller.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1controler_1_1_solicitud_material_controller" ]
+];

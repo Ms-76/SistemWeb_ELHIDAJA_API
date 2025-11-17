@@ -1,0 +1,4 @@
+var _request_documento_operacion_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.documentoOperacion.Request.RequestDocumentoOperacionInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_operacion_1_1_request_1b14716339fd580726cc27473df448178.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1documento_operacion_1_1_request_1b14716339fd580726cc27473df448178" ]
+];

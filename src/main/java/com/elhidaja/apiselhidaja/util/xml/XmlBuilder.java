@@ -14,14 +14,14 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlDetalleGuiaEntrada.class);
         xstream.processAnnotations(XmlDetallesGuiaEntrada.class);
 
-        xstream.alias("detalles", XmlDetallesGuiaEntrada.class);
-        xstream.alias("detalle", XmlDetalleGuiaEntrada.class);
+        xstream.alias("productos", XmlDetallesGuiaEntrada.class);
+        xstream.alias("producto", XmlDetalleGuiaEntrada.class);
 
         xstream.allowTypesByWildcard(new String[] {
                 "com.elhidaja.apiselhidaja.**"
@@ -37,7 +37,7 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlProductoInsert.class);
@@ -61,7 +61,7 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlProductoUpdate.class);
@@ -85,7 +85,7 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlDetalleInventarioInsert.class);
@@ -109,7 +109,7 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlDetalleSolicitudMaterialInsert.class);
@@ -133,7 +133,7 @@ public class XmlBuilder {
         xstream.ignoreUnknownElements();
         xstream.aliasSystemAttribute(null, "class");
         xstream.setMode(XStream.NO_REFERENCES);
-        xstream.useAttributeFor(String.class);
+        //xstream.useAttributeFor(String.class);
         xstream.omitField(Object.class, "class");
 
         xstream.processAnnotations(XmlDetalleGuiaSalida.class);
@@ -147,6 +147,53 @@ public class XmlBuilder {
         });
 
         XmlDetallesGuiaSalida wrapper = new XmlDetallesGuiaSalida(detalles);
+        return xstream.toXML(wrapper);
+    }
+
+    // Transporte detalle insert
+    public static String toXmlTransporteDetalle(List<XmlDetalleTransporte> detalles) {
+        XStream xstream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("_-", "_")));
+        xstream.autodetectAnnotations(true);
+        xstream.ignoreUnknownElements();
+        xstream.aliasSystemAttribute(null, "class");
+        xstream.setMode(XStream.NO_REFERENCES);
+        //xstream.useAttributeFor(String.class);
+        xstream.omitField(Object.class, "class");
+
+        xstream.processAnnotations(XmlDetalleTransporte.class);
+        xstream.processAnnotations(XmlDetallesTransporte.class);
+
+        xstream.alias("detalles", XmlDetallesTransporte.class);
+        xstream.alias("detalle", XmlDetalleTransporte.class);
+
+        xstream.allowTypesByWildcard(new String[] {
+                "com.elhidaja.apiselhidaja.**"
+        });
+
+        XmlDetallesTransporte wrapper = new XmlDetallesTransporte(detalles);
+        return xstream.toXML(wrapper);
+    }
+
+    public static String toXmlDetallesGuiaTransporte(List<XmlDetalleGuiaTransporte> detalles) {
+        XStream xstream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("_-", "_")));
+        xstream.autodetectAnnotations(true);
+        xstream.ignoreUnknownElements();
+        xstream.aliasSystemAttribute(null, "class");
+        xstream.setMode(XStream.NO_REFERENCES);
+        //xstream.useAttributeFor(String.class);
+        xstream.omitField(Object.class, "class");
+
+        xstream.processAnnotations(XmlDetalleGuiaTransporte.class);
+        xstream.processAnnotations(XmlDetallesGuiaTransporte.class);
+
+        xstream.alias("detalles", XmlDetallesGuiaTransporte.class);
+        xstream.alias("detalle", XmlDetalleGuiaTransporte.class);
+
+        xstream.allowTypesByWildcard(new String[] {
+                "com.elhidaja.apiselhidaja.**"
+        });
+
+        XmlDetallesGuiaTransporte wrapper = new XmlDetallesGuiaTransporte(detalles);
         return xstream.toXML(wrapper);
     }
 }

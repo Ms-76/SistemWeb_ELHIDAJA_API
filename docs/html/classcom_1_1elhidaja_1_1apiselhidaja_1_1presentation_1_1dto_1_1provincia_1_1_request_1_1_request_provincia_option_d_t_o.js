@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_option_d_t_o.html#ac012f8e8011d5a266433fe8c54ffe82c", null ],
+    [ "idDepartamento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1provincia_1_1_request_1_1_request_provincia_option_d_t_o.html#a98203bae743a8d99a343279067893ec4", null ]
+];

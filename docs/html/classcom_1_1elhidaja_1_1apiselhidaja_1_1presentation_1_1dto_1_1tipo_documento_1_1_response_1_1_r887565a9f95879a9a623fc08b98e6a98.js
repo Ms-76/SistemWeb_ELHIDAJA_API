@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_r887565a9f95879a9a623fc08b98e6a98 =
+[
+    [ "tipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1tipo_documento_1_1_response_1_1_r887565a9f95879a9a623fc08b98e6a98.html#afdd57a525e592ec1689699e07d0469f4", null ]
+];

@@ -1,16 +1,18 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.puesto.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.puesto.Response.*;
+
 public interface PuestoDAO {
-    public ResponsePuestoAllDTO getAllD(RequestPuestoOptionDTO option);
+    ResponsePuestoAllDTO getAllD(RequestPuestoOptionDTO option);
 
-    public ResponseDetallePuestoDTO getByIdD(RequestPuestoFilterDTO id);
+    ResponseDetallePuestoDTO getByIdD(RequestPuestoFilterDTO id);
 
-    public ResponsePuestoMensajeDTO desactivateD(RequestPuestoIdDTO id);
+    ResponsePuestoMensajeDTO desactivateD(RequestPuestoIdDTO id);
 
-    public ResponsePuestoMensajeDTO activateD(RequestPuestoIdDTO id);
+    ResponsePuestoMensajeDTO activateD(RequestPuestoIdDTO id);
 
-    public ResponsePuestoMensajeDTO insertD(RequestPuestoInsertDTO objPuesto);
+    ResponsePuestoMensajeDTO insertD(RequestPuestoInsertDTO objPuesto);
 
-    public ResponsePuestoMensajeDTO updateD(RequestPuestoUpdateDTO objPuesto);
+    ResponsePuestoMensajeDTO updateD(RequestPuestoUpdateDTO objPuesto);
 }

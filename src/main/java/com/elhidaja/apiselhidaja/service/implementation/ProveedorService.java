@@ -2,14 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.ProveedorRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.proveedor.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.proveedor.Response.*;
 
 @Service
-@Validated
 public class ProveedorService {
     private final ProveedorRepository provRepo;
 
@@ -27,12 +25,12 @@ public class ProveedorService {
         return provRepo.updateD(objProveedor);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseProveedorAllDTO getAllSer(RequestProveedorOptionDTO option) {
         return provRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleProveedorDTO getByIdSer(RequestProveedorFilterDTO id) {
         return provRepo.getByIdD(id);
     }

@@ -2,7 +2,6 @@ package com.elhidaja.apiselhidaja.persistence.repository;
 
 import com.elhidaja.apiselhidaja.service.DAO.DetalleInventarioDAO;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -26,10 +25,15 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
         ResponseDetalleInventarioAllDTO rp = new ResponseDetalleInventarioAllDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_obtener_detalle_inventarios");
+                    .withProcedureName("SP_obtener_detalles_inventario");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_inventario", option.getIdInventario(),
+                    "id_producto", option.getIdProducto(),
+                    "id_inventariador", option.getIdInventario(),
+                    "fecha_inicio", option.getFechaInicio(),
+                    "fecha_fin", option.getFechaFin());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -46,11 +50,11 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                 dto.setStockFisico((Integer) row.get("stock_fisico"));
                 dto.setDiferencia((Integer) row.get("diferencia"));
                 dto.setObservacion((String) row.get("observacion"));
-                dto.setFechaInicioInventario((LocalDateTime) row.get("fecha_inicio_inventario"));
-                dto.setFechaFinInventario((LocalDateTime) row.get("fecha_fin_inventario"));
+                dto.setFechaInicioInventario(((java.sql.Date) row.get("fecha_inicio_inventario")).toLocalDate());
+                dto.setFechaFinInventario(((java.sql.Date) row.get("fecha_fin_inventario")).toLocalDate());
                 dto.setNuevo((Boolean) row.get("nuevo"));
                 dto.setEditadoManual((Boolean) row.get("editato_manual"));
-                dto.setEstado((Integer) row.get("estado"));
+                dto.setEstado((String) row.get("estado"));
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;
             }).toList();
@@ -101,11 +105,11 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     dto.setStockFisico((Integer) row.get("stock_fisico"));
                     dto.setDiferencia((Integer) row.get("diferencia"));
                     dto.setObservacion((String) row.get("observacion"));
-                    dto.setFechaInicioInventario((LocalDateTime) row.get("fecha_inicio_inventario"));
-                    dto.setFechaFinInventario((LocalDateTime) row.get("fecha_fin_inventario"));
+                    dto.setFechaInicioInventario(((java.sql.Date) row.get("fecha_inicio_inventario")).toLocalDate());
+                    dto.setFechaFinInventario(((java.sql.Date) row.get("fecha_fin_inventario")).toLocalDate());
                     dto.setNuevo((Boolean) row.get("nuevo"));
                     dto.setEditadoManual((Boolean) row.get("editato_manual"));
-                    dto.setEstado((Integer) row.get("estado"));
+                    dto.setEstado((String) row.get("estado"));
                     dto.setStatus((Boolean) row.get("status"));
 
                     rp.setDetalleInventario(dto);
@@ -136,7 +140,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_activar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_detalle_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -176,7 +180,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_desactivar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", id.getIdLogin(),  
+                    "id_usuario_sign", id.getIdLogin(),
                     "id_detalle_inventario", id.getId());
 
             Map<String, Object> result = call.execute(inParams);
@@ -215,7 +219,7 @@ public class DetalleInventarioRepository implements DetalleInventarioDAO {
                     .withProcedureName("SP_actualizar_detalle_inventario");
 
             Map<String, Object> inParams = Map.of(
-                "id_usuario_sign", objDetalleInventario.getIdLogin(),  
+                    "id_usuario_sign", objDetalleInventario.getIdLogin(),
                     "id_detalle_inventario", objDetalleInventario.getId(),
                     "stock_fisico", objDetalleInventario.getStockFisico(),
                     "observacion", objDetalleInventario.getObservacion(),

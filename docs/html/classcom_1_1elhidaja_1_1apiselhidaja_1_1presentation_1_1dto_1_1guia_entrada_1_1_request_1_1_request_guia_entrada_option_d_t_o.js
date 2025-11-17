@@ -1,0 +1,10 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a9b2e0f500af13e1f4efcc430d46658db", null ],
+    [ "fechaFin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a842d6ce3da39bd421d26a6aa256f2057", null ],
+    [ "fechaInicio", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a5c6224cf0384f244c89caf83315dda1c", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a6c1577c5248db8302461101fc8b3542f", null ],
+    [ "idProveedor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a40f2b200b263c3046b9c4ce1d1688d30", null ],
+    [ "idSerieDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a5f22a9bebf4624ec5d8b6cf525070391", null ],
+    [ "idUsuario", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_option_d_t_o.html#a098c857f129b0f87e60f1d412091979b", null ]
+];

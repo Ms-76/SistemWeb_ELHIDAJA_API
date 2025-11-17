@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_insert_d_t_o =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_insert_d_t_o.html#ac38e6a3cb56114657107aecb6d2cfecf", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_insert_d_t_o.html#abd2065b7824ac0d7d27675c8de00cee2", null ],
+    [ "idEstante", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1ubicacion_1_1_request_1_1_request_ubicacion_insert_d_t_o.html#ab5553bd0ebe11220eda167e983707e20", null ]
+];

@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_re6cc8643433b2eda96c7e8f1b9da9b763 =
+[
+    [ "asignaciones", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1vehiculo_chofer_asignacion_1_1_re6cc8643433b2eda96c7e8f1b9da9b763.html#aff8eed34bedcc02cd23852886b0f9476", null ]
+];

@@ -1,16 +1,18 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.inventario.Response.*;
+
 public interface InventarioDAO {
-    public ResponseInventarioAllDTO getAllD(RequestInventarioOptionDTO option);
+    ResponseInventarioAllDTO getAllD(RequestInventarioOptionDTO option);
 
-    public ResponseDetalleInventarioDTO getByIdD(RequestInventarioFilterDTO id);
+    ResponseDetalleInventarioDTO getByIdD(RequestInventarioFilterDTO id);
 
-    public ResponseInventarioMensajeDTO desactivateD(RequestInventarioIdDTO id);
+    ResponseInventarioMensajeDTO desactivateD(RequestInventarioIdDTO id);
 
-    public ResponseInventarioMensajeDTO activateD(RequestInventarioIdDTO id);
+    ResponseInventarioMensajeDTO activateD(RequestInventarioIdDTO id);
 
-    public ResponseInventarioMensajeDTO insertD(RequestInventarioInsertDTO objInventario);
+    ResponseInventarioMensajeDTO insertD(RequestInventarioInsertDTO objInventario);
 
-    public ResponseInventarioMensajeDTO updateD(RequestInventarioUpdateDTO objInventario);
+    ResponseInventarioMensajeDTO updateD(RequestInventarioUpdateDTO objInventario);
 }

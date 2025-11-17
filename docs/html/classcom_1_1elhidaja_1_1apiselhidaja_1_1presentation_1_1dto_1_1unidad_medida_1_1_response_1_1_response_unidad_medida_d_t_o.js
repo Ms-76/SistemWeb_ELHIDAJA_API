@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_response_unidad_medida_d_t_o =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_response_unidad_medida_d_t_o.html#ac52d100bb903281d4ebf47ed4b71667a", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_response_unidad_medida_d_t_o.html#abdeac0c134369e8dbd51acecd4cb8361", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_response_unidad_medida_d_t_o.html#ac5b721c049420c39a04c5294e217a1c9", null ]
+];

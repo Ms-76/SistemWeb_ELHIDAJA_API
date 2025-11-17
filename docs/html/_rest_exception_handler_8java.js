@@ -1,0 +1,4 @@
+var _rest_exception_handler_8java =
+[
+    [ "com.elhidaja.apiselhidaja.configuration.interceptors.RestExceptionHandler", "classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1interceptors_1_1_rest_exception_handler.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1configuration_1_1interceptors_1_1_rest_exception_handler" ]
+];

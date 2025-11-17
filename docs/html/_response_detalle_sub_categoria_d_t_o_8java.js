@@ -1,0 +1,4 @@
+var _response_detalle_sub_categoria_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.subCategoria.Response.ResponseDetalleSubCategoriaDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_reda90d71b62884b1d75851ebd62a03be3.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1sub_categoria_1_1_response_1_1_reda90d71b62884b1d75851ebd62a03be3" ]
+];

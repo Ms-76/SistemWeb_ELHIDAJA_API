@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1departamento_1_1_response_1_1_response_departamento_all_d_t_o =
+[
+    [ "departamentos", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1departamento_1_1_response_1_1_response_departamento_all_d_t_o.html#a4a7f3a36fe56a5f4c2848d042fbc34b6", null ]
+];

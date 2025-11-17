@@ -1,0 +1,11 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a21ec804d20bac7fd4d0e6310029748f6", null ],
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a4a60ed7a5eeec1da2759c4feb551829e", null ],
+    [ "fechaSolicitud", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a174f878d45a6c392ebcd5838a8a7cbac", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#aebb1fd8365a7bf8639835bb94d12670f", null ],
+    [ "nombreProyecto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a737b0bc9310dc63103cc85c4348b981b", null ],
+    [ "nombreSolicitud", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#ac5a33b60adbedfa5d4b04712cf38210f", null ],
+    [ "nombreSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a1ea20b702de060f21698c88a85c629b4", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1solicitud_material_1_1_response_1152448b0aa05e4aff04be52d59705acc.html#a5f8048ba3e46db55fdf0d75f6c4120bc", null ]
+];

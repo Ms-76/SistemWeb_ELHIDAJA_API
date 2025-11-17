@@ -1,0 +1,9 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01 =
+[
+    [ "editadoManual", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#a201ab4916992ea0eca5ae076108bcdd1", null ],
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#ac61e55929abd67e23999578ad96ccc1b", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#ac8afeccdcba93a731f88aa44feebda97", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#ab31ca6025faa4df4732b6acbbbd69401", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#a98ef85a5b8e9d80214afb140cd0af577", null ],
+    [ "stockFisico", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_3f1f70a52db48e64048ab91674f45c01.html#a778c97a2a3e6804b14457e5ea59c9ad1", null ]
+];

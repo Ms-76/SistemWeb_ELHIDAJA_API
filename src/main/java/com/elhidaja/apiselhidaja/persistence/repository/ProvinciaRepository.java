@@ -28,7 +28,8 @@ public class ProvinciaRepository implements ProvinciaDAO {
                     .withProcedureName("SP_obtener_provincias");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_departamento", option.getIdDepartamento());
 
             Map<String, Object> result = call.execute(inParams);
 

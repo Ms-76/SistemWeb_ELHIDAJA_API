@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_re00f8866f31fbade14d9ef3fc1ac233ca =
+[
+    [ "unidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1unidad_medida_1_1_response_1_1_re00f8866f31fbade14d9ef3fc1ac233ca.html#a0486e9a3413dfd7ffe998247e2d3a1de", null ]
+];

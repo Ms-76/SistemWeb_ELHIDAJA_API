@@ -1,0 +1,13 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3 =
+[
+    [ "bulto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#a601f4fa82230746b805b789a33882413", null ],
+    [ "costoBulto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#afc30723b9affb9a231177d066813c934", null ],
+    [ "costoPasaje", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#aad7ca3ea67caca7fbefb6b71c9de1439", null ],
+    [ "idDetalle", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#a5928fea4df22e92fbc1953034fde457b", null ],
+    [ "idPasajero", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#ae4d14d4e22b8bb483a604d06bea157cd", null ],
+    [ "idTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#abd40f78776fba89bfbae6767dd5df0e7", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#ac9538ab5c8fecbf3a455ae1f362f179c", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#ab1fdda59610bf80eda2e9d1c6d975280", null ],
+    [ "tipoPasajero", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#a760f147615ff25a8824836cc92a72cc4", null ],
+    [ "tipoTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1transporte_detalle_1_1_response_1bdbf64c71997058e94fe76084d478db3.html#a7782f27b1ddbbd025a6d590411ce39ff", null ]
+];

@@ -1,0 +1,12 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o =
+[
+    [ "direccion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#a8c600de1c249f59f7f0f53640b8e3f32", null ],
+    [ "email", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#ae11ef999ef41405704ca9f59a9899027", null ],
+    [ "experienciaAnios", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#a3c8e44850de27cb359a01bc38168f6d5", null ],
+    [ "idDistrito", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#ad170c62344475932c1d8d0b316c41902", null ],
+    [ "idDocumentoIdentidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#ae04974376d2344b32bbf657768f7000c", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#a1020ff51d3f278308b377627bf726151", null ],
+    [ "nombres", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#acb21c98433b85dc0a6fd2ef313937d16", null ],
+    [ "numeroDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#aa1a94b24c3567ad8643e414eff2980a8", null ],
+    [ "telefono", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_insert_d_t_o.html#ae3e8fe1fb47c51fe43b9fbe603444994", null ]
+];

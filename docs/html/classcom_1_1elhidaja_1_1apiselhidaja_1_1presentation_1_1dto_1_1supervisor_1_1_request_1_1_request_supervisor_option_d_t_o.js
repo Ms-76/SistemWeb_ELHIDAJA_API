@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_option_d_t_o.html#a97e9253d9358a45a18ce05e010a5b333", null ],
+    [ "tipoSupervisor", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_option_d_t_o.html#ac2595255448aab51b651e19b049f5c01", null ]
+];

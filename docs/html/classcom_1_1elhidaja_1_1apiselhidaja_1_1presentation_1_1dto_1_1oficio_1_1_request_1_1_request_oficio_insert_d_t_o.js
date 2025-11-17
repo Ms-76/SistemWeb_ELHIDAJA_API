@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1oficio_1_1_request_1_1_request_oficio_insert_d_t_o =
+[
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1oficio_1_1_request_1_1_request_oficio_insert_d_t_o.html#a624f9bb3d477deb3341a1243bcb9eceb", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1oficio_1_1_request_1_1_request_oficio_insert_d_t_o.html#aa104226aa4990fa94eb479b1fd6d963a", null ]
+];

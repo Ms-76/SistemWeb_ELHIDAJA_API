@@ -1,0 +1,5 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1usuario_1_1_request_1_1_request_usuario_id_d_t_o =
+[
+    [ "getId", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1usuario_1_1_request_1_1_request_usuario_id_d_t_o.html#a5e6d1d9312cdf168e899eb0531072485", null ],
+    [ "setId", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1usuario_1_1_request_1_1_request_usuario_id_d_t_o.html#aec9566a40d7f3ebe43cfdc869cbcc54f", null ]
+];

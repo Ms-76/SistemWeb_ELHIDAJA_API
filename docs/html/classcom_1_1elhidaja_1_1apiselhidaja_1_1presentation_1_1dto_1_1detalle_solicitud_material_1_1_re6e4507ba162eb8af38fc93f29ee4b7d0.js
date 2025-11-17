@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re6e4507ba162eb8af38fc93f29ee4b7d0 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re6e4507ba162eb8af38fc93f29ee4b7d0.html#a61de79b67671a6bfff0067d61e9f87f3", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re6e4507ba162eb8af38fc93f29ee4b7d0.html#a6e4c2f460b5a17306502a7075e5263fb", null ],
+    [ "idProyecto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re6e4507ba162eb8af38fc93f29ee4b7d0.html#a45afe28e3209371b6b3999aeaad683de", null ]
+];

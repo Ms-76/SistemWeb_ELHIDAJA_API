@@ -1,0 +1,8 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request =
+[
+    [ "RequestPalletFilterDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_filter_d_t_o.html", null ],
+    [ "RequestPalletIdDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_id_d_t_o.html", null ],
+    [ "RequestPalletInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_insert_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_insert_d_t_o" ],
+    [ "RequestPalletOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_option_d_t_o" ],
+    [ "RequestPalletUpdateDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_update_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1pallet_1_1_request_1_1_request_pallet_update_d_t_o" ]
+];

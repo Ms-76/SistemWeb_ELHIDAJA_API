@@ -1,0 +1,10 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486 =
+[
+    [ "cantidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#aea4e80fdc981b5ae46e0ebb06621bf84", null ],
+    [ "fechaVencimientoProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#ad3efe11e931f7555f72d057d62194ac0", null ],
+    [ "idGuiaEntrada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#a0a72b8c4c6b6343f0691ea910f03bc8b", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#aaf236fa75167ad84e34b837e50f11514", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#a91cd80f248e8dffb07f6758315770cc0", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#a96da7f6507242f7f80bfd9f80781b5e9", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_56cfbd7ddfa17091ec42753229a06486.html#a5a79379cc7943344092e0482234a783c", null ]
+];

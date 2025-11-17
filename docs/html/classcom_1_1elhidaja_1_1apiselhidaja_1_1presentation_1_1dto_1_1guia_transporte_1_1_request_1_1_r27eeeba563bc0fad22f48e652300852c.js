@@ -1,0 +1,12 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c =
+[
+    [ "fechaTranslado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a7affd581733c201a573fabaae9647276", null ],
+    [ "idAlmacenSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#aa19ff01a5301627a40d2e784d677a6f2", null ],
+    [ "idAsignacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a8eee01aa25d252992f2a60a10b5f5b63", null ],
+    [ "idGuiaSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a4b2d405dca12763310bf5cd03ac117b8", null ],
+    [ "idGuiaTransporte", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#abff6a0509188b64cdc99abc60060e503", null ],
+    [ "idSerieDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a7c3e8777ea069d94f43d4e21622344c1", null ],
+    [ "observacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#aab4fc4c5b5ae3172c4619d853f8bdee9", null ],
+    [ "puntoLlegada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a4ebd3377326db3ada56e2f277fc8f3cf", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_transporte_1_1_request_1_1_r27eeeba563bc0fad22f48e652300852c.html#a6bccb5be53ae1c5886e1f63c0a79698a", null ]
+];

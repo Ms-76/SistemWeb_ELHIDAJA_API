@@ -1,14 +1,12 @@
 package com.elhidaja.apiselhidaja.service.implementation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.SupervisorRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.supervisor.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.supervisor.Response.*;
 
 @Service
-@Validated
 public class SupervisorService {
         private final SupervisorRepository supervisorRepo;
 
@@ -21,12 +19,12 @@ public class SupervisorService {
         return supervisorRepo.insertD(objSupervisor);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseSupervisorAllDTO getAllSer(RequestSupervisorOptionDTO option) {
         return supervisorRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleSupervisorDTO getByIdSer(RequestSupervisorFilterDTO id) {
         return supervisorRepo.getByIdD(id);
     }

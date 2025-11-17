@@ -2,20 +2,12 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.EstanteRepository;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteFilterDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteIdDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteInsertDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteOptionDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.RequestEstanteUpdateDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.ResponseDetalleEstanteDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.ResponseEstanteAllDTO;
-import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.ResponseEstanteMensajeDTO;
+import com.elhidaja.apiselhidaja.presentation.dto.estante.Request.*;
+import com.elhidaja.apiselhidaja.presentation.dto.estante.Response.*;
 
 @Service
-@Validated
 public class EstanteService {
      private final EstanteRepository estanteRepo;
 
@@ -33,12 +25,12 @@ public class EstanteService {
         return estanteRepo.updateD(objEstante);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseEstanteAllDTO getAllSer(RequestEstanteOptionDTO option) {
         return estanteRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleEstanteDTO getByIdSer(RequestEstanteFilterDTO id) {
         return estanteRepo.getByIdD(id);
     }

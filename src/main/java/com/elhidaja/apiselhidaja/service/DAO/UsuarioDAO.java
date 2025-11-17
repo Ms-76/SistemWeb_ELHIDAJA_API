@@ -1,17 +1,18 @@
 package com.elhidaja.apiselhidaja.service.DAO;
+
 import com.elhidaja.apiselhidaja.presentation.dto.usuario.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.usuario.Response.*;
 
 public interface UsuarioDAO {
-    public ResponseUsuarioAllDTO getAllD(RequestUsuarioOptionDTO option);
+    ResponseUsuarioAllDTO getAllD(RequestUsuarioOptionDTO option);
 
-    public ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioFilterDTO id);
+    ResponseDetalleUsuarioDTO getByIdD(RequestUsuarioFilterDTO id);
 
-    public ResponseUsuarioMensajeDTO desactivateD(RequestUsuarioIdDTO id);
+    ResponseUsuarioMensajeDTO desactivateD(RequestUsuarioIdDTO id);
 
-    public ResponseUsuarioMensajeDTO activateD(RequestUsuarioIdDTO id);
+    ResponseUsuarioMensajeDTO activateD(RequestUsuarioIdDTO id);
 
-    public ResponseUsuarioMensajeDTO insertD(RequestUsuarioInsertDTO objUsuario);
+    ResponseUsuarioMensajeDTO insertD(RequestUsuarioInsertDTO objUsuario);
 
-    public ResponseUsuarioMensajeDTO updateD(RequestUsuarioUpdateDTO objUsuario);
+    ResponseUsuarioMensajeDTO updateD(RequestUsuarioUpdateDTO objUsuario);
 }

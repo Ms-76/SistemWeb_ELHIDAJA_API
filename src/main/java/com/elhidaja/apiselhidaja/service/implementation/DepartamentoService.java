@@ -2,14 +2,13 @@ package com.elhidaja.apiselhidaja.service.implementation;
 
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 import com.elhidaja.apiselhidaja.persistence.repository.DepartamentoRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.departamento.Response.*;
+
 @Service
-@Validated
 public class DepartamentoService {
-        private final DepartamentoRepository deptoRepo;
+    private final DepartamentoRepository deptoRepo;
 
     public DepartamentoService(DepartamentoRepository deptoRepo) {
         this.deptoRepo = deptoRepo;

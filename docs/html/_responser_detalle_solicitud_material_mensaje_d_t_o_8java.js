@@ -1,0 +1,4 @@
+var _responser_detalle_solicitud_material_mensaje_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleSolicitudMaterial.Response.ResponserDetalleSolicitudMaterialMensajeDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_re3a12e8d311d06b3cfe9e6e865377f3be.html", null ]
+];

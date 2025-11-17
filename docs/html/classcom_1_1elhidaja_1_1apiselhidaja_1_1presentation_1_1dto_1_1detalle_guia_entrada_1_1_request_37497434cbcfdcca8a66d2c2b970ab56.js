@@ -1,0 +1,8 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56 =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56.html#adfcf4e363e28224a8dc35d3faa9cc6c5", null ],
+    [ "idAlmacen", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56.html#a02582eaf02ca84052d88c45817d8909e", null ],
+    [ "idGuiaEntrada", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56.html#ae3045ed093cfddfea65e5cf43de2c2cb", null ],
+    [ "idProducto", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56.html#ab791c8f077a41c281dd52908f454c651", null ],
+    [ "idUnidadMedida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_guia_entrada_1_1_request_37497434cbcfdcca8a66d2c2b970ab56.html#a44e8e00a141c74ee4324c6cb9e7e59da", null ]
+];

@@ -1,6 +1,6 @@
 package com.elhidaja.apiselhidaja.persistence.repository;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
 
@@ -22,22 +22,34 @@ public class DetalleSolicitudMaterialRepository implements DetalleSolicitudMater
 
     @Override
     public ResponseDetalleSolicitudMaterialAllDTO getAllD(RequestDetalleSolicitudMaterialOptionDTO option) {
+
         ResponseDetalleSolicitudMaterialAllDTO rp = new ResponseDetalleSolicitudMaterialAllDTO();
+
         try {
-            SimpleJdbcCall call = new SimpleJdbcCall(jdbc).withProcedureName("SP_obtener_detalles_solicitud_material");
-            Map<String, Object> result = call.execute(Map.of("status", option.getEstado()));
+            SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
+            .withProcedureName("SP_obtener_detalles_solicitud_material");
+
+            Map<String, Object> result = call.execute(Map.of(
+                "status", option.getEstado(),
+                "id_producto", option.getIdProducto(),
+                "id_proyecto", option.getIdProyecto()
+                ));
+
             @SuppressWarnings("unchecked")
+            
             List<Map<String, Object>> rows = (List<Map<String, Object>>) result.get("#result-set-1");
             List<ResponseDetalleSolicitudMaterialItemDTO> detalles = rows.stream().map(row -> {
                 ResponseDetalleSolicitudMaterialItemDTO dto = new ResponseDetalleSolicitudMaterialItemDTO();
                 dto.setId(((Number) row.get("id_detalle_solicitud_material")).longValue());
-                dto.setIdSolicitudMaterial(((Number) row.get("id_solicitud_material")).longValue());
+                dto.setIdSolicitudMaterial(((Number) row.get("solicitud_material")).longValue());
                 dto.setProducto((String) row.get("producto"));
                 dto.setCantidad((Integer) row.get("cantidad"));
                 dto.setObservacion((String) row.get("observacion"));
                 dto.setNombreSolicitud((String) row.get("nombre_solicitud"));
-                dto.setFechaCreacion((LocalDateTime) row.get("fecha_solicitud"));
-                dto.setEstado((Integer) row.get("estado_solicitud"));
+                dto.setFechaSolicitud(
+                        ((Timestamp) row.get("fecha_solicitud")).toLocalDateTime());
+                dto.setEstado((String) row.get("estado"));
+                dto.setStatus((Boolean) row.get("status"));
                 return dto;
             }).toList();
             rp.setDetalleSolicitudesMaterial(detalles);
@@ -65,13 +77,14 @@ public class DetalleSolicitudMaterialRepository implements DetalleSolicitudMater
                 Map<String, Object> row = rows.get(0);
                 ResponseDetalleSolicitudMaterialItemDTO dto = new ResponseDetalleSolicitudMaterialItemDTO();
                 dto.setId(((Number) row.get("id_detalle_solicitud_material")).longValue());
-                dto.setIdSolicitudMaterial(((Number) row.get("id_solicitud_material")).longValue());
+                dto.setIdSolicitudMaterial(((Number) row.get("solicitud_material")).longValue());
                 dto.setProducto((String) row.get("producto"));
                 dto.setCantidad((Integer) row.get("cantidad"));
                 dto.setObservacion((String) row.get("observacion"));
                 dto.setNombreSolicitud((String) row.get("nombre_solicitud"));
-                dto.setEstado((Integer) row.get("estado_solicitud"));
-                dto.setFechaCreacion((LocalDateTime) row.get("fecha_solicitud"));
+                dto.setFechaSolicitud(
+                        ((Timestamp) row.get("fecha_solicitud")).toLocalDateTime());
+                dto.setEstado((String) row.get("estado"));
                 dto.setStatus((Boolean) row.get("status"));
 
                 rp.setDetalleSolicitudMaterial(dto);

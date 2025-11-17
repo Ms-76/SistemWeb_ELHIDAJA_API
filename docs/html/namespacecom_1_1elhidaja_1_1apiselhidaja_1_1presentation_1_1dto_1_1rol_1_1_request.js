@@ -1,0 +1,8 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request =
+[
+    [ "RequestRolFilterDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_filter_d_t_o.html", null ],
+    [ "RequestRolIdDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_id_d_t_o.html", null ],
+    [ "RequestRolInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_insert_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_insert_d_t_o" ],
+    [ "RequestRolOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_option_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_option_d_t_o" ],
+    [ "RequestRolUpdateDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_update_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1rol_1_1_request_1_1_request_rol_update_d_t_o" ]
+];

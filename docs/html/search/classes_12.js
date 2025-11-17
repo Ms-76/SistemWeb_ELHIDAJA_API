@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['xmlbuilder_0',['XmlBuilder',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_builder.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetalleguiaentrada_1',['XmlDetalleGuiaEntrada',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_guia_entrada.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetalleguiasalida_2',['XmlDetalleGuiaSalida',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_guia_salida.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetalleguiatransporte_3',['XmlDetalleGuiaTransporte',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_guia_transporte.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetalleinventarioinsert_4',['XmlDetalleInventarioInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_inventario_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallesguiaentrada_5',['XmlDetallesGuiaEntrada',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_guia_entrada.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallesguiasalida_6',['XmlDetallesGuiaSalida',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_guia_salida.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallesguiatransporte_7',['XmlDetallesGuiaTransporte',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_guia_transporte.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallesinventarioinsert_8',['XmlDetallesInventarioInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_inventario_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallesolicitudmaterialinsert_9',['XmlDetalleSolicitudMaterialInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_solicitud_material_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallessolicitudmaterialinsert_10',['XmlDetallesSolicitudMaterialInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_solicitud_material_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetallestransporte_11',['XmlDetallesTransporte',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalles_transporte.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmldetalletransporte_12',['XmlDetalleTransporte',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_detalle_transporte.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmlproductoinsert_13',['XmlProductoInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_producto_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmlproductosinsert_14',['XmlProductosInsert',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_productos_insert.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmlproductosupdate_15',['XmlProductosUpdate',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_productos_update.html',1,'com::elhidaja::apiselhidaja::util::xml']]],
+  ['xmlproductoupdate_16',['XmlProductoUpdate',['../classcom_1_1elhidaja_1_1apiselhidaja_1_1util_1_1xml_1_1_xml_producto_update.html',1,'com::elhidaja::apiselhidaja::util::xml']]]
+];

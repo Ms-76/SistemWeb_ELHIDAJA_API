@@ -1,0 +1,7 @@
+var namespacecom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request =
+[
+    [ "RequestSupervisorFilterDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_filter_d_t_o.html", null ],
+    [ "RequestSupervisorIdDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_id_d_t_o.html", null ],
+    [ "RequestSupervisorInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_insert_d_t_o" ],
+    [ "RequestSupervisorOptionDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_option_d_t_o.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1supervisor_1_1_request_1_1_request_supervisor_option_d_t_o" ]
+];

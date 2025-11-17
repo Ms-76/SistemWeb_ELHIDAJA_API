@@ -23,10 +23,12 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
         ResponseSerieDocumentoAllDTO rp = new ResponseSerieDocumentoAllDTO();
         try {
             SimpleJdbcCall call = new SimpleJdbcCall(jdbc)
-                    .withProcedureName("SP_obtener_serie_documento");
+                    .withProcedureName("SP_obtener_serie_documentos");
 
             Map<String, Object> inParams = Map.of(
-                    "status", option.getEstado());
+                    "status", option.getEstado(),
+                    "id_serie", option.getIdSerie(),
+                    "id_documento_operacion", option.getIdDocumentoOperacion());
 
             Map<String, Object> result = call.execute(inParams);
 
@@ -36,8 +38,11 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
             List<ResponseSerieDocumentoDTO> serieDocumentos = rows.stream().map(row -> {
                 ResponseSerieDocumentoDTO dto = new ResponseSerieDocumentoDTO();
                 dto.setId(((Number) row.get("id_serie_documento")).longValue());
-                dto.setIdSerie(((Number) row.get("id_serie")).longValue());
-                dto.setIdDocumentoOperacion(((Number) row.get("id_documento_operacion")).longValue());
+                dto.setSerie((String) row.get("serie"));
+                dto.setTipoDocumento((String) row.get("nombre_tipo_documento"));
+                dto.setTipoOperacion((String) row.get("nombre_tipo_operacion"));
+                dto.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
+                dto.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
                 dto.setUltimoCorrelativo(((Number) row.get("ultimo_correlativo")).longValue());
                 dto.setStatus((Boolean) row.get("status"));
                 return dto;
@@ -81,8 +86,11 @@ public class SerieDocumentoRepository implements SerieDocumentoDAO {
                 } else {
                     ResponseSerieDocumentoDTO rcd = new ResponseSerieDocumentoDTO();
                     rcd.setId(((Number) row.get("id_serie_documento")).longValue());
-                    rcd.setIdSerie(((Number) row.get("id_serie")).longValue());
-                    rcd.setIdDocumentoOperacion(((Number) row.get("id_documento_operacion")).longValue());
+                    rcd.setSerie((String) row.get("serie"));
+                    rcd.setTipoDocumento((String) row.get("nombre_tipo_documento"));
+                    rcd.setTipoOperacion((String) row.get("nombre_tipo_operacion"));
+                    rcd.setCodigoSunat(((Number) row.get("codigo_sunat")).longValue());
+                    rcd.setCodigoInterno(((Number) row.get("codigo_interno")).longValue());
                     rcd.setUltimoCorrelativo(((Number) row.get("ultimo_correlativo")).longValue());
                     rcd.setStatus((Boolean) row.get("status"));
 

@@ -28,7 +28,9 @@ public class PalletRepository implements PalletDAO {
 
             Map<String, Object> inParams = Map.of(
                     "status", option.getEstado(),
-                    "id_almacen", option.getIdAlmacen());
+                    "id_almacen", option.getIdAlmacen(),
+                     "id_estante", option.getIdEstante()
+                    );
 
             Map<String, Object> result = call.execute(inParams);
 

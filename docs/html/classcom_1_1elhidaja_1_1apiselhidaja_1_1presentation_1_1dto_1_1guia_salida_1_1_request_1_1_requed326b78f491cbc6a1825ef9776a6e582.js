@@ -1,0 +1,11 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582 =
+[
+    [ "codigoInterno", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a0ba5b317e48a008e96c04741aa6a824c", null ],
+    [ "codigoSunat", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a8cad263d63ff32526c7451f9f6e4b22d", null ],
+    [ "idGuiaSalida", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a9e00820c67b3d83185eb60b0aca3809b", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a918b34b653d6da708590eedbbb789e6a", null ],
+    [ "idProveedorSistema", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#ad278f24c32d0352c8f516db047c3394a", null ],
+    [ "idSerie", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a4343deabc0fde4f69c2b1e02cce897b2", null ],
+    [ "idTipoDocumento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a4093c6c7f620f7ca104626415247de2f", null ],
+    [ "idTipoOperacion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_salida_1_1_request_1_1_requed326b78f491cbc6a1825ef9776a6e582.html#a8aeac5434665d31fd8c71f699776f3da", null ]
+];

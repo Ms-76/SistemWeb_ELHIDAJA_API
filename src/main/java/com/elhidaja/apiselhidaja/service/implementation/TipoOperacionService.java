@@ -1,14 +1,12 @@
 package com.elhidaja.apiselhidaja.service.implementation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.annotation.Validated;
 
 import com.elhidaja.apiselhidaja.persistence.repository.TipoOperacionRepository;
 import com.elhidaja.apiselhidaja.presentation.dto.tipoOperacion.Request.*;
 import com.elhidaja.apiselhidaja.presentation.dto.tipoOperacion.Response.*;
 
 @Service
-@Validated
 public class TipoOperacionService {
      private final TipoOperacionRepository tipoOperacionRepo;
 
@@ -26,12 +24,12 @@ public class TipoOperacionService {
         return tipoOperacionRepo.updateD(obj);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseTipoOperacionAllDTO getAllSer(RequestTipoOperacionOptionDTO option) {
         return tipoOperacionRepo.getAllD(option);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     public ResponseDetalleTipoOperacionDTO getByIdSer(RequestTipoOperacionFilterDTO id) {
         return tipoOperacionRepo.getByIdD(id);
     }

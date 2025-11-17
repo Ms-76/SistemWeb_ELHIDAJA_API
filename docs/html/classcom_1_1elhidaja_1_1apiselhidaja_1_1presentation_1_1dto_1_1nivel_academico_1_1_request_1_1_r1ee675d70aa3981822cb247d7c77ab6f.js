@@ -1,0 +1,4 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_r1ee675d70aa3981822cb247d7c77ab6f =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_request_1_1_r1ee675d70aa3981822cb247d7c77ab6f.html#a1e2f31a6777ae2fd2b9f2377ac784c24", null ]
+];

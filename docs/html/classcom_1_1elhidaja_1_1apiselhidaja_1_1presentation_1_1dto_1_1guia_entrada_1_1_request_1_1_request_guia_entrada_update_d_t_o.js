@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_update_d_t_o =
+[
+    [ "descripcion", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_update_d_t_o.html#a3a6a147c11a8b105286dd7578961c79d", null ],
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_update_d_t_o.html#ad1cbd89e6ab9d6b44db8ecff1ab34b0f", null ],
+    [ "idLogin", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1guia_entrada_1_1_request_1_1_request_guia_entrada_update_d_t_o.html#a2d02f53ebc8963cf530e2621c6b57aa2", null ]
+];

@@ -1,0 +1,8 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o =
+[
+    [ "estado", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o.html#a6cf14a3f2004ab3718f0983036c39f2a", null ],
+    [ "idDepartamento", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o.html#a6d10ddffd1ee9ab055caaaf0ad8ad763", null ],
+    [ "idDistrito", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o.html#a69f8fe0aa44fe2178f974c07ed117880", null ],
+    [ "idDocumentoIdentidad", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o.html#aee00aa179ccd2c571a6013e182d1f33d", null ],
+    [ "idProvincia", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1maestroobra_1_1_request_1_1_request_maestro_obra_option_d_t_o.html#a7691da657ad9245576c3067df164bc27", null ]
+];

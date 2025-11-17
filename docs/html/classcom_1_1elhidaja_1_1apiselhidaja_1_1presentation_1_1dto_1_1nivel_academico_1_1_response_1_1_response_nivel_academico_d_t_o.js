@@ -1,0 +1,6 @@
+var classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_response_nivel_academico_d_t_o =
+[
+    [ "id", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_response_nivel_academico_d_t_o.html#ac5b29cab077603347f1faa2bcaa9dc31", null ],
+    [ "nombre", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_response_nivel_academico_d_t_o.html#a19cf4dc424045d2002aa6bd9e9b18717", null ],
+    [ "status", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1nivel_academico_1_1_response_1_1_response_nivel_academico_d_t_o.html#a402f3a8fcd39db8350a05ef6930380b5", null ]
+];

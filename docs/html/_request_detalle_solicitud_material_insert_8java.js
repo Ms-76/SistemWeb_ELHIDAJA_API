@@ -1,0 +1,4 @@
+var _request_detalle_solicitud_material_insert_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleSolicitudMaterial.Request.RequestDetalleSolicitudMaterialInsert", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_rec4e346805117bc0b948ea9087756ae00.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_solicitud_material_1_1_rec4e346805117bc0b948ea9087756ae00" ]
+];

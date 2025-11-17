@@ -12,7 +12,6 @@ public class ResponseMaestroObraDTO {
     private String documento;
     private String numeroDocumento;
     private String nombre;
-    private String especialidad;
     private String email;
     private String telefono;
     private String direccion;

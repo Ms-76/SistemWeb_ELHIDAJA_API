@@ -1,0 +1,4 @@
+var _request_detalle_inventario_insert_d_t_o_8java =
+[
+    [ "com.elhidaja.apiselhidaja.presentation.dto.detalleInventario.Request.RequestDetalleInventarioInsertDTO", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4.html", "classcom_1_1elhidaja_1_1apiselhidaja_1_1presentation_1_1dto_1_1detalle_inventario_1_1_request_1_58aab5344e947db16462fe26f11963b4" ]
+];
